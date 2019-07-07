@@ -1,0 +1,48 @@
+---
+title: "Basics of R Programming Language"
+output:
+  html_document:
+    df_print: paged
+---
+
+***
+
+# Introduction to R
+
+## Introduction {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+### Functions
+
+## Vectors {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+### Functions
+
+## Matrices {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+### Functions
+ 
+## Factors {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+### Functions
+
+## Data Frames {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+### Functions
+ 
+## Lists {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+### Functions 
+
+***
