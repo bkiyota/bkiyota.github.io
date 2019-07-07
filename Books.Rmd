@@ -6,7 +6,6 @@ output:
     toc: true
     toc_float: true
     toc_depth: 4
-    theme: journal
 ---
 
 # Genres {.tabset .tabset-fade .tabset-pills}
