@@ -1,0 +1,677 @@
+---
+title: "Book log"
+author: "Brett Kiyota"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 4
+    theme: journal
+---
+
+# Genres {.tabset .tabset-fade .tabset-pills}
+
+***
+## Non-fiction
+***
+
+### I. Medicine
+
+#### Being Mortal (Gawande, Atul)
+
+* Date of publication: 2014
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2018 | Medical practices in the face of mortality | How the process of aging can affect treatments of medical conditions | 9 |
+
+> Physics and biology and accident ultimately have their way in our lives. But the point is that we are not helpless either. Courage is the strength to recognize both realities. We have room to act, to shape our stories, though as time goes on it is within narroweer and narrower confines. A few conclusions become clear when we understand this: that our most cruel failure in how we treat the sick and the aged is the failure to recognize that they have priorities beyond merely being safe and living longer; that we have the opportunity to refashion our institutions, our culture, and our conversations in ways that transform the possibilitiees for the last chapters of everyone's lives. Inevitably, the question arises of how far these possibilities should extend at the very end -- whether the logic of sustaining  people's autonomy and control requires helping them to accerate their own demise when they wish to.
+
+This was an extremely moving book, as it touches on a subject that is unquestionably stigmatized in the society in which we live; namely, the topic of mortality and the consequences of our own death. This is particularly true with the more Westernized medical practices, which have come to adopt an idealism that features rigorous methodologies and preaches objectivity. It may have developed to the extent that the treatment of medical conditions has lost sight of the true meaning of what "treating a patient" entails in the sense that the comfort and mental therapy of patient care has become largely underappreciated. With how the medical system is set up with people willing to do whatever they can to "get better" from a given disease, what often happens is their  willingness to try anything paradoxically leads them toward a path that involves a much more severe degree of suffering at a marginal benefit of the most precious and cherished thought -- *time*. However, this marginal increase in longevity, if any at all, can often come at great costs to the quality of life. For example, the search for drugs entering the early phases of clinical trials has led to a few "miracle" cures, but they are more likely to have little affect relative to the efficacy in the drugs that have already been attempted. Because of the obvious challenges in the decision-making process that occurs when considering the fate of a patients life, accepting the statistical likelihood of how the actions of a disease will take its course versus the power that can be granted from any source of hope is one that will often fall to the latter decision. The course of action that can follow the acceptance of the likely fate of the patient with a terminal illness can act as a very viable option to maximize the remaining time that can be spent in a conscious state of control over the disease that one may be harbouring. The palliative care option, focused on providing support by way of easing any discomforts as well as mental support, is an option that can greatly increase the quality of life for a patient when compared to the opposite that entails fighting the disease with compounds until the very end. 
+
+> Being mortal is about the struggle to cope with the constraints of our biology, with the limits set by genes and cells and flesh and bone. Medical science has given us remarkable power to push against these limits, and the potential value of this power was  a central reason I became a doctor. But again and again, I have seen the damage we in medicine do when we fail to acknowledge that such power is finite and always will be. We've been wrong about what our job is in medicine. We think our job is to ensure health and survival. But really it is larger than that. It is to enable well-being. And well-being is about the reasons one wishes to be alive. Those reasons matter not just at the end of life, or when debility comes, but all along the way. 
+
+#### Bad Pharma: How Drug Companies Mislead Doctors and Harm Patients (Goldacre, Ben)
+
+* Date of publication: 2014
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | Health and science issues | Pharmaceutical and medical practices | 6 |
+
+* Trials are frequently conducted, but then left unpublished, and so are unavailable to doctors and patients. Only 1/2 of all trials get published, and those with negative results are twice as likely to go missing as those with positive ones. This means that the evidence on which we base decisions in medicine is systematically biased to overstate the benefits of the treatments we give. 
+* Proportional reporting ratios and Bayesian confidence propagation neural networks are the methods by which reports on given drugs are collated into what is effectively a gient spreadsheet. They both determine whether a given side effect is more prominent than would be expected by chance.
+* Some of the distortions used by pharmaceutical industries:
+    + Testing treatments in freakishly perfect 'ideal' patients. Patients in trials are often nothing like real patients seen by doctors in everyday clinical practice. These 'ideal' patients are more likely to get better, resulting in an exaggeration of benefits of drugs. 
+    + Test your drug against something useless. Drugs are often compared with something that's not very good (i.e. placebo sugar pills). It is also common to see trials where a new drug is compared with a competitor that is known to be pretty useless; or with a good competitor, but at a stupidly low dose, or a stupidly high dose. 
+    + Trials that stop early. Stopping the trial early, or late, due to constant monitoring of data increases the chances of a favourable result by exploiting the random variation that exists in data. 
+    + Trials that measure uninformative outcomes. Example: blood tests are easy to measure, and often respond very neatly to a dose of a drug; but patients care more about whether they are suffering, or dead, than they do about the numbers printed on a lab report. 
+    + Trials that bundle their outcomes together in odd ways. By setting your thresholds in a particular way, you can turn a modest benefit into an apparently dramatic one. Or, by bundling up lots of different outcomes to make one big 'composite outcome', you can dilute harms.
+    + Trials that ignore drop-outs. When patients leave a trial altogether, often it's because they didn't like the drug they were on (a.k.a. experienced adverse events while taking the drug, possibly speaking). Disregard for dropouts, thus, can amount to overstating the benefits of your drug. 
+    + Trials that change their main outcome after they have finished. If you measure a dozen outcomes in your trial, but cite an improvement in any one of them as a positive result, then your results are meaningless. Tests typically decide if a result is statistically significant assuming there is only one measurement, and must be adjusted if multiple outcomes are under test (or else you are simply giving yourself a dozen chances for a positive result).
+    + Dodgy subgroup analysis of trials or patients.
+    + 'Seeding' trials. Sometimes trials aren't really trials, they're viral marketing projects that are designed to get as many doctors prescribing the new drug as possible.
+    + Pretend it's all positive regardless. At the end of your trial, if your result is unimpressive, you can exaggerate it in the way that you present the numbers; and if you haven't got a positive result at all, you can just spin it harder. 
+* The idea that depression is caused by low serotonin levels in the brain is now deeply embedded in popular folklore, and people with no neuroscience background at all will routinely incorporate phrases about it into everyday discussion of their mood. 
+    + The theory behind selective serotonin reuptake inhibitors (SSRI) antidepressants is wrong, as the evidence behind the 'serotonin hypothesis' is largely shaky.
+* *Medicalisation* is the social process where pharmaceutical companies widen the boundaries of diagnosis, to increase their market and sell the idea that a complex social or personal problem is a molecular disease, in order to sell their own molecules, in pills, to fix it. Also called disease-mongering.
+* **ProPublica** is a US non-profit investigative journalism foundation that created a publicly accessible database of payments made to doctors. 
+
+> We have to learn, in medicine, to block out the [reality and feelings associated with the suffering and death of patients] in order to get the job done (objectively). With research, we have the opposite challenge: we need to force ourselves to give the numbers the emotional content they deserve.
+
+#### When Breath Becomes Air (Kalanithi, Paul)
+
+* Date of publication: 2016
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | The turmoil that follows after a cancer diagnosis while in residency in an  MD-PhD program | The meaning of life | 10 |
+
+> "You can't  every reach perfection, but you can believe in an asymptote toward which you are ceaselessly striving." -- Paul Kalanithi
+
+#### Do No Harm (Marsh, Henry)
+
+* Date of publication: 2014
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | Cases in neurosurgery | The complexity, attention to detail, and paradoxical precision which requires one to follow instincts, prior experience, and an understanding of your patient on a case-by-case basis. | 6 |
+
+#### The Laws of Medicine (Mukherjee, Siddhartha)
+
+* Date of publication: 2015
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | The laws of medicine | Experiences that may be of value in the field of physicians | 4 |
+
+The 3 overarching laws of medicine include:
+
+1. A strong intuition is much more powerful than a weak test. 
+2. "Normals" teach us rules; "outliers" teach us lessons.
+3. For every perfect medical experiment, there is a perfect human bias. 
+
+A test can only be interpreted sanely in the context of prior probabilities (eludes to Bayes). There exists an illusion of the systematic understanding of diseases. For example, if cancer is a disease in which genes that control cell division are mutated, thus causing unbridled cellular growth, then why do the most exquisitely-targeteed inhibitors of cell division fail to cure most cancers? Why do certain autoimmune diseases cluster together in some people, while others only have one variant? If type 2 diabetes results from insensitivity of tissues to insulin signaling, then why does adding extra insulin reverse many, but not all features of the disease? Why do patients with some neurological diseases, such as Parkinson's disease, have a reduced risk of cancer. 
+
+### II. Biological sciences
+
+#### The Selfish Gene (Dawkins, Richard)
+
+* Date of publication: 1976
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2018 | The gene | Evolutionary selective pressures | 6 |
+
+#### Let Them Eat Dirt (Finlay, Brett & Arrieta, Marie-Claire)
+
+* Date of publication: 2016
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2018 | Microbiome | Parental care | 4 |
+
+* Anton van Leeuwenhoeck - born Delft (Netherlands) in 1632, was the creater of the first microscope and basically the father of microbiology. 
+* Short-chain fatty acids (e.g. acetate, butyrate, and propionate) are important to different aspects of human energy metabolism. Intestinal cells rapidly absorb SCFAs and use them as an energy source. They can also be transported to the liver and transformed into critical compounds involved in energy expenditure and energy storage. 
+
+#### The Whole-Body Microbiome (Finlay, Brett & Finlay, Jessica)
+
+* Date of publication: 2019
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2019 | Microbiome | Self-health care | 6 |
+
+This book covers some of the most recent and exciting discoveries surrounding the microbiome in regard to the process of maintaining one's health and vitality as your lifetime continues to advance with time. One of the most exciting factors with this  topic, as emphasized throughout the book, is that the microbiome and its influences on various aspects of the aging process is a concept very much in its infancy. Both from an understanding of the microbes involved, as well as how they can interact to modulate different aspects and processes in your body, there remains much to be understood. The general themes of this book revolve around the beneficial effects that are apparent when following a healthy diet (MIND, Mediterranean diet) as well as continuous activation of your body by way of exercise. There are many studies that are beginning to elucidate an underlying microbial link to these long-perceived components that are essential for a healthy lifestyle. Rather than thinking of our microbiota as a completely independent commodity that inhabits our body (obviously said with a host of mutual interactions), it is now moving toward the progressive ideology that it may represent a role that garners recognition similar to that of another organ system within the human body (and animals, for that matter). Among the topics discussed in the book, with a focus on what appears to be the beginning of understanding the appreciable role of the microbiome on our everyday life, include: the skin, oral, lung, stomach, gut, heart, vaginal, cancer, immune system, muscoskeletal system, and environment.
+
+The state of the microbiome can have a very strong correlation with many conditions (autoimmune diseases, Type 2 diabetes, obesity, cardiovascular diseases, etc.), and there are additional factors that may be exacerbating the prominence of these effects that seem to be deeply intertwined with what western society has progressed to. Whether it be the sugar and carb-heavy diets, overly-sanitized, indoor, sedentary lifestyles, or our sanitation and health care tendencies, our microbiomes are becoming less and less diverse in terms of the composition that makes up the population. An important distinction to be made, currently under heavy research, is the line between justified measures of cleanliness/intervention and acceptance of the intimacy in the microbes we interact with, which appears to be a necessity to straddle for the long-term, sustainability of our health. Thus, this novel focuses on the existing research in some of the major facets of the influences of the microbiome into our health as we age, providing interesting insights, tips, and the direction that each respective field appears to be heading. I think the biggest impact that reading this book has had on me is that is has made me realize how much our lives are influenced by the state of the microbiome in times of either good or bad health. And from the message this book sends, there are certainly ways in which the microbiome can be modified in order to improve the outcome of health. And to the saying that they finished each section with *ad nauseam*: it will be interesting/exicing to watch this research develop and progress in the coming years. If I had one issue with some of the ideas in this book, it would be that I felt there were contradictions in regard to the use of probiotics. They were semingly promoted in all possible scenarios; however, there was also some evidencee that indicated limited viability as an actual therapeutic option, specific to a select few conditions. 
+
+| MYTH                     | FACT                                                  |
+---------------------------|-------------------------------------------------------|
+| Antibacterial soaps are necessary to sanitize your hands. | You do not need to use antimicrobial soap to get the job done. Using regular household soap with proper handwashing technique is generally a better way to remove germs. |
+| Sweat stinks | Sweat is essentially ordourless: the source of any smell is the microbes. |
+| The brain controls every part of the body and tells it exactly what to do. | There is two-way communication between the gut and the brain. |
+| Intelligence declines with age. | Crystallized intelligence - knowledge and experience accumulated over time - remains stable as we age. However, fluid intelligence, the ability to think logically and solve problems in novel situations not based on experience or education, tends to decline. |
+| If you are diagnosed with Parkinson's disease, there is not much you can do. | A Parkinson's diagnosis does not necessarily mean a shortened life, and there are effective ways to control the symptoms, such as medication, exercise, and diet. |
+| Symptoms of Parkinson's disease start in the brain. | The first symptoms often begin in the gut with constipation, and sometimes in the nasal cavity with loss of smell. |
+| Depression is a normal part of aging due to illness and personal loss. | Deprssion is not caused by aging and should be treated. |
+| Effects of stress occur only in the brain. | Stress causes changes across the entire body including muscle tension, fatigue, upset stomach, and increased gut permeability. |
+| There is nothing you can do to prevent a stroke. | Up to 80% of strokes are preventable. There is a lot one can  do, including managing blood pressure and cholesterol, maintaining an appropriate weight, and eating a heart-healthy diet full of fiber. |
+| Brushing teeeth is important only for oral health. | Brushing teeth promotes health throughout your entire body, including protecting against heart disease and even dementia. |
+| Eating sugar causes cavities. | Cavities are caused not *directly* by sugar, but instead by certain microbes living off the sugar. The microbes produce acid wich dissolves tooth enamel and create cavities. |
+| Mouthwash achieves the same effect as brushing. | Mouthwash is merely an add-on - thorough brushing and flossing do a much better job of preventing plaque than rinsing alone. Some mouthwashes kill both harmful and beneficial microbes. |
+| Brushing your teeth immediately after smoking can make up for some of the harmful effects on your teeth and gums. | Smoking kills beneficial microbes in your mouth that protect against dental disease and bad breath. The destructive microbes settle right back in the mouth immediately after brushing. |
+| All older people lose lung capacity, which is why they can become unable to carry out daily activities. | Healthy young adults have extra lung capacity, which begins to decline around the age of thirty. But as we age, that surplus enables the healthy lung function needed for daily tasks to continue. |
+| The lungs are sterile and devoid of microbes. | Our lungs are exposed to upwards of a million bacteria each day and most likely have their very own, essential microbiome. |
+| COPD is a man's disease. | While it is historically true that more older men - who are as a group generally smoked at higher rates than women - suffered from COPD, deaths resulting from COPD are currently higher in women than men. The reason is threefold: 1) women have started smoking more in the last 50 years; 2) women are more vulnerable due to smaller lung size and higher estrogen levels (which play a role in worsening lung disease); and 3) womena are often misdiagnosed because many doctors because many doctors still do not expect to see this "man's disease" in female patients. |
+| Everybody who is a carrier of the bacterium *S. pneumoniae* (a common bacterial cause of pneumonia) will get sick from it. | It is quite common for people, especially children, to carry the bacteria in their throats without getting pneumonia. |
+| Pneumonia only happens in cold-weather seasons. | Though we've all heard the warning "put on your coat or you'll catch a cold," air temperature in fact has little impact on the ability of microbes to cause infection. The origin of this myth likely stems from the fact that we gather indoors together more frequently during winter months, so microbes can spread more effectively from person to person. |
+| All digestion occurs in the stomach. | Some digestion occurs in the stomach, but food passes through a series of GI tract stations on its way through the body: the mouth, esophagus, stomach, small intestine, and large intestine. |
+| Spicy foods cause ulcers. | Hot sauce lovers, rejoice! We now know that the microbe *Helicobacter pylori* causes most ulcers, along with the use of anti-inflammatory pain medications such as aspirin and ibuprofen. Spicy foods may aggravate symptoms in some people, but they won't literally eat a hole through your stomach. Ulcers are caused by inflammation in the stomach lining: when stomach acid seeps through the protective mucus barrier, a lesion grows and further damages the tissue. |
+| You'll know if you might have stomach cancer because you'll feel pain. | People with stomach cancer rarely have symptoms during early stages of the disease. This is one of the reasons why early detection is so hard. In the US, only about 1 in 5 stomach cancers are found at an early stage before it has spread to other parts of the body. |
+| Stress  and anxiety cause irritable bowel syndrome (IBS) | Experts don't know why people get IBS. While stress and depression can make symptoms worse, IBS is not solely a psychiatric illness. There is bidirectional communication between the brain and gut, so symptoms may be caused by dysfunctions primarily at the central nervous system, the gut, or a combination of both. |
+| You can give yourself a fecal transfer from a healthy friend or family member. | Despite the simplicity of the procedure - and the numerous DIY YouTube videos featuring brown mixtures in blenders - do NOT attempt this at gome. If the gut is ruptured, you can get sepsis and possibly die of complications. FMTs are to be performed only in regulated medical settings under careful medical observation. |
+| Exercise is the key to successful weight loss. | To lose weight, eating is far more effective than exercising more, according to scientific studies. And given that our gut microbes are so heavily influenced by the diet (and, to some extent, exercise), we may be able to use personalized microbe-attuned diets for more effective weight loss. |
+| Heart disease runs in my family, so there is nothing that I can do to  prevent it. | Nearly all cardiovascular disease is preventable. Though people with a family history are at a higher risk, there are steps that you can take to immensely decrease your risk. |
+| Red meat alone causes heart disease. | Red meat does not cause CVD by itself: It's how our microbes break down the red meat and create harmful by-products that leads to heart disease. |
+| The vagina naturally smells bad. | It's normal for the vagina to have a slight odour. This can vary depending on the menstrual cycle, sexual activities, and sweat. Distinct causes of abnormal odours include bacterial vaginosis, which occurs when the delicate balance between "good" and "bad" vaginal bacteria is upset and causes an overgrowth of anaerobic bacteria. It is different from yeast infections, which are caused by a fungus (*Candida*). A yeast infection generally itches; has a thick, white discharge; and doesn't smell. Bacterial vaginosis, in comparison, has a thin white, grey, or green discharge; a burning sensation when you pee; and a fishy smell. A doctor may prescribe a course of antibiotics for bacterial vaginosis, while antifungal medications are generally used to treat yeast infections. |
+Douching - spraying the inside of your vagina with a mixture of water and vinegar or a multitude of other "cleansers" - is an effective way to clean your vagina. | You do not need to douche to clean your vagina. The body naturally flushes out and cleans the vagina, whereas douching disrupts the normal flora and pH of the vagina. Most doctors recommend that women do not douche, as studies have not found any health benefits. Douching is linked to health problems including bacterial vaginosis, pelvic inflammatory disease, pregnancy complications, sexually transmitted infections, and vaginal irritation - all likely affected by the microbal disruptions it causes. |
+| Urine is sterile. | There are numerous bacteria present in urine - and not just in individuals with a UTI. Bacteria are present in the pee of healthy individuals too. |
+| Cranberry juice can cure UTIs. | Prevention of a UTI is different from treating an active, symptomatic infection. The body of evidence supports cranberries in the prevention - but not "cure" - of UTIs. Scientists originally thought that the acidity in cranberry juice decreased vaginal pH, which could protect against pathogens. More recent data indicates that components in the juice bind to - and plug up - surface structures (called pili) on the microbal pathogen's surface, therefore blocking its ability to adhere to host cells. Numerous clinical studies have testede the ability of cranberry juice to block (prevent) UTIs. Because some studies suggest that cranberry products may reduce repeated infections in women, some medical professionals may suggest the use of cranberry supplementation in the prevention or treatment of a UTI. Dr. Stothers recommended it as a "low risk" prevention strategy in patients with recurrent UTIs with potential upside (as opposed to chronic antibiotic use). |
+| Cancer is cellular, so microbes aren't invovled. | Microbes aare intimately involved in many cancers. They influence the risk for developing cancer, immune responses that affect both cancer and tumour control, disease progression, and response to treatment. |
+| You do not need to be screened for colon cancer if you have regular bowel movements and feel fine. | Colon cancer is a silent killer without obvious symptoms. Starting at age fifty - and even earlier for those with a history of family risk - everyone is urged to have a colonoscopy to screen for colon cancer. The sooner the disease is caught, the better your chances for treatment and survivial. |
+| Everyone with cancer must start treatment immediately. | Not necessarily. Under certain conditions - if the cancer is found at an early stage, if it is growing slowly, or if treatment will cause more discomfort than the disease - doctors may recommend active surveillance, a process where they monitor the cancer closely, and begin treatment if the cancer shows signs of growing or begins to cause symptoms. Treatment can also put patients at greater risk for infection, which is increasingly dangerous in a world of antibiotic resistance. |
+| Airplane air makes you sick. | The recycled cabin air on airplanes is filtered by high-quality filters and is not the direct source of you catching a cold. What could make you sick is being packed on a plane with other people - whole have a cold or other viral infection - coughing, sneezing, or even talking nearby. Those up to 2 to 3 feet away could make you sick if droplets containing a virus become airborne. Fatigue, hwich many of us experience while travelling, may also dampen your immune system: Think sleep deprivation from jet lag, crack-of-dawn early flights, and the elusiveness of  sleep when cramped into a tiny transoceanic seat. When travelling, wash your hands frequently with soap and water and prioritize sleep to help out your immune system. |
+| Biological aging and the immune system are unrelated. | Our immune systems are intimately associated with youthful vigour and vitality. Without an immune system, longevity is not an option. The key to a healthy, longer life is to limit chronic low-grade inflammation, which causes general tissue damage associated with bodily aging. |
+| Trying to exercise and get healthy is pointless in later life because decline in old age is inevitable. | Many of the symptoms that we associate with elderly people - such as weakness and loss of balance - are actually symptoms of inactivity, not old age. You're never "too old" to move your body! One the one extreme, there are body builders and marathon runners in their seventies, eighties, and nineties; on the other, studies show that even nursing home residents in their nineties can boost muscle strength by starting an exercise program. |
+| Exercise isn't safe for healthy people, since they are more likely to fall and break a hip. | Studies show that exercise can actually reduce your chances of falling by building strength, balance, and agility. Gentler activities such as tai chi and yoga may be especially helpful to improve balance and strengthen bones, also reducing risk for - and slowing the progression of - osteoporosis. |
+| Only women need to worry about age-relateed bone loss and osteoporosis. | Women are 4x more likely to get osteoporosis. However, men still make up to 20% of all cases. More than 2 million men in the US have osteoporosis, and another 3 million have osteopenia. |
+| You cannot gain muscle from a solely plant-based diet. | You can maintain strong bones and muscles as a vegan/vegetarian. What's key is getting adequate protein through supplements and/or foods consumed. | 
+| If you're not working up a swea, you're not working hard enough. | Sweat is not necessarily an indicator of exertion - it's the body's way of cooling itself. Heart rate is a better indicator of exertion for cardiovascular exercise. In weight training, you may not necessarily work up a sweat depending on the type of exercise, your body's propensity to sweat, and temperature of the room. |
+| Longevity is determined by genetic factors. | The everyday social and physical conditions of life - where you live, who you interact with, what you eat, how often you exercise - can influence health and longevity to a much greater extent (about 75% in studies) than genes (about 25%). |
+| All fungi and bacteria in the home are harmful. | This common misconception inspires unnecessary fears and often excessive cleaning, sterilization, and use of antimicrobial products. The vast majority of microbes found in the built environment are innocuous, and many are even beneficial to human inhabitants. |
+| Opening the window in a nursing home or hospital room will let in harmful bacteria. | Healthcare centres might help thwart the spread of infection by opening their windows. Fresh air lets  more microbes in, which can help control previously unchallenged pathogens. In rooms sealed from the outdoors and unventilated by fresh air, harmful bacteria have less competition from other microbes in the environment. A diverse environmental microbiome can act as a protective layer against hospital and nursing home-borne infections. |
+| A dog's mouth is cleaner than a person's mouth. | A dog's mouth likely contains fewer microbes that are directly harmful to humans. However, that does not mean that the dog's mouth has fewer microbes overall or is cleaner. Think about how dogs behave - their mouths frequently come into contact with their own and other animals' backsides and feces (unlike humans, they're coprophagic). |
+| Cross-contamination does not occur in the refrigerator as it's too cold in there for microbes to survive. | Some bacteria can survive, and even thrive, in cool, moist environments like the refrigerator. For example, *Listeria monocytogenes*, a pathogen that contaminates meats and cheeses, loves to grow at 4&deg;C (39&deg;F). Your fridge's produce compartment may be one of the "germiest" places in the kitchen. Keep fresh fruits and vegtables separate from raw meat, poultry, seafood, and eggs. Clean the fridge on a regular basis with  hot water and soap and clean up any spills immediately. Dry with a clean cloth towel and/or let removable parts dry in the air outside the fridge. |
+
+
+<center>
+**Quick tips:**
+</center>
+
+* **A different way to clean:** Avoid antibacterial soaps whenever possible. Washing hands with regular soap and running water remains one of the best ways to preevent illness and spread infection.
+* **Look, don't touch:** Reduce risk of bacterial eye infections by washing hands with soap and water before handling contact lenses. Clean contacts and storage cases thoroughly with fresh disenfecting solution, never water. Leave the empty case open to air dry and replace it at least every 3 months. If you are an occasional user, do not give bacteria the chance to grow in your static lense case. Never wear lenses stored more than 30 days without re-disinfecting.
+* **Youthful glow:** Certain probiotics, including *Lactobacillus plantarum*, show significant promise for decreasing skin wrinkles and promoting general skin health. Consider incorporating it into your diet through a probiotic supplement and fermented foods (e.g. sauerkraut, kimchi, pickles, brined olives). 
+* **Sun safe:** The easiest and least expensive way to keep healthy and youthful skin is to stay out of the sun. Emerging  bio-sunscreens, such as Helioguard 365 and Helionori, use cyanobacteria UVA filters to naturally protect against the sun; they may be a better alternative to traditional sunscreens, which negatively disrupt the skin microbiota. After any extended sun exposure, consider taking the probiotic *Lactobacillus johnsonii* to help decrease inflammation and sunburn.
+* **Give your brain a workout:** The brain is no different from the rest of your body - it needs exercise to stay healthy. Aerobic exercise gets your heart pumping, which boosts blood flow to the brain. This improves brain function and protects your brain from Alzheimer's and dementia. Exercise also decreases stress and improves mood (and affects the microbes). 
+* **Trade your T-bone for a turnip:** A diet high in fibre is associated with significantly lower risk of stroke, while red meat increases risk. High-fiber foods good for the brain and intestinal microbes include whole grains, fruits, vegetables, beans, nuts, and seeds. 
+* **Reset your clock:** Sleep is essential for brain health - not to mention its impact on the microbiota. Lack of regular, solid pillow time (such as when you're jet lagged) can cause problems with your memory, thinking, and mood. 
+* **Enjoy your morning cup of java:** Besides helping with constipation and keeping you regular, coffee also decreases risk for Parkinson's and Alzheimer's.  
+* **Brush, floss, rinse, repeat:** Early tooth loss is linked to higher levels of dementia. Brushing your teeth regularly (ideally 3 times a day) may decrease your risk for dementia or Alzheimer's. 
+* **A new generation of probiotics:** Promising oral health products often include lactobacilli and bifidobacteria. You can incorporate these "mouthy microbes" into your diet through dairy products and fermented vegetables (e.g. cultured yogurt, kefir, sauerkraut), or consider taking a supplement that includes specific strains. Supplemented chewing gums and toothpastes may also help with bad breath and improve oral health. Using these enhanced products on a regular basis, particularly following antibiotic treatment and after any dental visits, may help recognize healthy microbes for immune support. 
+* **You know the drill:** Regular tooth brushing, interdental cleaning, and dentist visits  will  drastically  reduce risk of gum disease and tooth decay as  you age. Flossing is particularly important to keep  plaque-producing microbes in check. 
+* **Flossed in translation:** Talk to your dentist and doctor if you are experiencing dry mouth. Medications are often the culprit, and other  drugs may be substituted or dosages changed. If medications cannot  be avoided, it is advised to drink plenty of water, chew sugarless gum (consider probiotic variety) and avoid tobacco and alcohol. Perhaps try taking a probiotic (e.g. *L. reuteri* or *L. rhamnosus*) after taking antibiotics.
+* **Malodorous microbes:** Alcohol-based mouthwashes cannot penetrate microbes, and antimicrobial mouthwashes kill off both helpful and harmful microbes indiscrimminately. This allows the microbes that cause bad breath to flourish without competition. To treat bad breath, floss and brush regularly to keep microbes in check, and perhaps use a probiotic-infused mouthwash or chewing gum containing *S. salivarius*. 
+* **Know the warning signs:** Early symptoms of pneumonia and COPD can often seem like a regular cold or age-related changes. Seek immediate medical attention if symptoms persist. Early detection is essential for effective treatment. 
+* **Take a breath of fresh air:** Minimize exposure to smoke and harmful pollutants as much as possible. If you smoke, the best way to improve your respiratory health and boost your lung microbiota is to quite. 
+* **Consider probiotics:** Taking lactobacilli products can help manage allergic lung disease. It may even help with COPD symptoms to reduce inflammation. 
+* **Shots all around:** Get you annual fle shot. Due to increased risk of bacterial pneumonia over the age of 65, also get the one-dose pneumonococcal vaccine (if applicable) to protect against illnesses such as meningitis and pneumonia. 
+* **Not just any stomach bug:** Check with your doctor if you suffer persistently and/or severely from any stomach symptoms including poor appetite; abdomen discomfort, fullness after eating a small meal, swelling, or fluid buildup; unintentional weight loss; abdominal pain or discomfort; heartburn or indigestion; nausea or vomiting; and anemia. Unfortunately, early-stage stomach cancer rarely causes symptoms, so having these symptoms may be a sign of advanced-stage illness. 
+* **Balancing act:** If you have stomach issues and are colonized with *H. pylori*, have a frank discussion with your physician about whether or not to try to eradicate the organism.
+* **Pass the probiotics:** If you are on a PPI, consuming probiotic yogurt could potentially increase the therapy's effectiveness and decrease side effects. 
+* **It takes a village:** Maintain your gut's rich microbial diversity as much as possible throughout life. This includes taking antibiotics only when medically necessary, eating probiotic-rich foods, and consuming prebiotic foods (e.g. asparagus, Jerusalem artichokes, bananas, oatmeal, red wine, honey, maple syrup, legumes). for a more targeted approach, consider one of the commercial products available to get a snapshot of your gut microbes and adjust diet accordingly. 
+* **Put away the yo-yo:** Cycling between diets is bad for your waistline and for your microbes, since your microbes likely remember the unhealthier composition when at a heavier weight and make sustained weight loss more difficult. 
+* **Poop-tacular:** If you or a loved one suffer from recurrent *C. difficile* infections (and potentially IBD), talk to your doctor about a fecal transfer instead of a another round of antibiotics. Exciting clinical studies suggest that simply transferring feces from one person to another can potentially cure this deadly disease. But remember, do not try this at home!
+* **Eat and drink to your heart's content:** Incorporate plenty of fruits, vegetables, whole grains, fibres, and nuts into your diet. Keep your heart and microbes happy by limiting intake of saturated fats, added sugars, salt, and red meat. Red wine can inhibit TMAO production and help protect the arteries. Cold-pressed extra virgin olive oil and foods rich in antioxidants and good HDL cholesterol in moderation can also protect the heart. 
+* **Smile with your whole heart:** Regular brushing, flossing, and dental check-ups can help keep away heart disease. Don't rush when you brush to get all those deep cavities where microbes can settle down.
+* **Get your blood pumping:** Regular exercise is essential to the health of your heart and your microbes. Pursue whatever heart-pumping activities you enjoy. It is recommended to get at least 30 min of moderate activity most or all days of the week, and this doesn't have to all be done at once. Ten-minute blocks of exercise are just as beneficial (if not more so, since you are sitting less continuously the rest of the day). 
+* **Closing the prescription gender gap:** Women are significantly more likely than med to receive antibiotic prescriptions, and are at greater risk for sexist, gender-based medical care. Ask your doctor when she/he prescribes antibiotics; double-check that the prescription is warranted given your health condition and symptoms. 
+* **Boost your defences:** A healthy microbiome can help block pathogens and potentially improve cancer treatment outcomes. Maintain a healthy microbiota by eatinga  range of fresh, whole, and fermented foods. Consider taking a probiotic supplement - especially if you are currently undergoing any treatments. 
+* **Stand up to superbugs:** Given that heavy antibiotic use is linked to greater risk of cancer and infections, take antibiotics only when necessary and exactly as prescribed: Do not skip doses, and complete the course of treatment even if you start to feel better - otherwise you increase the chances of increased antimicrobial resistance to the antibiotic, requiring additional treatment. Do not share or use leftover medications. Shore up your immune system after a course of antibiotics with probiotic/prebiotic foods. 
+* **Take help when you can:** Keep your vaccinations up to date (uncluding a yearly flu shot each fall) to help  your immune system fight off viruses. 
+* **Age, don't inflammage:** Maintain as robust and diverse a microflora as possible to help diminish gut permeability and low-grade inflammation. Dietary choices to help limit inflammaging include those that increase SCFA (namely fibre) and antioxidants. High-fibre foods legumes, berries, and cruciferous vegetables. Dark-coloured grapes, blueberries, red berries, nuts, and dark green veggies are examples of antioxidant foods. 
+* **Put the phone down:** Microbes are another reason to divorce yourself from your cell phone. Leave it behind on your next trip to the bathroom and at the kitchen table. Clean it regularly to minimize the number of potentially harmful microbes pressed against your face. 
+ 
+
+#### Bad Science (Goldacre, Ben)
+
+* Date of publication: 2008
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | Health and science issues | Systematic and media-reportorted issues | 7 |
+
+Some general caveats that may bias any scientific investigations:
+
+1. We see patterns where is only random noise. In other words, with our brains being such a powerful pattern recognition tool, it can/will make out relationships that may not be there. 
+2. We see causal relationships where there are none. 
+3. We overevalue confirmatory information for any given hypothesis. 
+4. We seek out confirmatory information for any given hypothesis.
+5. Our assessment of teh quality of new evidence is biased by our previous beliefs.
+6. Social influences and conforming to society largely impact our actions. 
+
+#### Advice for a Young Investigator (Ramón y Cajal, Santiago)
+
+* Date of publication: 1897
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | The empirical investigation system | Tips and guidance based on experience | 6 |
+
+<center>
+**Beginner's traps**
+</center>
+
+* Undue admiration of authority.
+    + 2 phases may be noted in the careers of learned investigators: first there is the productive time devoted to the elimination of past errors and the illumination of new data. It is then followed by the mature or intellectual phase (which does not necessarily coincide with old age) when scientific productivity declines and the hypotheses incubated during youth are defended with paternal affection from the attacks of newcomers.
+    + Throughout history, no great man has shunned titles or failed to extol his right to glory before the new generation. Rousseau's bitter quote is sad but true: "There has never been a wise man who hasn't failed to prefer the lie invented by himself to the truth discovered by someone else."
+* The most important problems are already solved.
+    + It is nevertheless true that if we arrived on the scene too late for certain problems, we were also born too early to help solve others. 
++ Preoccupation with applied science.
+    + In short, consider problems on their own merits when attacking them. Avoid deviating to secondary concerns that distract attention and weaken analytical powers. 
+    + It is well known that a discovery is simply the joining of two or more pieces of information to a useful end. 
+        + The applications of new data will come in due time, when other related information emoerges.
+        + Many scientific observations are of little ise at the time they are made. 
+* Perceived lack of ability.
+    + Using strength and perseverance, concentrate deeply only on information pertinent to the question at hand. 
+        + During the gestation period of our work, sentence ourselves to ignorance of everything else that is going on -- politics, literature, music, and idle gossip. There are occasions when ignorance is a great virtue, almost a state of heroism.
+        + Unless books distract attention and are thus weightly, occupying as much space in our brains as on the library shelf, they can spoil or hinder mental adjustments to the problem at hand. Although popular opinion may not agree: "Knowledge occupies space."
+
+<center>
+**Intellectual qualities**
+</center>
+    
+* The investigator should display some happy combination of these traits: an artistic temperament that impels him to search for and admire the number, beauty, and harmony of things; and -- in the struggle for life that ideas create in our minds -- a sound critical judgement that is able to reeject thee rash impulses of daydreams in favour of those thoughts most faithfully embracing objective reality. 
+* Independent judgement.
+    + The mission of those docile souls who form the retinues of outstanding investigators -- as susceptible to suggestion as they are to inactivity and perseverance in error -- has always byyn to flatter genius and applaud its aberrations.
+    + This is the lip service mediocrity complacently renders to superior talent. It is  easy to understand when one recalls that inferior intellect adapts better to error, which almost always involves a simple answer, than the truth, which is often rigorous and difficult. 
+* Concentration.
+    + The object here is to focus the train of thought on more and more complex and accurate associations between images based on observation and ideas slumbering in the unconsciousness -- ideas that only vigorous concentration of mental energy can raise to the conscious level. 
+    + This type of cerebral polarization (which involves a spacial ordering of perceptions) refines judgement, enriches analytical powers, spurs constructive imagination, and -- by focusing all light of reason on the darkness of a problem -- allows unforseen and subtle relationships to be discovered. 
+    + The harm in certain things that are too distracting lies not so much in the time they steal from us as in the enervation they bring to the creative tension of the mind, and in the loss they cause to that quality of tone that nerve cells acquire when adapted to a particular subject. 
+* Passion for reputation and patriotism.
+* Taste for scientific originality.
+    + In fact, beyond the stimulation of variety and interest, the supreme joy of the intellect lies in seeing the divine harmony of the universe, and in knowing the truth -- as beautiful and virginal as the flower opening its calyx to the caresses of early morning sun. 
+    + As Pioncaré says in his beautiful book, *La Science et la methode*: "Intellectual beauty is sufficient unto itself, and only for it rather than for the future good of humanity does the scholar condemn himself to arduous and painful labours."
+    
+<center>
+**What Newcomers to biological research should know**
+</center>
+
+* General education.
+    + It is essential that this knowledge come from descriptions in books and monographs, as well as from the direct study of nature itself.
+    + However, it is equally important that he acquire a general knowledge of all those branches of science that are directly or indirectly related to the one of choice because they contain guiding principles or general methods of attack. 
+        + For example: a biologist does not limit his studies to anatomy and physiology, but also grasps the fundamentals of psychology, physics, and chemistry. 
+    + Discovery is often a matter of simply fitting a piece of data to a law, or wrapping it in a broader theoretical framework, or finally, classifying it. Thus, it can be concluded that to discover something is to name something correctly, something that had been christened incorrectly or conditionally before.
+    + If a supreme intelligence knew all the mysterious explanations linking all phenomena in the universe, there would be one single science instead of many different sciences. 
+        + The frontiers that appear to separate fields of learning, the formal scaffolding of our classification scheme, the artificial division of things to please our intellects -- which can only view reality in stages and by facets -- would disappear completely in the eyes of such individual. 
+        + Total science would appear as a giant tree, whose branches represent the individual sciences and whose trunk represents the principle(s) upon which they are founded. 
+* The need for specialization. 
+    + It is too easy to run aground on the shoal of encyclopedic learning, where minds incapable of orderliness -- who are reestless, undisciplined, and unable to concentrate attention on a sinlge idea for any length of time -- tend to stop.
+        + Rotating inclinations, as a highly original physician -- writer has called them, may create great writers, delightful conversationalists, and illustrious orators, but rarely scientific discoverers.
+    + The well-known proverb, "knowledge does not occupy space," is  a grave mistake. The intent to  master a number of sciences is a chimaeric aspiration. Just consider the indefatigable men of real genius who resign themselves to a profound knowledge of one branch of knowledge -- only to harvest a small number of facts.
+        + It seems useful to conclude with a frequent comparison that is expressed in 2 maxims of everyday philosophy: "A long harvest, little corn," and "Knowledge occupies no space."
+        + The inquisitive mind is like a sword usd in battle. If it has one sharp edge, we have a cutting weapon; with 2 edges it will still cut, though less efficiently; but if 3 or 4 edges are arranged simultaneously, the effectiveness of each diminishes progressively, until the sword is reduced to a dull bludgeon.
+* Understanding foreign languages.
+* How monographers should read.
+    + When monographs on the specialty one has chosen to investigate are read, particular attention should be focused on 2 important things: research methods used by the author in his work, and problems that remain unsolved. Our new and inexperienced man of science must flee from abstracts and syllabuses as if from the plague. 
+        + The syllabus is good for teaching purposes, but is abominable for guiding the investigator.
+        + He who abstracts a book does so with his own purposes in mind.
+* Thee absolute necessity of  seeking inspiration in nature.
+    + We may learn a great deal from books, but we learn much more from the contemplation of nature -- the reason and occasion for all books. 
+    + The direct examination of phenomena has an indescribably disturbing and leavening effect on our mental inertia -- a certain exciting and revitalizing quality altogether absent, or barely perceptible, in even the most faithful copies and descriptions of reality. 
+    + Descartes: "Life seems to be pure mechanism. Living bodies are hydraulic mechines that are so perfect they can repair the damage caused by the force of torrent moving from them, and even producing some other similar hydraulic machines through the mechanism of reporduction."
+* Mastery of technique.
+    + Master of technique is so important that without fear of contradiction it may be stated that great discoveries are in the hands of the finest and most knowledgeable experts on one or more analytical methods. 
+* In search of original data.
+    + This brinds me to the point of discussing the role of chance in the realm of scientific investigation. There is no doubt that accident is a major component of empirical work, and we must not overlook the fact that science owes brilliant achievements to it. 
+    + Once the new data are obtained -- and especially if they generate new currents in the scientific atmosphere -- our task will be as smooth as it is brilliant because it reduces to working out the consequences of the enw data for the various spheres of science. This leads to the conclusion that the first discovery is the one that counts; the rest are usually corollaries of the original.
+    + A well-known doctrine espoused by philosophers such as Taine and by scientists such as Tyndall, is that each problem solved stimulates an infinite number of new questions, and that today's discoveries contain the seeds of tomorrow's. 
+
+<center>
+**Diseases of the will**
+</center>
+    
+* Contemplators.
+    + They love the study of nature, but only for its aesthetic qualities -- the sublime spectacles, the beautiful forms, the splendid colours, and the graceful structures. 
+* Bibliophiles and polygots.
+    + The symptoms of this disease include encyclopedic tendencies; the mastery of numerous languages, some totally useless; exclusive subscription to highly speecialized journals; the acquisition of all the latest books to appear in the bookseller's showcase; assiduous reading of everything that is important to know, especially when it interests very few; unconquerable laziness where writing is concerned; and an aversion to the seminar and laboratory.
+* Megalomaniacs.
+    + While they are confirmed gradualists in theory, they turn out to rely on luck in practice. As if believing in miracles, they want to start their careers with an extraordinary achievement. 
+    + They end up spending their lives planning and plotting, constructing and correlating, always submerged in feverish activity, always revising, hatching the great embryonic work -- the outstanding, sweeping contribution. 
+* Instrument addicts.
+    + This rather unimportant variety of ineffectualist can be recognizeed immediately by a sort of fetishistic worship of research  instruments. They suffer from an almost incurable disease, especially when it's associated (as it commonly is) with a distinctive moral condition  that is rarely admitteed -- a selfish and disagreeable obsession with preventing others from working because they don't know how/want to.
+* Misfits.
+    + There would be many fewer exampls of strange contradictions between genuine vocation and official business, between working for pay and scholarly activity, if a professorship were not so often used merely as a stepping stone to politics, or as advertising to help build a lucrative medical practice.
+* Theorists.
+    + Undeniable symptoms include a facility for exposition, a creative and restless imagination, an aversion to the laboratory, and an indomitable dislike for concrete science and seemingly unimportant data. 
+        + When faced with a difficult problem, they feel an irresistable urge to formulate a theory than to question nature. 
+        + As soon as they happen to notice a slight, half-hidden analogy between 2 phenomena, or succeed in fitting some new data or other into the framework of a general theory -- whether true or false -- they dance for joy and genuinely believe they are the most admirable reformers.
+        + They unconsciously obey the law of minimum effort because it is easier to fashion a theory than to discover a phenomenon.
+    + Must distinguish between a working hypothesis (Arbeitshypothesen of Weismann) and scientific theories. The hypothesis is an interpretative questioning of nature. It's an integral part of the investigation because it forms the initial phase, the virtually required  antecedent. But to speculate continuously -- to theorize just for its own sake, without arriving at an  objective analysis of phenomena -- is to lose oneself in a kind of philosophical idealism without a solid foundation, to turn one's back on reality.
+
+<center>
+**Social factors beneficial to scientific work**
+</center>
+
+* Material support.
+    + There is poverty of will, rather than lack of means. Enthusiasm and perseverance work miracles.
+    + From a POV of actual success, it is not the instruments that are costly and require the most time, work, and patience -- it  is the development and maturing of talent. At the very least, limited means condemn us to limit our initial steps, to narrow the scope of investigation, but after all, isn't this an advantage?
+* Having a profession and doing research work are compatible. 
+* The investigator and his family.
+
+<center>
+**Stages of scientific research**
+</center>
+
+* Observation.
+    + The work should be carried out under the best possible conditions, and to this end one should utilize the best analytical instruments, as well as the research methods that can be used with the greatest confidence.
+    + If possible, we should use a variety of methods on the same problem, correcting the weaknesses of some with the revelations afforded by others.
+    + Avoid any tendency to hasty judgement in the evaluation of data.
+    + When we are not entirely satisfied with the results, even though the most appropriate technique was used, we must repeat the experiments as many times as necessary to obtain everything that the method can provide.
+* Experimentation.
+* Working hypothesis.
+    + Should bear in mind the following truisms:
+        + A hypothesis is necessary; without it, phenomena cannot be explained.
+        + Hypotheses can be contrasted or compared, or at least verified, at a more or  less distant time in the future. Hypotheses that cannot be tested by observation/experimentation leave the problem unilluminated.
+        + Hypotheses should be easily understood in terms of physics and chemistry. If possible, should lie in the realm of pure mechanism, as Lord Kelvin had wished -- hypotheses  that are too obscure or abstract run the risk of being empty  verbal descriptions.
+        + Hypotheses solve quantitative  problems in a qualitative way, avoiding occult properties and metaphysical considerations.
+        + If possible, hypotheses should also suggest new research and arguments. If they do not solve the problem, they should at least steer us in the right direction, stimulating new and more accurate concepts. 
+    + The following may be useful when thinking about how to formulate a hypothesis. Nature uses the same means for equivalent ends. It often allows us to compare a phenomenon that we don't understand with one we do. 
+        + Important to view the problem in its simplest form.
+        + All natural arrangemenets, however capricious they may seem, have a function. This Teleological principle applies to all quirks of plant and animal structure.
+* Proof.
+    + The duty of the scientist is to adapt continuously to new scientific methods, not become paralyzed by mistakes; that cerebral vigour lies in mobilizing oneself, not in reaching a state of ossification; and that in the man's intellectual life, as in the mental life of animals, the harmful thing is not  change, but regression and atavism.
+    + Rational interpretation of the facts.
+    + Proof of hypotheses must come from new observations and repeated experiments. If it doesn't fit with facts, replacement with another hypothesis that is in turn submitted to rigorous subjective analysis, followed by application of the imploications of that hypothesis, now regarded as knowledge to other spheres. 
+    
+<center>
+**On writing scientific papers**
+</center>
+
+Some genereal tips: (1) have something to say, (2) say it, (3) stop once it is said, and (4) give the article a suitable title and order of presentation.
+
+* Justice in courtesy in decisions.
+    + Typically, critical examination deals with errors of fact or observation, or with errors of interpreetation. Errors in observation, or recognition of fact, theoretical error often resulting from poor interpretation of data. 
+
+It's really amazing how many of these pieces of advice have stayed relevant over time, or maybe not given the structure and foundation that make up empirical investigation. Nonetheless, there are definitely some interesting takes, particularly when discussing the some of the traits *required* to be a suitable investigator in the lens of Santiago.
+
+#### The Emperor of All Maladies (Mukherjee, Siddhartha)
+
+* Date of publication: 2010
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | Cancer | Historical narrative | 8 |
+
+#### The Gene (Mukherjee, Siddhartha)
+
+* Date of publication: 2016
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | The gene | Historical narrative | 8 |
+
+The R's of gene physiology: Regulation, Replication, Recombination, and Repair. 
+
+**The post-genomic manifesto**: Scientific, philosophical, and moral lessons of the history of the gene.
+
+1. A gene is the basic unit of hereditary information. It carries the information needed to build, maintain, and repair organisms. Genes collaborate with other genes, with inputs from the environment, with triggers, and with random chance to produce the ultimate form and function of an organism. 
+2. The genetic code is universal*. A gene from a blue whale can be inserted into a microscopic bacterium and it will be deciphered accurately and with nearly perfect fidelity. A corollary: there is nothing particularly special about human genes. 
+3. Genes influence form, function, and fate, but these typically do not occur in a one-to-one manner. Most human attributes are the consequence of more than one gene; many are the result of collaborations between genes, environment, and chance. Most of  these interactions are nonsystematic - i.e. they occur through the intersection between a genome and fundamentally unpredictable events. And some genes tend to influence only propensities and tendencies. we can thus reliably predict the ultimate effect of a mutation or variation on an organism for only a minor subset of genes. 
+4. Variations in genes contribute to variations in features, forms, and behaviours. When we use the colloquial term for blue eyes or gene for height, we are really referring to a variation (or allele) that specifies an eye colour or height. These variations constitute an extremely minor portion of the genome. They are magnified in our imagination because of cultural, and possibly biological, tendencies that tend to amplify differences. A 6-foot man from Denmark and a 4-foot man from Demba share the same anatomy, physiology, and biochemistry. Even the two most extreme human variants - male and female - share 99.688% of their genes. 
+5. When we claim to find "genes for" certain human features or functions, it is by virtue of defining that feature narrowly. It makes sense to define "genes for" blood type or height since these biological attributes have intrinsically narrow definitions. But it is an old sin of biology to confuse the definition of a feature with a feature itself. If we define "beauty" as having blue eyes (and only blue eyes), then we will, indeed, "find a gene for beauty." If we define "intelligence" as the performance on only one kind of problem in only one kind of test, then we will, indeed, find a "gene for intelligence." The gneome is only a mirror for the breadth or narrowness of human imagination. It is Narcissus, reflected. 
+6. It is nonsense to speak about "nature" or "nurture" in absolutes or abstracts. Whether nature - i.e. a gene - or nurture - i.e. the environment - dominates in the development of a feature or function depends, acutely, on the individual feature and the context. The SRY gene determines sexual anatomy and physiology in a strikingly autonomous manner; it is all nature. Gender identity, sexual preference, and the choice of sexual roles are determined by intrsections of genes and environments - i.e. nature plus nurture. The manner in which "masculinity" versis "femininity" is enacted or perceived in a society, in contrast, is largely determined by an environment, social memory, history, and culture; this is all nurture. 
+7. Every generation of humans will produce variants and mutants; it is an inextricable part of biology. A mutation is only "abnormal" in a statistical sense: it is the less common variant. The desire to homogenize and "normalize" humans must be counterbalanced against biological impurities to maintain diversity and abnormalcy. Normalcy is the antithesis of evolution. 
+8. Many human diseases - including several illnesses previously thought to be relateed to diet, exposure, environment, and chance - are powerfully influenced or caused by genes. Most of these diseases are polygenic - i.e. influenced by multiple genes. These illnesses are heritable - i.e. caused by the intersection of a particular permutation of genes - but not easily inheritable - i.e. likely to be transmitted intact to the next generation, since the permutations of genes are remixed in each generation. Instances of each singl gene (monogenic) diseases are rare, but, in sum, they turn out to be suprisingly common. More than ten thousand such diseases have been defined thus far. Between one in a hundred and one in two hundred children will be born with a monogenic disease. 
+9. Every "genetic" illness is a mismatch between an organism's genome and its environment. In some cases, the appropriate medical intervention to mitigate a disease might be to alter the environment to make it "fit" an organismal form (building alternative architectural realms for those with dwarfism; imagining alternative educational landscapes for children with autism). In other cases, conversely, it might mean changing genes to fit environments. In yet other cases, the match may be impossible to achieve: the severest forms of genetic illnesses, such as those caused by nonfunction of essential genes, are incompatible with all envvironments. It is a peculiar modern fallacy to imagine that the definitive solution to illness is to change nature - i.e. genes - when the environment is often more malleable. 
+11. There is nothing about genes or genomes that makes them inherently resistant to chemical and biological manipulation. The standard notion that "most human features are the result of complex gene-environment interactions and most are the result of multiple genes" is absolutely true. But while these complexities constrain the ability to manipulate genes, they leave plenty of opportunity for potent forms of gene modification. Master regulators that effect dozens of genes are common in human biology. An epigenetic modifier may be designed to change the state of hundreds of genes with a single switch. The genome is replete with such nodes of intervention. 
+12. A triangle of considerations - extraordinary suffering, highly penetrant geneotypes, and justifiable interventions - has, thus far, constrained our attempts to intervene on humans. As we loosen the boundaries of this triangle (by changing the standards for "extraordinary suffering" or "justifiable interventions"), we need new biological, cultural, and social precepts to determine which genetic interventions become safe or permissible. 
+13. History repeats itself, in part because the genome repeats itself. And the genome repeats itself, in part because history does. The impulses, ambitions, fantasies, and desires that drive human history are, at least in part, encoded in the human genome. And human history, has, in turn, selected genomes that carry these impulses, ambitions, fantasies, and desires. This self-fulfilling circle of logic is responsible for some of the most magnificent and evocative qualities in our species, but also some of the most reprehensible. It is far too much to ask ourselves to escape the orbit of this logic, but recognizing this inherent circularity, and being skeptical of its overreach, might protect the weak from the will of the strong, and the "mutant" from being annihilated by the "normal".
+
+#### The Immortal Life of Henrietta Lacks (Skloot, Rebecca)
+
+* Date of publication: 2010
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2018 | HeLa cells | Historical narrative; biography | 8 |
+
+#### Bee Time (Winston, Mark L.)
+
+* Date of publication: 2014
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | Bees | Social structure; reflective lessons  | 3 |
+
+#### I Contain Multitudes (Yong, Ed)
+
+* Date of publication: 2016
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | Microbiome | Informative archive | 9 |
+
+<center>
+***Bacillus thuringiensis (Bt)***
+</center>
+A soil-dwelling microbe that produces toxins that can kill insects by effectively perforating their guts. The toxins themselves don't inflict lethal damage, rather the microbiome of inseects (in the gut) are the means through which Bt kills. Microbes pass through the holes created by Bt toxins and invade the bloodstream, which leads to sepsis (systemic inflammation, damage to organs, disruption of blood flow). Farmers have actually exploited this ability since the 1920s by spraying Bt onto crops as a living pesticide. 
+
+<center>
+**Obesity**
+</center>
+Obese people (mice) have different communities of microbes in their guts. Preliminary research has revealed that the condition of obesity can be correlated from the ratio of 2 major groups of bacteria: Bacteroidetes and Firmicutes. In particular, obese people tended to have more Firmicutes and fewer Bacteroidetes in comparison to  healthy individuals. However, more recent data has possibly shown that it is not necessarily the case, and it may be more complicated than that. Another microbe that has been implicated is *Akkermansia muciniphila*, which is one of the most common gut bacteria. This microbe is over 3,000 times more common in healthy versus genetically predisposed mice to obesity. Thus, by extension it may trigger weight loss. Interestingly, it appears to become upregulated as a result of gastric bypass surgery. It is important to understand that the microbiome doesn't replace or contradict the long-understood causes of obesity. 
+<center>
+**Notes**
+</center>
+* Alexander Fleming - British chemist that discovered Penicillin in 1928.
+* Antibiotics decrease diversity of microbiome, which may foster microbial communities that are better at harvesting energy from food (sugars and fats). This can lead to  fatter organisms. 
+    + Farmers have fattened their livestock with low doses of antibiotics since the 1950s. 
+* *Helicobacter pylori* - has been associated with negative effects (stomach ulcers and stomach cancer), as well as beneficial  effects (reduces  the risk of reflux, oeesophageal cancer, and possibly asthma). 
+
+#### Parasite Rex (Zimmer, Carl)
+
+* Date of publication: 2000
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | Parasites | Informative, appreciative account | 6 |
+
+
+### III. Physical sciences
+
+#### what if? Serious Scientific Answers to Absurd Hypothetical Questions (Munrow, Randall)
+
+* Date of publication: 2014
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | Scientific answers to ridiculous  questions | Entertaining hypotheticals | 6 |
+
+It is always interesting getting into the details that may be hidden from plain-sight which can come from simple, silly questions. Some of which become quite complex and even more entertaining when setting the questions in the context of a background of scientific principles. I found some of the questions to be entertaining, while others were so absurd or random that it was difficult to give too many shits about what the answer to the question may be. But overall, it was a very fun, light read.  
+
+#### Proof (Rogers, Adam)
+
+* Date of publication
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | The history of humans in the context of the alcohol that we have come to consume with great delight | Scientific principles behind the process of making alcoholic beverages | 2 |
+
+I think this book would be much better now (2019), now that I have a bit more experience and a more refined understanding of alcohol, in general. It may have been a bit early in order to fully appreciate the book. 
+
+#### Seven Brief Lessons on Physics (Rovelli, Carlo)
+
+* Date of publication
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | Physics | Important topics | 2 |
+
+### IV. Natural sciences
+
+#### A Walk in the Woods (Bryson, Bill)
+
+* Date of publication
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | Adventure | The Appalacian trail | 3 |
+
+While it was definitely an entertaining read, I found that it became a bit stale by the end of the book -- as the initial phase of intruiging experiences, interactions, and events came to be repetitive. 
+
+### V. Social sciences
+
+#### Thinking, Fast and Slow (Kahneman, Daniel)
+
+* Date of publication
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2018 | The human brain and thinking | What drives any decisions, underlying motives, and insights that have been uncovered after years of study | 8 |
+
+Characteristics of System 1
+
+* Generates impressions, feelings, and inclinations; when endorsed by System 2, these become beliefs, attitudes, and intentions.
+* Operates automatically and quickly, with little or no effort, and no sense of voluntary control.
+* Can be programmed by System 2 to mobilize attention when a particular pattern is detected (search).
+* Executes skilled responses and generates skilled intuitions, after adequate training.
+* Creates a coherent pattern of activated ideas in associative memory. 
+* Links a sense of cognitive ease to illusions of truth, pleasant feelings, and reduced vigilance. 
+* Distinguishes the surprising from the normal.
+* Infers and invents causes and intentions.
+* Neglects ambiguity and suppresses doubt.
+* Is biased to believe and confirm.
+* Exaggerates emotional consistency (halo effect).
+* Focuses on existing evidence and ignores absent evidence (WYSIATI - what you see is all there is).
+* Generates a limited set of basic assessments.
+* Represents sets by norms and prototypes, does not integrate.
+* Matches intensities across scales (e.g. size to loudness).
+* Computes more than intended (mental shotgun).
+* Sometimes substitutes an easier question for a difficult one (heuristic).
+* Is more sensitive  to changes than to states (prospect theory).
+* Overweights low probabilities.
+* Shows diminishing sensitivity to quantity (psychophysics).
+* Responds more strongly to losses than gains (loss aversion). 
+* Frames decision problems narrowly, in isolation from one another.
+
+We are pattern-seekers, believers in a coherent world, in which regularities appear not by accident, but as a result of mechanical causality or of someone's intention. We do not expect to see regularity produced by a random process, and when we detect what appears to be a rule, we quickly reject the idea that the process is truly random.
+
+> "'Risk' does not exist 'out there', independent of our minds and culture, waiting to be measured. Human beings have invented the concept of 'risk' to help them understand and cope with the dangers and uncertainties of life. Although these dangers are real, there is no such thing as 'real risk' or 'objective risk'." -- Slovic
+
+Confusing experience with the memory of it is a compelling cognitive illusion -- and it is the substitution that makes us believe a past experience can be ruined. The experiencing self does not have a voice. The remembering self is sometimes wrong, but it is the one that keeps score and governs what we learn from living, and it is the one that makes decisions. What we learn from the past is to maximize the qualities of our future memories, not necessarily of our future experience. This is the tyranny of the remembering self. Odd as it may seem, I am my remembering self, and the experiencing self, who does my living, is like a stranger to me. 
+
+The *focusing illusion*: nothing in life is as important as you think it is when you are thinking about it.
+
+The remembering self's neglect of duration, its exaggerated emphasis on peaks and ends, and its susceptibility to hindsight combine to yield distorted reflections of our actual experience. 
+
+<center>
+**WYSIATI**
+</center>
+
+You cannot help dealing with the limited information you have as if it were  all there is to know. You build the best possible story from the information available to you, and if it is a good story, you believe it. Paradoxically, it is easier to construct a coherent story when you know little, when there are fewer pieces to fit inot the puzzle. Our comforting conviction that the world maks sense rests on a secure foundation: our almost unlimited ability to ignore our ignorance.
+
+**3 heuristics that are employed  in making judgements under uncertainty:**
+
+1. Representativeness, which is usually employed when people are asked to judge the probability that an object or event A belongs to class or process B.
+2. Availability of instances or scenarios, which is often employed when people are asked to assess the frequency of a class or  the plausibility of a particular development. 
+3. Adjustment from an anchor, which is usually employed in numerical prediction when a relevant value is available. 
+
+**Gustav Fechner (1801-1887)**
+
+Fechner was obsessed with the relation of mind and matter. On one side there is a physical quantity that can vary, such as the energy of a light, the frequency of a tone, or an amount of money. On the other side there is a subjective experience of brightness, pitch, or value. Mysteriously, variations of the physical quantity cause variations in the intensity or quality of the subjective experience. 
+
+He proposed a psychophysical law that could relate the subjective quantity in the observer's  mind to the objective quantity in the material world. He proposed that for many dimensions, the function is logarithmic -- which simply means that an increase of stimulus instensity by a given factor (e.g. say 1.5  or 10 times) always yields the same increment on the psychological scale. If raising the energy of the sound from 10 to 100 units of physical energy increases psychological intensity by 4 units, then a further increase of the stimulus intensity from 100 to 1000 will also increase psychological intensity by 4 units. 
+
+
+### VI. Computational sciences
+
+#### The Code Book (Singh, Simon)
+
+* Date of publication
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2018 | Coding | Historical context | 8 |
+
+In Chadwick's account of their work, the Decipherment of Linear B, he writes:
+
+> "Cryptography is a science of deduction nad controlled experiment; hypotheses are formed, tested and often discarded. But the residue which passes the test grows until finally there comes a point when the experiment feels solid ground beneath his feet; his hypotheses cohere, and fragments of sense emerge from their camoflauge. The code 'breaks.' Perhaps this is best defined as the point when the likely leads appear faster then they can be followed up. It is like the initiation of a chain reaction in atomic physics; once the critical threshold is passed, the reaction propagates itself."
+
+### VII. Scientific theory
+
+#### Gödel, Escher, Bach: an Eternal Golden Braid (Hofstafter, Douglas R.)
+
+* Date of publication
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2018 | Consciousness | Strange loops theory | 7 |
+
+* *Epimenides paradox*: "All Cretans are liars."
+* The word "isomorphism" applies when two complex structures can be mapped onto each other, in such a way that to each part of one structure there is a corresponding part in the other structure,  where "corresponding" means that the two parts play similar roles in their respective structures.
+* *Hofstadter's Law*: It always takes longer than you expect, even when you take into account Hofstadter's Law.
+* "My belief is that the explanations of 'eemergent' phenomena in our brains--for instance, ideas, hopes, images, analogies, and finally consciousness and free will--are based on a kind of strange loop, an interaction between levels in which the top level reaches back down towards the bottom level and influences it, while at the same time being itself determined by the bottom level. In other words, a self-reinforcing 'resonance' between different levels--quite like the Henkin sentence which, by merely asserting its own provability, actually becomes provable. The self comes into being at the moment it has the power to reflect itself. 
+
+Douglas R. Hofstadter attempts employ the knowledge of different disciplines - including art, math & logic, music, biology, philosophy, psychology, physics, computer science, and sociology - in such a way that an intimate relationship can be revealed with regard to the understanding of how sentient/conscious organisms could have possibly originated. In particular, he works to construct a plausible explanation as to how consciousness can be the culmination of the sum of parts, which of course represent a collection of inanimate objects.
+
+The breadth of his knowledge in each respective field is amazing given that he was just finishing graduate school at the time of writing the book. In discussing each subject in detail, he creates this complex system in which numerous different ideas and concepts are floating about. The challenge was then to construct them into a relatively cohesive theory that could effectively converge them as a central idea, which I think, from a mathemathical perspective, is best described as Gödel's incompleteness theorem. However, his overall theory (if you will) is likely best-suited when presented in the context of the stratifications that he chose to draw. In particular, he used some of the parallels in fields such as music and mathematics to indicate isomorphisms, or empirical investigation as the primary mechanism by which we strive to understnad nature from. It is important to consider that one of the fundamental issues with viewing these concepts from a scientific-based lens is that it will primarily achieve the progression of knowledge through a series of experiments that allow one to conclude that a certain theory is most likely (with some associated degree of certainty). In other words, this systematic approach operates by incrementally honing in on the *negative space* in regard to finding what the most likely truth is based on those findings. But, this method, will effectively act as an asymptote, as the simple experiments will never be a satisfactory measure to grasp any sense of altruism of the natural world. This is primarily an issue because the scientific investigative system is the primary method on which so many of the concepts are based, and so another leap of synergy is required to hypothetically be able to reach the truth from a series of scientific experiments. 
+
+There are a couple methods used in this book to attempt to discern such a daunting task. 
+
+The first is to allude to the most complex and beautiful process of what we, as humans, are aware of, ourselves. In particular, Hofstadter discusses two aspects of human natur such that they can each provide crucial insights into the central premise, given that we can find a way to disentangle the complexity to a degree that allows us to even understand them. First off is the human brain. This can be stratified into several levels, which may be hierarchical and/or ahierarchical in the sense that we don't really understand how the isomorphic meaning at each level is preserved as it continues on to the next level. But, from creating neural networks, collections or associations of neurons firing in somee cohesive manner due to incoming stimuli is a fascinating topic, and much is still being done to try to understanding the relation of neural network activation to the meaning that is later perceived at the highest levels. That "meaning" may involve the invokation of emotions, intuitions, or the general response to how we can respond to our environment. Each of the levels that begin at a single neuron firing in response to a stimulus and end at a conceptual understanding of the model of reality that is created in one's mind is a very intriguing pathway, and understanding this pathway may ultimately allow us to achieve the capacity of understanding ourselves and to finally provide a rationale for our conscious actions. And, similar to the advantages of the central dogma, having distinct levels may provide a means to introduce specification, complexity, and, eventually solve the sentient aspects that can come from the inanimate. One of the difficulties at this stage likely lies within the fact that there is no clear distinction between different levels. In this case, it may give in to the "strange loops" appearance as Hofstafter perceives it. There is still no way to decipher the meanings of the process; however, this would likely require a problem reductionistic ideology, and then the difficulty lies in how far the reduction needs to extend to before it becomes meaninglessly convoluted. These general ideas can relate to the central dogma, as the architecture of biological organisms allows for epigenetics, further regulation, specification, and specialization to take place. Thus, this probelm may also be approachable from trying to understand the self-referential abilities of DNA. The genome is essentially a comprehensive collection of the chemical data that is required to create a self-reproducing *formal* system (humans) wherein all the hallmarks of the concept of sentience are checked. Because of the self-referential abilities of DNA/RNA/proteins, understnading this biological dogma will also result in the understanding of us as humans. 
+
+Another method of trying to understand the essence of human thinking lies in the topic of artificial intelligence. The logic in this pursuit involves the foundations of inference which can be applied given the creation of a model. In other words, this can be explained by the following: if we are able to create a formal system that has attained a satisfactory level of consciousness to such a degree that any refutes are implausible or irrelevant (even if they may have credibility from a theoretical standpoint) then that model may carry some isomorphism to the manner in which the process is perceive as human thinking. This would assume that, in order to reach that level of sophistication, a similar foundation will be created - referring back to the numerous levels that appear to be present in humans. The primary caveat of this idea lies in the concept described by the incompleteness theorem. A large argument against this achievement is the fact that formal systems are inflexible, rigid systems that follow a set of rules encoded by the programmer (the human brain). This notion would suggest that in order to achieve an artificially intelligent, sentient being, the essence of human intelligence would have to be understood in such a way that it could be explicitely written as a piece of code. Thus, this would presumably represent an impossible challenge because in order to create a formal system that can be completely deemed as conscious, we would need to understand the thinking to such an extent that we could impose our understanding as explicit commands on machines. And referring to what was said in the book, intelligence may only be some unattainable idea because no matter how sophisticated a formal system appears, humans would need to understand it one step better. This would suggest that once some level is reached in terms of creating an "intelligent" system, a new door will open that represents the new bar for obtaining intelligence. This cycle could only progress and continue for a certain period of time, however, because there would likely be some practical limit where either technology or knowledge prevents any further prograssion. 
+
+Philosophically, it may be that the true essence of human thinking is unattainable. This would give credit to the Church/Turing theses, where truth, or even theorem-hood, can never be fully proven in a formal system such as typographical number theory. Our understanding may simply approach some asymptotic barrier that prevents us from ever understanding the true nature of human thinking. However, this rational is likely a bit extreme and there likely exists some intermediate level of achievement where the thinking of a formal system is indistinguishable from that of a common human. But, even then, I think the question is whether people will be fully satisfied with that level of achievement. 
+
+And lastly, just looking into the thought processes that must occur for even the most mundane task is almost infintely more complicated than it appear to be. The amount of subconsious processes that need to happen in order to extract meaning out of a task is incomprehensible. Our thoughts are dependent on a model of reality created in our hands, where incoming stimuli from the environment signal events that only carry meaning given past experience. Without some level of familiarity in how one thing can be related, by association, to other things, we would have no bearing on the interpretation that is constructed by our brains. Our meaning is based on relativity in some sense, which is pervasive throughout all facets of our lives because the way we are wired to think and view the nature of the world around us. 
+
+This is definitely a challenging topic, with some areas ofthe book becoming quite convoluted in the ideas that are suggested, but it's definitely a book that can (and has) had an enormous impact on the outlook in our quest for understanding what makes us human. This book was more of challenging read as it included many topics that I'm not necessarily versed in, so I don't know if I had the breadth of knowledge to really extract all of the ideas he postulated in this book and translate that into something both moving and meaningful. 
+
+#### The Origins of Creativity (Wilson, Edward O.)
+
+* Date of publication
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | Creativity | The evolution of what enabled the human brain to think critically and 'consciously' in the face of the surrounding and ever-fluctuating environment | 5 |
+
+1. The humanities arose from symbolic language, a capacity that singly and dramatically distinguishes our species from all others. Coevolving with the structure of the brain, language freed the mind from the animal to be creative, thence to enter and imagine other worlds infinite in time and space. We were empowered but, as I will show in this first part, we retained the emotions of our ancient primitive ancestors. The combinations composing what we roughly call humanities, is why we are both supremely advanced, and supremely dangerous. 
+2. The humanities, particularly the creative arts and philosophy, continue to lose esteem and support relative to science for two primary reasons. First, their leaders have kept stubbornly within the narrow audiovisual bubble we inherited happenstance from our prehuman ancestors. Second, they have paid scant attention to the reasons why (and not just how) our thinking species acquired its distinctive traits. Thus, unaware of most of the world around us, and shorn of their roots, the humanities remain needlessly static. 
+3. Science and the humanities share the same origin processes of creativity. They can be drawn closer together and widely joined in substance through a more thorough applicaiton of five disciplinaries -- paleontology, anthropology, psychology, evolutionary biology, and neurobiology - bound together by the evolutionary process in heredity and culture. 
+4. Even as our species destroys the natural world at an accelerating rate, nature remains a source of deep love and fear. As we hasten to blanket Earth with a humanized environment, we should -- we must -- pause to consider how and why our relation to nature exists. That degree of self-understanding, as I will suggest next can be achieved only by a blending of science and the humanities. 
+5. The more closely we examine the properties of metaphors and archetypes, the more it becomes obvious that science and the humanities can be blended. In the borderland of new disciplines created, it should also be possible to reinvigorate philosophy and begin a new and more endurable enlightenment. 
+
+> "Knowledge of life obtained through fiction is only possible by another stage of self-consciousness. That is to say, it can only be knowledge of other people's knowledge of life, not all life itself." -- T. S. Eliot
+
+The main premise or message that Wilson is advocating is a more holistic, multi-faceted approach that brings together many fields -- particularly the social sciences such as philosophy -- in order to study the origins of consciousness with the human mind. There were concerns that were presented where, despite the fact that science has progressed at an extraordinary rate, fields such as philosophy and art, which are equally important for evaluating what makes us humans, has become stagnant. This may be due to  our tendencies to anthropomorphize our own species in all regards, creating a division from the rest of the organisms that inhabit Earth. He urges the likelihood that we will never be able to form a suitable answer to the most profound questions of humankind through solely a scientific lens. 
+
+***
+### VIII. Memoirs
+
+* Date of publication: 2018
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2019 | Memoir of Tara Westover | Family affairs; Mormonism; how education was able to provide a self-identity | 8 |
+
+## Fiction
+***
+### I. Fantasy
+
+#### A Game of Thrones (Martin, George R. R.)
+
+* Date of publication: 1996
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | GOT | Book I | 7 |
+
+#### A Clash of Kings (Martin, George R. R.)
+
+* Date of publication: 1998
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | GOT | Book II | 7 |
+
+
+#### A Storm of Swords (Martin, George R. R.)
+
+* Date of publication: 2000
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2016 | GOT | Book III | 7 |
+
+### II. Science fiction
+
+#### Brave New World (Huxley, Aldous)
+
+* Date of publication: 1932
+
+| Date finished   | Topic     | Context of topic    | Rating (1-10 scale)   |
+------------------|-----------|---------------------|-----------------------|
+| 2017 | Futuristic | Dystopian society | 5 |
