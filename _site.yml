@@ -9,6 +9,8 @@ navbar:
       href: about.html
     - text: "Basics"
       href: Basics.html
+    - text: "Reading log"
+      href: Books.html
 output:
   html_document:
     theme: cosmo
