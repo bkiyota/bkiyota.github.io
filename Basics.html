@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -24,6 +24,9 @@
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -104,34 +107,34 @@ button.code-folding-btn:focus {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 51px;
+  padding-top: 45px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 
 .section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 .section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
+  padding-top: 50px;
+  margin-top: -50px;
 }
 </style>
 
@@ -183,20 +186,56 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
 </li>
 <li>
-  <a href="about.html">About</a>
+  <a href="about.html">
+    <span class="fa fa-about"></span>
+     
+    About
+  </a>
 </li>
 <li>
-  <a href="Basics.html">Basics</a>
+  <a href="Books.html">
+    <span class="fa fa-align-right"></span>
+     
+    Reading log
+  </a>
 </li>
-<li>
-  <a href="Books.html">Reading log</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-laptop-code"></span>
+     
+    Coding
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">DataCamp: R courses</li>
+    <li class="dropdown-header">Introduction</li>
+    <li>
+      <a href="Basics.html"></a>
+    </li>
+  </ul>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-user-circle"></span>
+     
+    Personal
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Resume</li>
+  </ul>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -218,54 +257,409 @@ $(document).ready(function () {
 <h2>Introduction</h2>
 <div id="content" class="section level3">
 <h3>Content</h3>
+<p>Some useful notes:</p>
+<ul>
+<li>R is ‘case-sensitive’.</li>
+<li><code>#</code> adds comments.</li>
+<li>Arithmetic in R:
+<ul>
+<li>Addition: <code>+</code></li>
+<li>Subtraction: <code>-</code></li>
+<li>Multiplication: <code>*</code></li>
+<li>Division: <code>/</code></li>
+<li>Exponentiation: <code>^</code></li>
+<li>Modulo: <code>%%</code> (returns the remainder of the division)</li>
+</ul></li>
+<li><code>&lt;-</code> assigns variables</li>
+<li>Basic data types in R:
+<ul>
+<li>Numerics: e.g. <code>4.5</code></li>
+<li>Integers: e.g. <code>4</code></li>
+<li>Logical (Boolean): <code>TRUE</code> or <code>FALSE</code></li>
+<li>Characters: <code>&quot;&quot;</code> or <code>''</code></li>
+</ul></li>
+</ul>
 </div>
 <div id="functions" class="section level3">
 <h3>Functions</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>class()</code></td>
+<td>Base R</td>
+<td>Check the data type of a variable.</td>
+<td><em>variable</em></td>
+<td><code>class(x)</code></td>
+</tr>
+<tr class="even">
+<td><code>c()</code></td>
+<td>Base R</td>
+<td>Combines; creates vector.</td>
+<td>vector elements</td>
+<td><code>c(1, 2, 3, 4)</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="vectors" class="section level2 tabset tabset-fade tabset-pills">
 <h2>Vectors</h2>
 <div id="content-1" class="section level3">
 <h3>Content</h3>
+<p>Vectors are one-dimension arrays that can hold numeric data, character data, or logical data. In other words, vectors represent a simple tool to store data in. You can use square brackets (<code>[ ]</code>) in order to select elements of a vector, matrix, or data frame (indicate the elements to select in the square brackets). For example, <code>poker_vector[2:4]</code> generates a vector with all natural numbers from 2 up to 4. Can also use the names of vector elements instead of their numeric positions, as long as they are denoted between <code>&quot;&quot;</code>.</p>
+<p>Some useful notes:</p>
+<ul>
+<li>Understanding what a given element refers to is essential, thus the names assigned to a particular element is most helpful when it is descriptive to the content that it contains in some intelligible manner.</li>
+<li>The (logical) comparison operators known to R are:</li>
+<li><code>&lt;</code> for less than
+<ul>
+<li><code>&gt;</code> for greater than</li>
+<li><code>&lt;=</code> for less than or equal to</li>
+<li><code>&gt;=</code> for greater than or equal to</li>
+<li><code>==</code> for equal to each other</li>
+</ul></li>
+<li><code>!=</code> not equal to each other (this command tests for elements of the vector if the condition states by the comparison operator is TRUE or FALSE.)</li>
+<li>When you pass a logical vector in square brackets, it will only select the elements that correspond to TRUE.</li>
+</ul>
 </div>
 <div id="functions-1" class="section level3">
 <h3>Functions</h3>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="17%" />
+<col width="22%" />
+<col width="24%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>names()</code></td>
+<td>Base R</td>
+<td>Give a name to the elements of a vector.</td>
+<td><em>variable</em></td>
+<td><code>names(x) &lt;- &quot;x&quot;</code></td>
+</tr>
+<tr class="even">
+<td><code>sum()</code></td>
+<td>Base R</td>
+<td>Calculates sum of all elements of a vector.</td>
+<td><em>vector</em></td>
+<td><code>sum(c(1, 2, 3))</code></td>
+</tr>
+<tr class="odd">
+<td><code>mean()</code></td>
+<td>Base R</td>
+<td>Calculates mean of all elements of a vector.</td>
+<td><em>vector</em></td>
+<td><code>mean(c(1, 2, 3))</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="matrices" class="section level2 tabset tabset-fade tabset-pills">
 <h2>Matrices</h2>
 <div id="content-2" class="section level3">
 <h3>Content</h3>
+<p>A matrix is a 2D collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns.</p>
+<p><strong>Selection of matrix elements:</strong></p>
+<p>Square brackets <code>[]</code> to select one or multiple elements from a matrix and use a comma to separate rows from columns.</p>
+<ul>
+<li>Example: <code>my_matrix[1:3, 2:4]</code> results in a matrix with the data on the rows 1, 2, 3 and columns 2, 3, 4</li>
+<li>Example: <code>my_matrix[, 1]</code> selects all elements of the first column.</li>
+</ul>
+<p><strong>Arithmetic of matrix elements:</strong></p>
+<p>Standard operators like <code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>, etc. work in an element-wise manner on matrices.</p>
+<ul>
+<li>Example: 2 * my_matrix multiplies each element of my_matrix by two.</li>
+</ul>
 </div>
 <div id="functions-2" class="section level3">
 <h3>Functions</h3>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="17%" />
+<col width="22%" />
+<col width="24%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>matrix()</code></td>
+<td>Base R</td>
+<td>Construct a matrix.</td>
+<td><em>variable</em>, byrow, nrow</td>
+<td><code>matrix(1:9, byrow = TRUE, nrow = 3)</code></td>
+</tr>
+<tr class="even">
+<td><code>colnames()</code></td>
+<td>Base R</td>
+<td>Name the columns of a matrix.</td>
+<td><em>matrix</em></td>
+<td><code>colnames(x)</code></td>
+</tr>
+<tr class="odd">
+<td><code>rownames()</code></td>
+<td>Base R</td>
+<td>Name the rows of a matrix.</td>
+<td><em>matrix</em></td>
+<td><code>rownames(x)</code></td>
+</tr>
+<tr class="even">
+<td><code>rowSums()</code></td>
+<td>Base R</td>
+<td>Calculates the totals for each row of a matrix.</td>
+<td><em>matrix</em></td>
+<td><code>rowSums(x)</code></td>
+</tr>
+<tr class="odd">
+<td><code>colSums()</code></td>
+<td>Base R</td>
+<td>Calculates the totals for each row of a matrix.</td>
+<td><em>matrix</em></td>
+<td><code>rowSums(x)</code></td>
+</tr>
+<tr class="even">
+<td><code>cbind()</code></td>
+<td>Base R</td>
+<td>Can add a column or multiple columns to a matrix by merging matrices and/or vectors together by column.</td>
+<td><em>matrices</em></td>
+<td><code>cbind(x, y)</code></td>
+</tr>
+<tr class="odd">
+<td><code>rbind()</code></td>
+<td>Base R</td>
+<td>Can add a row or multiple rows to a matrix by merging matrices and/or vectors together by row</td>
+<td><em>matrices</em></td>
+<td><code>rbind(x, y)</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="factors" class="section level2 tabset tabset-fade tabset-pills">
 <h2>Factors</h2>
 <div id="content-3" class="section level3">
 <h3>Content</h3>
+<p>The term factor refers to a statistical data type used to store categorical variables. The difference between a categorical variable and a statistical variable is that a categorical variable can belong to a limited number of categories. A continuous variable on the other hand, can correspond to an infinite number of values.</p>
+<p>There are two types of categorical variables: a nominal categorical variable and an ordinal categorical variable:</p>
+<ul>
+<li>Nominal variable is a categorical variable without an implied order. It is impossible to say that one is worth more than the other.</li>
+<li>Ordinal variables do have a natural ordering. Consider the categorical variable temperature_vector with the categories: “Low”, “Medium”, “High”.</li>
+</ul>
+<p>Some useful notes:</p>
+<ul>
+<li>Comparing ordered factors: use square brackets <code>[]</code> to select a certain value in a factor. They can then be compared using operators.</li>
+</ul>
 </div>
 <div id="functions-3" class="section level3">
 <h3>Functions</h3>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="17%" />
+<col width="22%" />
+<col width="24%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>factor()</code></td>
+<td>Base R</td>
+<td>Create factors (encodes the vector as a factor to an unordered factor).</td>
+<td><em>data</em>, levels</td>
+<td><code>factor(x)</code></td>
+</tr>
+<tr class="even">
+<td><code>levels()</code></td>
+<td>Base R</td>
+<td>factors with specific factor levels, but sometimes you will want to change the names of these levels for clarity or other reasons (the levels of the factor will automatically be assigned alphabetically).</td>
+<td><em>order of variables</em></td>
+<td>For ordered factors: <code>factor(x, ordered = T, levels = c(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;))</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="data-frames" class="section level2 tabset tabset-fade tabset-pills">
 <h2>Data Frames</h2>
 <div id="content-4" class="section level3">
 <h3>Content</h3>
+<p>A data frame has the variables of a data set as columns and the observations as rows. Utilizing data frames allow you to use data sets with different data types, and they are often involved in working with (extremely) large data sets. Understanding the structure and main elements is very important.</p>
+<p>Some useful notes:</p>
+<ul>
+<li>Both <code>head()</code> and <code>tail()</code> print a top line called the ‘header’, which contains the names of the different variables in your data set.</li>
+</ul>
+<p><strong>Selection of data frame elements:</strong></p>
+<p>Similar to vectors and matrices, select elements from a data frame with the help of square brackets <code>[]</code>. Use a comma to indicate what to select from the rows and the columns, respectively. Can also use the variable names to select columns of a data frame.</p>
+<ul>
+<li>Example: <code>planets_df[1:3, &quot;type&quot;]</code></li>
+<li>If you want to select all elements of a variable, you can use the short-cut, which Is the <code>$</code> sign.
+<ul>
+<li>Example: <code>planets_df[, 3]</code> == <code>planets_df[, &quot;diameter&quot;]</code> == <code>planets_df$diameter</code></li>
+<li>To select certain values (e.g. planets with rings), use <code>planets_df[rings_vector,  ]</code>. This selects a subset from a data frame based on whether or not a certain condition was true (rings or no rings), pulling out the relevant data.</li>
+</ul></li>
+</ul>
 </div>
 <div id="functions-4" class="section level3">
 <h3>Functions</h3>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="17%" />
+<col width="22%" />
+<col width="24%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>head()</code></td>
+<td>Base R</td>
+<td>Enables you to show the first observations of a data frame (rows).</td>
+<td><em>data frame</em></td>
+<td><code>head(x)</code></td>
+</tr>
+<tr class="even">
+<td><code>tail()</code></td>
+<td>Base R</td>
+<td>Prints out the last observations in your data set.</td>
+<td><em>data frame</em></td>
+<td><code>tail(x)</code></td>
+</tr>
+<tr class="odd">
+<td><code>str()</code></td>
+<td>Base R</td>
+<td>Shows the structure of the data.</td>
+<td><em>data frame</em></td>
+<td><code>str(x)</code></td>
+</tr>
+<tr class="even">
+<td><code>data.frame()</code></td>
+<td>Base R</td>
+<td>Constructs a data frame by integrating the vectors to become different columns.</td>
+<td><em>different variables</em></td>
+<td><code>data.frame(x, y, z)</code></td>
+</tr>
+<tr class="odd">
+<td><code>subset()</code></td>
+<td>Base R</td>
+<td>Selects from a subset from the data frame.</td>
+<td><em>dataset</em>, subset (provides the necessary information and conditions for R to select the correct subset)</td>
+<td><code>subset(my_df, subset = some_condition)</code></td>
+</tr>
+<tr class="even">
+<td><code>order()</code></td>
+<td>Base R</td>
+<td>Sort data according to a certain variable in the data set. Gives you the ranked position of each element when it is applied on a variable such as a vector.</td>
+<td><em>dataset</em></td>
+<td><code>a[order(a)]</code> this would re-shuffle a vector according to <code>a</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="lists" class="section level2 tabset tabset-fade tabset-pills">
 <h2>Lists</h2>
 <div id="content-5" class="section level3">
 <h3>Content</h3>
+<p>A list allows you to gather a variety of objects under one name, in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc… (it’s not required that the objects be related in any way).</p>
+<p>Some useful notes:</p>
+<ul>
+<li>Creating a named list: <code>my_list &lt;- list(your_comp1, your_comp2) &gt; names(my_list) &lt;- c(&quot;name1&quot;, &quot;name2&quot;)</code>.</li>
+<li>Selecting elements from a list:
+<ul>
+<li>One way to select a component is using the numbered position of that component
+<ul>
+<li>Example: <code>my_list[[1]]</code> + Note: to select elements from vectors, you use single square brackets (don’t mix them up)</li>
+</ul></li>
+<li>Can also use the $ sign: <code>shining_list$reviews</code></li>
+<li>Selecting specific elements out of these components: <code>shining_list[[&quot;actors&quot;]][1] == shining_list$actors[1]</code>.</li>
+</ul></li>
+<li>Adding to a list:
+<ul>
+<li>To conveniently add elements to lists, you can use the <code>c()</code> function.</li>
+<li>Example: <code>ext_list &lt;- c(my_list, my_val)</code></li>
+<li>This will simply extend the original list with the component</li>
+<li>To give the new list item a name, just add the name as you did before: E.g. <code>ext_list &lt;- c(my_list, my_name = my_val)</code>.</li>
+</ul></li>
+</ul>
 </div>
 <div id="functions-5" class="section level3">
 <h3>Functions</h3>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="17%" />
+<col width="22%" />
+<col width="24%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>list()</code></td>
+<td>Base R</td>
+<td>Creates a list.</td>
+<td><em>different objects</em></td>
+<td><code>my_list &lt;- list(my_vector, my_matrix, my_df)</code></td>
+</tr>
+</tbody>
+</table>
 <hr />
 </div>
 </div>

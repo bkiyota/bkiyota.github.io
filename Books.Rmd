@@ -6,6 +6,8 @@ output:
     toc: true
     toc_float: true
     toc_depth: 4
+    theme: yeti
+    highlight: textmate
 ---
 
 # Genres {.tabset .tabset-fade .tabset-pills}

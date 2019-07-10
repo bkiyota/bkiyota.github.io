@@ -3,6 +3,8 @@ title: "Basics of R Programming Language"
 output:
   html_document:
     df_print: paged
+    theme: yeti
+    highlight: textmate
 ---
 
 ***
@@ -13,36 +15,165 @@ output:
 
 ### Content
 
+Some useful notes:
+
+* R is 'case-sensitive'.
+* `#` adds comments.
+* Arithmetic in R:
+    + Addition: `+`
+    + Subtraction: `-`
+    + Multiplication: `*`
+    + Division: `/`
+    + Exponentiation: `^`
+    + Modulo: `%%` (returns the remainder of the division)
+* `<-` assigns variables
+* Basic data types in R:
+    + Numerics: e.g. `4.5`
+    + Integers: e.g. `4`
+    + Logical (Boolean): `TRUE` or `FALSE`
+    + Characters: `""` or `''`
+
 ### Functions
 
+|   Function   |   Package   |   Explanation   |   Key arguments   |   Example  | 
+|--------------|-------------|-----------------|-------------------|-------------|
+| `class()` | Base R | Check the data type of a variable. | *variable* | `class(x)` | 
+| `c()` | Base R | Combines; creates vector. | vector elements | `c(1, 2, 3, 4)` |
+ 
 ## Vectors {.tabset .tabset-fade .tabset-pills}
 
 ### Content
 
+Vectors are one-dimension arrays that can hold numeric data, character data, or logical data. In other words, vectors represent a simple tool to store data in. You can use square brackets (`[ ]`) in order to select elements of a vector, matrix, or data frame (indicate the elements to select in the square brackets). For example, `poker_vector[2:4]` generates a vector with all natural numbers from 2 up to 4. Can also use the names of vector elements instead of their numeric positions, as long as they are denoted between `""`. 
+
+Some useful notes:
+
+* Understanding what a given element refers to is essential, thus the names assigned to a particular element is most helpful when it is descriptive to the content that it contains in some intelligible manner.
+* The (logical) comparison operators known to R are:
+  + `<` for less than
+	+  `>` for greater than
+	+ `<=` for less than or equal to
+	+ `>=` for greater than or equal to
+	+ `==` for equal to each other
+  + `!=` not equal to each other (this command tests for elements of the vector if the condition states by the comparison operator is TRUE or FALSE.)
+* When you pass a logical vector in square brackets, it will only select the elements that correspond to TRUE. 
+
 ### Functions
+
+|   Function   |   Package   |   Explanation   |   Key arguments   |   Example  | 
+|--------------|-------------|-----------------|-------------------|-------------|
+| `names()` | Base R | Give a name to the elements of a vector. | *variable* | `names(x) <- "x"` |
+| `sum()` | Base R | Calculates sum of all elements of a vector. | *vector* | `sum(c(1, 2, 3))` |
+| `mean()` | Base R | Calculates mean of all elements of a vector. | *vector* | `mean(c(1, 2, 3))` |
 
 ## Matrices {.tabset .tabset-fade .tabset-pills}
 
 ### Content
 
+A matrix is a 2D collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns. 
+
+**Selection of matrix elements:**
+
+Square brackets `[]` to select one or multiple elements from a matrix and use a comma to separate rows from columns.
+
+* Example: `my_matrix[1:3, 2:4]` results in a matrix with the data on the rows 1, 2, 3 and columns 2, 3, 4
+* Example: `my_matrix[, 1]` selects all elements of the first column.
+
+**Arithmetic of matrix elements:**
+
+Standard operators like `+`, `-`, `/`, `*`, etc. work in an element-wise manner on matrices.
+
+* Example: 2 * my_matrix multiplies each element of my_matrix by two.
+
 ### Functions
  
+|   Function   |   Package   |   Explanation   |   Key arguments   |   Example  | 
+|--------------|-------------|-----------------|-------------------|-------------|
+| `matrix()` | Base R | Construct a matrix. | *variable*, byrow, nrow | `matrix(1:9, byrow = TRUE, nrow = 3)` |
+| `colnames()` | Base R | Name the columns of a matrix. | *matrix* | `colnames(x)` |
+| `rownames()` | Base R | Name the rows of a matrix. | *matrix* | `rownames(x)` |
+| `rowSums()` | Base R | Calculates the totals for each row of a matrix. | *matrix* | `rowSums(x)` |
+| `colSums()` | Base R | Calculates the totals for each row of a matrix. | *matrix* | `rowSums(x)` |
+| `cbind()` | Base R | Can add a column or multiple columns to a matrix by merging matrices and/or vectors together by column. | *matrices* | `cbind(x, y)` |
+| `rbind()` | Base R | Can add a row or multiple rows to a matrix by merging matrices and/or vectors together by row | *matrices* | `rbind(x, y)` |
+
 ## Factors {.tabset .tabset-fade .tabset-pills}
 
 ### Content
 
+The term factor refers to a statistical data type used to store categorical variables. The difference between a categorical variable and a statistical variable is that a categorical variable can belong to a limited number of categories. A continuous variable on the other hand, can correspond to an infinite number of values. 
+
+There are two types of categorical variables: a nominal categorical variable and an ordinal categorical variable:
+
+* Nominal variable is a categorical variable without an implied order. It is impossible to say that one is worth more than the other.
+* Ordinal variables do have a natural ordering. Consider the categorical variable temperature_vector with the categories: "Low", "Medium", "High".
+
+Some useful notes: 
+
+* Comparing ordered factors: use square brackets `[]` to select a certain value in a factor. They can then be compared using operators.
+
 ### Functions
+
+|   Function   |   Package   |   Explanation   |   Key arguments   |   Example  | 
+|--------------|-------------|-----------------|-------------------|-------------|
+| `factor()` | Base R | Create factors (encodes the vector as a factor to an unordered factor). | *data*, levels | `factor(x)` |
+| `levels()` | Base R | factors with specific factor levels, but sometimes you will want to change the names of these levels for clarity or other reasons (the levels of the factor will automatically be assigned alphabetically). | *order of variables* | For ordered factors: `factor(x, ordered = T, levels = c("A", "B", "C"))` |
 
 ## Data Frames {.tabset .tabset-fade .tabset-pills}
 
 ### Content
 
+A data frame has the variables of a data set as columns and the observations as rows. Utilizing data frames allow you to use data sets with different data types, and they are often involved in working with (extremely) large data sets. Understanding the structure and main elements is very important.
+
+Some useful notes:
+
+* Both `head()` and `tail()` print a top line called the 'header', which contains the names of the different variables in your data set.
+
+**Selection of data frame elements:**
+
+Similar to vectors and matrices, select elements from a data frame with the help of square brackets `[]`. Use a comma to indicate what to select from the rows and the columns, respectively. Can also use the variable names to select columns of a data frame.
+
+* Example: `planets_df[1:3, "type"]`
+* If you want to select all elements of a variable, you can use the short-cut, which Is the `$` sign.
+    + Example: `planets_df[, 3]` == `planets_df[, "diameter"]` == `planets_df$diameter`
+    + To select certain values (e.g. planets with rings), use `planets_df[rings_vector,  ]`. This selects a subset from a data frame based on whether or not a certain condition was true (rings or no rings), pulling out the relevant data.
+
 ### Functions
+ 
+|   Function   |   Package   |   Explanation   |   Key arguments   |   Example  | 
+|--------------|-------------|-----------------|-------------------|-------------|
+| `head()` | Base R | Enables you to show the first observations of a data frame (rows). | *data frame* | `head(x)` |
+| `tail()` | Base R | Prints out the last observations in your data set. | *data frame* | `tail(x)` |
+| `str()` | Base R | Shows the structure of the data. | *data frame* | `str(x)` |
+| `data.frame()` | Base R | Constructs a data frame by integrating the vectors to become different columns. | *different variables* | `data.frame(x, y, z)` |
+| `subset()` | Base R | Selects from a subset from the data frame. | *dataset*, subset (provides the necessary information and conditions for R to select the correct subset) | `subset(my_df, subset = some_condition)` |
+| `order()` | Base R | Sort data according to a certain variable in the data set. Gives you the ranked position of each element when it is applied on a variable such as a vector. | *dataset* | `a[order(a)]` this would re-shuffle a vector according to `a` | 
  
 ## Lists {.tabset .tabset-fade .tabset-pills}
 
 ### Content
 
+A list allows you to gather a variety of objects under one name, in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc… (it's not required that the objects be related in any way). 
+
+Some useful notes: 
+
+* Creating a named list: `my_list <- list(your_comp1, your_comp2) > names(my_list) <- c("name1", "name2")`.
+* Selecting elements from a list: 
+    + One way to select a component is using the numbered position of that component
+        + Example: `my_list[[1]]`
+				+ Note: to select elements from vectors, you use single square brackets (don't mix them up)
+    + Can also use the $ sign: `shining_list$reviews`
+    + Selecting specific elements out of these components: `shining_list[["actors"]][1] == shining_list$actors[1]`.
+* Adding to a list: 
+    + To conveniently add elements to lists, you can use the `c()` function.
+    + Example: `ext_list <- c(my_list, my_val)`
+    + This will simply extend the original list with the component
+    + To give the new list item a name, just add the name as you did before: E.g. `ext_list <- c(my_list, my_name = my_val)`.
+
 ### Functions 
+
+|   Function   |   Package   |   Explanation   |   Key arguments   |   Example  | 
+|--------------|-------------|-----------------|-------------------|-------------|
+| `list()` | Base R | Creates a list. | *different objects* | `my_list <- list(my_vector, my_matrix, my_df)` |
 
 ***

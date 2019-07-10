@@ -2,3 +2,8 @@
 title: "About my website"
 ---
 
+The creation of this website, which is currently being produced using R Markdown, is a [hopeful] beginning to my descent into the world of computer science and programming languages. Furthermore, it will contain general phenomena or findings that I find interesting enough to assign some form of text to. 
+
+As of now, I figured it would be decent place to pop-in some documents that I am continually updating or re-evaluating, as well as some of the new things that I pick up along the way. 
+
+

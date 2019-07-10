@@ -4,14 +4,26 @@ navbar:
   title: "bkiyota"
   left:
     - text: "Home"
+      icon: fa-home
       href: index.html
     - text: "About"
+      icon: fa-about
       href: about.html
-    - text: "Basics"
-      href: Basics.html
     - text: "Reading log"
-      href: Books.html
+      icon: fa-align-right
+      href: Books.html    
+    - text: "Coding"
+      icon: fa-laptop-code
+      menu:
+        - text: "DataCamp: R courses"
+        - text: "Introduction"
+        - href: Basics.html
+  right: 
+    - text: "Personal"
+      icon: fa-user-circle
+      menu:
+        - text: "Resume"
+          icon: fa-file
 output:
   html_document:
-    theme: cosmo
-    highlight: textmate
+    theme: yeti
