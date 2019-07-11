@@ -2,4 +2,12 @@
 title: "Home"
 ---
 
+<script>
+   $(document).ready(function() {
+     $head = $('#header');
+     $head.prepend('<img src=\"Figures/Header.png\" style=\"float: center;width: 800px;\"/>')
+   });
+</script>
+
 Data science, computational biology, statistics, and more fun!
+
