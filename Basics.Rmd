@@ -46,7 +46,7 @@ output:
 
 ## Introduction {.tabset .tabset-fade .tabset-pills}
 
-### <span style="color:darkseagreen">Content</span>
+### Content
 
 Some useful notes:
 
@@ -72,19 +72,6 @@ Some useful notes:
 |--------------|-------------|-----------------|-------------------|-------------|
 | `class()` | Base R | Check the data type of a variable. | *variable* | `class(x)` | 
 | `c()` | Base R | Combines; creates vector. | vector elements | `c(1, 2, 3, 4)` |
-
-```{r, eval=FALSE}
-.btn {
-    border-width: 0 0px 0px 0px;
-    font-weight: normal;
-    text-transform: ;
-}
-.btn-default {
-    color: #2ecc71;
-    background-color: #ffffff;
-    border-color: #ffffff;
-}
-```
  
 ## Vectors {.tabset .tabset-fade .tabset-pills}
 
@@ -223,3 +210,287 @@ Some useful notes:
 | `list()` | Base R | Creates a list. | *different objects* | `my_list <- list(my_vector, my_matrix, my_df)` |
 
 ***
+
+# Intermediate R 
+
+## Conditionals and Controls Flow {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+Relational operators - see how one object relates to another (can compare all kinds of forms of data):
+
+* Equality: `==`
+* Inequality: `!=`
+* Less than: `<`
+* Greater than: `>`
+
+Note that for character strings, R uses alphabetical order to sort character strings in a way such that TRUE coerces to 1 and FALSE coerces to 0. 
+
+Logical operators:
+
+* *AND* operator (`&`) - only TRUE if both are TRUE; FALSE otherwise.
+    + `&&` - the biggest difference being when the operations are used with vectors - only examines the first element of a vector. 
+* *OR* operator (`|`) - Only one of the logical values that it uses should be equal to TRUE for the entire R operation to evaluate it as TRUE (FALSE if both are FALSE).
+    + `||` - the biggest difference being when the operations are used with vectors - only examines the first element of a vector. 
+* *NOT* operator (`!`) - negates the logical value it's used in (e.g. !TRUE evaluates as FALSE). 
+
+**Conditional statements:**
+
+1. `if` statements take a condition, which, if evaluates as TRUE, the argument associated with the `if` statement is executed. No printout will occur if the condition is not met. 
+2. `else` statements are conditional statements that do not need an explicit condition, so it needs to be used together with an `if` statement. The else condition gets executed whenever the `if` statement is not satisfied (its corresponding code is simply run if all of the preceding conditions in the control structure are FALSE).
+3. `else if` statments comes in between the `if` and `else` statements. You can add as many `else if` statements as you'd like. R executes the first statement that evaluates as TRUE, and ignores the rest of the control structure
+
+Some useful notes:
+
+* Terminology:
+    + *Inclusive* - can be equal to or greater than/less than.
+    + *Exclusive* - only greater than/less than.
+    
+
+### Functions
+
+
+if (condition) {
+  expression
+}
+
+
+if (condition) {
+  expression_1
+} else {
+  expression_2
+}
+
+* Example: x <- 5. if(x < 0)  {
+				              print("x is a negative number") 
+			             }  else  {
+				              print("x is either a positive number or zero")
+                   }
+
+if (condition_1) {
+  expression_1
+} else if (condition_2) {
+  expression_2
+} else {
+  expression_3
+}
+
+## Loops {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+1. `while` loops are similar to the `if` statement in that it will execute the code inside if the condition is TRUE. The `while` loop will continue to execute the code over and over again as long as the condition is TRUE. Remember that the condition part of this recipe should become FALSE at some point during the execution (otherwise the while loop will go on indefinitely). 
+2. `for` loops can be used for vectors, as well as lists, in the exact same manner. This version is more concise and easy to read, but it does not give access to all looping information. 
+
+Some useful notes:
+
+* The **break statement** simply breaks out of the `while` loop; when R finds it, it abandons the currently-activated `while` loop. Just like in `while` loops, the break statement in `for` loop simply stops the execution of the code and abandons the for loop altogether. Example: to stop the loop as soon as a city with 6 characters is encountered, use: for(city in cities)  { if(nchar(city) == 6)  { break } print(city) }
+    + Example: ctr <- 1. while(ctr <= 7) { if(ctr %% 5 == 0) { break } print(paste("ctr is set to", ctr)) ctr <- ctr + 1 }
+* The **next statement** also alters the flow of the flow loop. The next statement skips the remainder of the code inside the for loop and proceeds to the next actuation.     + Example: for(city in cities)  { if(nchar(city) == 6)  { next } print(city) }
+    + As soon as next is encountered, the print city part is not processed and the for loop is continued.
+
+### Functions
+
+while (condition) {
+  expression
+}
+
+* Example: ctr <- 1. while (ctr <= 7) { print(paste("ctr is set to", ctr)) ctr <- ctr + 1}
+    + The line of code to increment the `ctr` is crucial (it will continue to execute the code indefinitely, so you must manually stop the code using (`control+C`)). Always make sure the while loop will stop at some point
+    
+for(variable in sequence) {
+  expression
+}
+
+* Example: cities <- c("New York", "Paris", "London", "Tokyo", "Rio de Janeiro", "Cape Town")
+    + for(city in cities)  {
+				   print(city)
+				}
+        + This version is more concise and easy to read, but it does not give access to all looping information.
+				+ If wanted to give information on the city's position inside the vector in addition to simply printing out the city's name
+    + We can manually create a looping index ourselves 
+    + for(i in 1:length(cities))  {
+			  print(city)
+			}
+        + We lose the city variable, so must change the contents of the looping structure as well.
+    + We can then have more control in adding more into the loop
+        + for(i in 1:length(cities))  {
+					print(paste(cities[i], "is on position", i, "in the cities vector."))
+					}. Harder to read and write, but more versatile (gives you all the information you may need).
+
+Note: you need double square brackets [[]] to select the elements in a list, compared to a vector
+
+## Functions {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+A function generally serves a particular need, or solves a particular problem. The **black box principle**: you give an input to the black box, which is then processed, and it returns an output.
+
+**R packages:**
+
+Functions such as `mean()`, `list()`, and `sample()` are a part of R packages, which are loaded onto the R session. The `mean()`, `list()`, and `sample()` functions are part of the base package, which contains the basic functionality to use R. The ggvis package, for example, is a package used for data visualization. Packages of code, data, documentation and tests that are easy to share with others.
+
+**Installing packages:**
+
+Base packages areautomatically installed, whereas the ggvis package, for example, is not automatically installed. Install the package in R: install.packages("ggvis"). This function goes to the Comprehensive R Archive Network (CRAN), which is a repository where thousands of packages are available. The function downloads the package file and installs the package on your system. 
+
+**Load packages:** 
+
+Loading of the package is required to actually use the packages once downloaded.
+
+* Load package = attach to search list 
+
+The search list is a list of packages and environments that R looks through to find a variable or function you want to use. Can use the `search()` function to look at the list.
+
+Load packages with the `library()` command to access the package's functionality. It takes the name of the command and adds the function to the search list. The `require()` function also loads packages into the R session. The only difference appears when trying to install a package not yet installed. 
+
+Some useful notes:
+
+* For information on what a function does, and how it should be used, you can look up the documentation of the function using the R function (for example, for the standard deviation: `help(sd)` == `?sd`). This will provide all relevant details such as description, usage, and arguments. 
+* `na.rm` argument: a logical value; indicating whether or not missing values should be removed. If this argument is FALSE by default, it would indicate by default that missing values (i.e. NA's) will not be removed. If there are missing values that must be removed: `sd(values, TRUE)`.
+* R matches arguments by position or by name.
+* Some functions have default values that can be overridden.
+* Function scoping: variables that are defined inside a function are not accessible outside that function.
+* R passes arguments by value: an R function cannot change the variable that you input to that function. The objects you pass to a function can never change unless you do an explicit experiment.
+
+### Functions
+
+|   Function   |   Package   |   Explanation   |   Key arguments   |   Example  | 
+|--------------|-------------|-----------------|-------------------|-------------|
+| `sd()` | Base R | Calculates the standard deviation of a dataset. | *variables* | `sd(c(1, 5, 6, 7))` | 
+| `args()` | Base R | Learn about the arguments of a function without having to read through the entire documentation | *function* | `args(mean)` |
+| `mean()` | Base R | Computes the arithmetic mean. | data, ..., trim, na.rm | mean(x) |
+| `abs()` | Base R | Absolute differences between `x - y`. | x, y | `abs(x, y)` |
+| `return()` | Base R | Explicitly state the return value. | ... | `y <- 3 * x`, `return(y)` |
+| `install.packages()` | Base R | Install packages. | package name | `install.packages(ggvis)` | 
+| `search()` | Base R | Search list is a list of packages and environments that R looks through to find a variable or function you want to use. | variable or function | -- |
+| `library()` | Base R | Load packages | package name | `library(tidyverse)` |
+
+## The Apply family {.tabset .tabset-fade .tabset-pills}
+
+### Content
+
+The output of `lapply()` is a list, the same length as `x`, where each element is the result of applying FUN on the corresponding element x. It always returns a list, irrespective of the data structure. The function can return R objects of different classes, but lists are necessary to store heterogeneous content.
+
+**Anonymous functions: **
+
+* It is perfectly possible to not give the function a name: `triple <- function(x)  {3 * x}`
+* Anonymous function with the same implementation: `function(x)  {3 * x}`
+
+Apply functions that return NULL: Using the str() function in lapply() will return NULL: lapply(list(1, "a", TRUE), str). On the other hand, calling str(TRUE) on its own prints only the structure of the logical values to the console, not NULL. The str() function uses invisible() behind the scenes, which returns an invisible copy of the return value, NULL in this case. This prevents it from being printed when the result of str() is not assigned.
+
+**sapply** - short for "simplify apply", it calls lapply to apply the function over each element of the vector or a matrix, and then uses the simplify an array function to convert the list lapply generated to an array. The sapply function will also provide names to the vector (can exclude the names by setting the optional argument to FALSE - E.g. `sapply(cities, nchar, USE.NAMES = FALSE)` - USE.NAMES is TRUE by default). 		○ There are cases in which the function you want to apply does not always return a vector of the same length at all times (simplification to a vector or matrix doesn’t make sense). In this case the simplification will remain a list. The `sapply()` function does not simplify lists of NULLs. This is because the 'vector-version' of a list of NULLs would simply be a NULL, which is no longer a vector with the same length as the input.
+
+**vapply**
+
+Recap of this chapter:
+* The `lapply()` function allows you to avoid for loops and apply a function over list or vector. The output list is the same length as the input list. Many cases in which the lists can be simplified into an array.
+* R provides an `sapply()` function, which will try to convert a list of elements the code generates into an array. If this is not possible, `sapply()` returns the same list that `lapply()` generates.
+
+The `vapply()` function is quite similar to `sapply()`. It will similarly try to convert the `lapply()` function, and then tries to simplify the results. When using `vapply()`, you must explicitly state what the type of the return value will be (output format). 
+
+* The FUN.VALUE argument should be a general template for the return value of FUN, the function you want to apply over the input, x. Must think of what the function will return:
+  + Numeric
+  + Character
+  + Logical
+
+The `vapply()` function is safer than `sapply()` if you want the simplified response that `lapply()` generates. `vapply()` can be considered a more robust version of `sapply()`, because you explicitly restrict the output of the function you want to apply. The USE.NAMES argument tries to generate a named array if possible, by default.
+
+**Regular Expressions:** 
+
+Sequence of (meta)characters that form a search pattern, which can be used to match strings. Can be used to check whether certain patterns exist, to replace these patterns with other elements, or to extract certain patterns out of a string.
+
+* \\s: match a space.
+* The "s" is normally a character, escaping it with (\\) makes it a meta-character.
+* [0-9]+: match the numbers 0 to 9, at least once (+).
+* ([0-9]+): The parentheses are used to make parts of the matching string available to define the replacement.
+    + The \\1 in the replacemetn argumetn of sub() gets set to the string that is captured by the regular expression [0-9]+. Selects the entire number that comes before the word specified in the string, and the entire match gets replaced by this number because of the \\1 that reference to the content inside the parentheses.
+
+**Formatting dates:**
+
+* %A = weekday (e.g. Wednesday)
+* %a = abbreviated weekday (e.g. Wed)
+* %B = month (e.g. December)
+* %b = abbreviated month (Dec)
+* E.g. The following R commands will all create the same Date object 
+    + as.Date("1982-01-13")
+    + as.Date("Jan-13-82", format = %b-%d-%y")
+    + as.Date("13  January, 1982, format = "%d  %B, %Y")
+* Can convert dates to character strings that use a different date notation using the format() function.
+    + E.g. today <- Sys.Date()
+					        format(Sys.Date(), format = "%d  %B,  %Y")
+					        [1] "07  July, 2017"
+					        format(Sys,Date(), format = "Today is a %A!")
+					        [1] "Today is a Friday!"
+* Create POSIXct objects. To convert a string denoting an exact time, the function as.POSIXct() can be used (e.g. as.POSIXct("1971-05014   11:25:15")).
+
+**Formatting times:**
+
+* %H = hours as a decimal number (00-23)
+* %I = hours as a decimal number (01-12)
+* %M = minutes as a decimal number
+* %S = seconds as a decimal number
+* %T = shorthand notation for the typical format   %H:%M:%S
+* %p = AM/PM indicator 
+
+For a full list of conversion symbols, consult the strptime documentation to the console: `?strptime`.
+
+> Default format for as.POSIXct(): %Y-%m-%d   %H:%M:%S
+
+* Date arithmetic 
+    + Incrementing a date by one (i.e. my_date + 1) will change the date by one day: 
+my_date <- as.Date("1971-05-14")
+my_date2 <- as.Date("1998-09-29")  
+my_date2 - my_date
+[1] Time difference of 10000 days
+
+POSIXct arithmetic: computations happen in the exact same fashion as date arithmetic. The only difference is that the time unit of POSIXct  is not a day as for date objects, but is a second. Incrementing a POSIXct object by one will increment seconds by 1. For any time difference, R will automatically display an easy to interpret time difference. Under the hood (arithmetic): R represents dates and times as simple numerics. The date object is simply a more advanced representation of the number of days since the first date specified (1970-01-01). January 1, 1970 is the common origin representing times and dates in a wide range of programming languages for no particular reason (completely arbitrary). If you were to unclass the date of "1971-05-14", using the `unclass()` function, thus converting it from a date to a numeric, 498 will be the output 498 days from January 1, 1970.. Unclassing a POSIXct object will provide a numeric that is the difference from January 1, 1970, 00:00:00 (midnight).
+		
+Dedicated R Packages for date and time:
+
+1. lubridate
+2. zoo
+3. xts
+
+Some useful notes: 
+
+* In combination with the `rev()` function, which reverses elements in a data structure, we could create a new version of a list that contains the same data in a different order. The `rev()` function first reverses the list, placing the in effect vector first, and the log value, TRUE, last. Then append concatenates the vector and its reversed version to create a list double the length of the original list.
+* Good identifiers for emails addresses
+    + @ sign, because a valid email must contain an at-sign
+    + .*, which makes any character (.) zero or more times (*)
+    +  Both the dot and the asterisk are meta-characters
+    +  Any character that is matched zero or more times 
+    +  \\.edu$, to match the ".edu" part of the email at the end of the string 
+        + The \\ part escapes the dot (tells R that you want to use the dot as an actual character)/
+
+### Functions
+
+|   Function   |   Package   |   Explanation             |   Key arguments   |   Example   | 
+|--------------|-------------|---------------------------|-------------------|-------------|
+| `lapply()` | Base R | takes a vector or a list `x`, and applies the function FUN to each of its members| x, FUN, ... | `multiply <- function(x factor)  { x * factor } lapply(list(1, 2, 3), multiply, factor = 3)` | 
+| `unlist()` | Base R | Return code to the form of a vector. | list | `unlist(list1)` |
+| `tolower()` | Base R | Simply returns the strings with the characters in lowercase. | object | -- | 
+| `sapply()` | Base R | calls lapply to apply the function over each element of the vector or a matrix and generates array. | `sapply(x, FUN, …)` |
+| `identical()` | Base R | Compare variables. | variables | -- |
+| `vapply()` | Base R | Similar to `sapply()`, but you must explicitely state output format. | x, FUN, FUN.VALUE, …, USE.NAMES = TRUE | vapply(x, FUN, FUN.VALUE, …, USE.NAMES = TRUE)
+| `round()` | Base R | Rounds the input to whole integers. | dataset | -- |
+| `seq()` | Base R | Generates a sequence of numbers. | start, end, by (sets increment value) | `seq(1, 10, by = 2)` |
+| `rep()` | Base R | Ability to replicate its input, which typically is a vector or a list. | sequence, times, each | `rep(c(8, 6, 4, 2), times = 2)` [1]  8   6   4   2   8   6   4   2 or `rep(c(8, 6, 4, 2), each = 2)` [1]  8   8   6   6   4   4   2   2   |
+| `sort()` | Base R | Sorting an input vector (can be used on numerical values, character, or logical vectors). | decreasing, dataset | `sort(c(8, 6, 4, 2, 8, 6, 4, 2), decreasing = TRUE)` [1]  8   8   6   6   4   4   2   2 |
+| `is.*()` | Base R | Allows you to check the type of your data structure (returning a logical). | object | `is.list(li)` [1] TRUE | 
+| `as.*()` | Base R | Allows you to convert vectors into lists (to convert a list into a vector, use the `unlist()` function). | object | `as.list(li)` | 
+| `append()` | Base R | Allows you to add elements to a vector or list in a very readable way. | object, element | -- |
+| `rev()` | Base R | Reverses elements in a data structure. | data structure | -- |
+| `grepl()` | Base R | Returns TRUE when a pattern is found in the corresponding character string; E.g. it can identify all names containing the letter "a" in a vector of animal names. If you wanted to select only for animal names that start with an "a", can use `^a`. The `$` sign allows for selection of the last letter in the name. | pattern = <regex>, x = <string> | `grepl(pattern = "^a", x = animals)` |
+| `grep()` | Base R | Returns a vector of the indices of the elements of x that yield a match. In other words, it returns of vector of indices of the character strings that contains the pattern. Gives the indices of the TRUE elements that `grepl()` returns. | -- | -- |  
+| `sub()` | Base R | If inside the character vector x, the regular expression pattern is found, the matching element(s) will be replaced with the replacement argument. | sub(pattern = <regex>, replacement = <str>, x = <str>) | `sub(pattern = "a", replacement = "o", x = animals)` All animals with an "a" in their name will have it replaced by an "o" (if there are two "a's" only the first one will be replaced)
+The sub function only looks for the first match in the string. |
+| `gsub()` | Base R | Allows for the replacement of every single element within a string. Can use the `|` meta-character to match for different options. | -- | -- |
+| `Sys.Date()` | Base R | Will tell us the "Year-Month-Day". | NA | -- |
+| `Sys.time()` | Base R | Will provide both the time and the date. | NA | -- |
+| `as.Date()` | Base R | Can convert a character string into a date. | Default format: "%Y-%m-%d" or "%Y/%m/%y". (%Y = 4-digit year; %m = 2-digit month; %d = 2-digit day) | `as.Date("1971-14-05", format = "%Y-%d-%m")` |
+| `diff()` | Base R | will allow you to calculate differences between consecutive dates. | -- | -- |
+
+
+
+

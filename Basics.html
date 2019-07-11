@@ -387,7 +387,7 @@ div.tocify {
 <div id="introduction" class="section level2 tabset tabset-fade tabset-pills">
 <h2><span class="header-section-number">1.1</span> Introduction</h2>
 <div id="content" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> <span style="color:darkseagreen">Content</span></h3>
+<h3><span class="header-section-number">1.1.1</span> Content</h3>
 <p>Some useful notes:</p>
 <ul>
 <li>R is ‘case-sensitive’.</li>
@@ -440,16 +440,6 @@ div.tocify {
 </tr>
 </tbody>
 </table>
-<pre class="r"><code>.btn {
-    border-width: 0 0px 0px 0px;
-    font-weight: normal;
-    text-transform: ;
-}
-.btn-default {
-    color: #2ecc71;
-    background-color: #ffffff;
-    border-color: #ffffff;
-}</code></pre>
 </div>
 </div>
 <div id="vectors" class="section level2 tabset tabset-fade tabset-pills">
@@ -802,6 +792,491 @@ div.tocify {
 </tbody>
 </table>
 <hr />
+</div>
+</div>
+</div>
+<div id="intermediate-r" class="section level1">
+<h1><span class="header-section-number">2</span> Intermediate R</h1>
+<div id="conditionals-and-controls-flow" class="section level2 tabset tabset-fade tabset-pills">
+<h2><span class="header-section-number">2.1</span> Conditionals and Controls Flow</h2>
+<div id="content-6" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Content</h3>
+<p>Relational operators - see how one object relates to another (can compare all kinds of forms of data):</p>
+<ul>
+<li>Equality: <code>==</code></li>
+<li>Inequality: <code>!=</code></li>
+<li>Less than: <code>&lt;</code></li>
+<li>Greater than: <code>&gt;</code></li>
+</ul>
+<p>Note that for character strings, R uses alphabetical order to sort character strings in a way such that TRUE coerces to 1 and FALSE coerces to 0.</p>
+<p>Logical operators:</p>
+<ul>
+<li><em>AND</em> operator (<code>&amp;</code>) - only TRUE if both are TRUE; FALSE otherwise.
+<ul>
+<li><code>&amp;&amp;</code> - the biggest difference being when the operations are used with vectors - only examines the first element of a vector.</li>
+</ul></li>
+<li><em>OR</em> operator (<code>|</code>) - Only one of the logical values that it uses should be equal to TRUE for the entire R operation to evaluate it as TRUE (FALSE if both are FALSE).
+<ul>
+<li><code>||</code> - the biggest difference being when the operations are used with vectors - only examines the first element of a vector.</li>
+</ul></li>
+<li><em>NOT</em> operator (<code>!</code>) - negates the logical value it’s used in (e.g. !TRUE evaluates as FALSE).</li>
+</ul>
+<p><strong>Conditional statements:</strong></p>
+<ol style="list-style-type: decimal">
+<li><code>if</code> statements take a condition, which, if evaluates as TRUE, the argument associated with the <code>if</code> statement is executed. No printout will occur if the condition is not met.</li>
+<li><code>else</code> statements are conditional statements that do not need an explicit condition, so it needs to be used together with an <code>if</code> statement. The else condition gets executed whenever the <code>if</code> statement is not satisfied (its corresponding code is simply run if all of the preceding conditions in the control structure are FALSE).</li>
+<li><code>else if</code> statments comes in between the <code>if</code> and <code>else</code> statements. You can add as many <code>else if</code> statements as you’d like. R executes the first statement that evaluates as TRUE, and ignores the rest of the control structure</li>
+</ol>
+<p>Some useful notes:</p>
+<ul>
+<li>Terminology:
+<ul>
+<li><em>Inclusive</em> - can be equal to or greater than/less than.</li>
+<li><em>Exclusive</em> - only greater than/less than.</li>
+</ul></li>
+</ul>
+</div>
+<div id="functions-6" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Functions</h3>
+<p>if (condition) { expression }</p>
+<p>if (condition) { expression_1 } else { expression_2 }</p>
+<ul>
+<li>Example: x &lt;- 5. if(x &lt; 0) { print(“x is a negative number”) } else { print(“x is either a positive number or zero”) }</li>
+</ul>
+<p>if (condition_1) { expression_1 } else if (condition_2) { expression_2 } else { expression_3 }</p>
+</div>
+</div>
+<div id="loops" class="section level2 tabset tabset-fade tabset-pills">
+<h2><span class="header-section-number">2.2</span> Loops</h2>
+<div id="content-7" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Content</h3>
+<ol style="list-style-type: decimal">
+<li><code>while</code> loops are similar to the <code>if</code> statement in that it will execute the code inside if the condition is TRUE. The <code>while</code> loop will continue to execute the code over and over again as long as the condition is TRUE. Remember that the condition part of this recipe should become FALSE at some point during the execution (otherwise the while loop will go on indefinitely).</li>
+<li><code>for</code> loops can be used for vectors, as well as lists, in the exact same manner. This version is more concise and easy to read, but it does not give access to all looping information.</li>
+</ol>
+<p>Some useful notes:</p>
+<ul>
+<li>The <strong>break statement</strong> simply breaks out of the <code>while</code> loop; when R finds it, it abandons the currently-activated <code>while</code> loop. Just like in <code>while</code> loops, the break statement in <code>for</code> loop simply stops the execution of the code and abandons the for loop altogether. Example: to stop the loop as soon as a city with 6 characters is encountered, use: for(city in cities) { if(nchar(city) == 6) { break } print(city) }
+<ul>
+<li>Example: ctr &lt;- 1. while(ctr &lt;= 7) { if(ctr %% 5 == 0) { break } print(paste(“ctr is set to”, ctr)) ctr &lt;- ctr + 1 }</li>
+</ul></li>
+<li>The <strong>next statement</strong> also alters the flow of the flow loop. The next statement skips the remainder of the code inside the for loop and proceeds to the next actuation. + Example: for(city in cities) { if(nchar(city) == 6) { next } print(city) }
+<ul>
+<li>As soon as next is encountered, the print city part is not processed and the for loop is continued.</li>
+</ul></li>
+</ul>
+</div>
+<div id="functions-7" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Functions</h3>
+<p>while (condition) { expression }</p>
+<ul>
+<li>Example: ctr &lt;- 1. while (ctr &lt;= 7) { print(paste(“ctr is set to”, ctr)) ctr &lt;- ctr + 1}
+<ul>
+<li>The line of code to increment the <code>ctr</code> is crucial (it will continue to execute the code indefinitely, so you must manually stop the code using (<code>control+C</code>)). Always make sure the while loop will stop at some point</li>
+</ul></li>
+</ul>
+<p>for(variable in sequence) { expression }</p>
+<ul>
+<li>Example: cities &lt;- c(“New York”, “Paris”, “London”, “Tokyo”, “Rio de Janeiro”, “Cape Town”)
+<ul>
+<li>for(city in cities) { print(city) }
+<ul>
+<li>This version is more concise and easy to read, but it does not give access to all looping information. + If wanted to give information on the city’s position inside the vector in addition to simply printing out the city’s name</li>
+</ul></li>
+<li>We can manually create a looping index ourselves</li>
+<li>for(i in 1:length(cities)) { print(city) }
+<ul>
+<li>We lose the city variable, so must change the contents of the looping structure as well.</li>
+</ul></li>
+<li>We can then have more control in adding more into the loop
+<ul>
+<li>for(i in 1:length(cities)) { print(paste(cities[i], “is on position”, i, “in the cities vector.”)) }. Harder to read and write, but more versatile (gives you all the information you may need).</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Note: you need double square brackets [[]] to select the elements in a list, compared to a vector</p>
+</div>
+</div>
+<div id="functions-8" class="section level2 tabset tabset-fade tabset-pills">
+<h2><span class="header-section-number">2.3</span> Functions</h2>
+<div id="content-8" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Content</h3>
+<p>A function generally serves a particular need, or solves a particular problem. The <strong>black box principle</strong>: you give an input to the black box, which is then processed, and it returns an output.</p>
+<p><strong>R packages:</strong></p>
+<p>Functions such as <code>mean()</code>, <code>list()</code>, and <code>sample()</code> are a part of R packages, which are loaded onto the R session. The <code>mean()</code>, <code>list()</code>, and <code>sample()</code> functions are part of the base package, which contains the basic functionality to use R. The ggvis package, for example, is a package used for data visualization. Packages of code, data, documentation and tests that are easy to share with others.</p>
+<p><strong>Installing packages:</strong></p>
+<p>Base packages areautomatically installed, whereas the ggvis package, for example, is not automatically installed. Install the package in R: install.packages(“ggvis”). This function goes to the Comprehensive R Archive Network (CRAN), which is a repository where thousands of packages are available. The function downloads the package file and installs the package on your system.</p>
+<p><strong>Load packages:</strong></p>
+<p>Loading of the package is required to actually use the packages once downloaded.</p>
+<ul>
+<li>Load package = attach to search list</li>
+</ul>
+<p>The search list is a list of packages and environments that R looks through to find a variable or function you want to use. Can use the <code>search()</code> function to look at the list.</p>
+<p>Load packages with the <code>library()</code> command to access the package’s functionality. It takes the name of the command and adds the function to the search list. The <code>require()</code> function also loads packages into the R session. The only difference appears when trying to install a package not yet installed.</p>
+<p>Some useful notes:</p>
+<ul>
+<li>For information on what a function does, and how it should be used, you can look up the documentation of the function using the R function (for example, for the standard deviation: <code>help(sd)</code> == <code>?sd</code>). This will provide all relevant details such as description, usage, and arguments.</li>
+<li><code>na.rm</code> argument: a logical value; indicating whether or not missing values should be removed. If this argument is FALSE by default, it would indicate by default that missing values (i.e. NA’s) will not be removed. If there are missing values that must be removed: <code>sd(values, TRUE)</code>.</li>
+<li>R matches arguments by position or by name.</li>
+<li>Some functions have default values that can be overridden.</li>
+<li>Function scoping: variables that are defined inside a function are not accessible outside that function.</li>
+<li>R passes arguments by value: an R function cannot change the variable that you input to that function. The objects you pass to a function can never change unless you do an explicit experiment.</li>
+</ul>
+</div>
+<div id="functions-9" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Functions</h3>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="17%" />
+<col width="22%" />
+<col width="24%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>sd()</code></td>
+<td>Base R</td>
+<td>Calculates the standard deviation of a dataset.</td>
+<td><em>variables</em></td>
+<td><code>sd(c(1, 5, 6, 7))</code></td>
+</tr>
+<tr class="even">
+<td><code>args()</code></td>
+<td>Base R</td>
+<td>Learn about the arguments of a function without having to read through the entire documentation</td>
+<td><em>function</em></td>
+<td><code>args(mean)</code></td>
+</tr>
+<tr class="odd">
+<td><code>mean()</code></td>
+<td>Base R</td>
+<td>Computes the arithmetic mean.</td>
+<td>data, …, trim, na.rm</td>
+<td>mean(x)</td>
+</tr>
+<tr class="even">
+<td><code>abs()</code></td>
+<td>Base R</td>
+<td>Absolute differences between <code>x - y</code>.</td>
+<td>x, y</td>
+<td><code>abs(x, y)</code></td>
+</tr>
+<tr class="odd">
+<td><code>return()</code></td>
+<td>Base R</td>
+<td>Explicitly state the return value.</td>
+<td>…</td>
+<td><code>y &lt;- 3 * x</code>, <code>return(y)</code></td>
+</tr>
+<tr class="even">
+<td><code>install.packages()</code></td>
+<td>Base R</td>
+<td>Install packages.</td>
+<td>package name</td>
+<td><code>install.packages(ggvis)</code></td>
+</tr>
+<tr class="odd">
+<td><code>search()</code></td>
+<td>Base R</td>
+<td>Search list is a list of packages and environments that R looks through to find a variable or function you want to use.</td>
+<td>variable or function</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><code>library()</code></td>
+<td>Base R</td>
+<td>Load packages</td>
+<td>package name</td>
+<td><code>library(tidyverse)</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="the-apply-family" class="section level2 tabset tabset-fade tabset-pills">
+<h2><span class="header-section-number">2.4</span> The Apply family</h2>
+<div id="content-9" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Content</h3>
+<p>The output of <code>lapply()</code> is a list, the same length as <code>x</code>, where each element is the result of applying FUN on the corresponding element x. It always returns a list, irrespective of the data structure. The function can return R objects of different classes, but lists are necessary to store heterogeneous content.</p>
+<p><strong>Anonymous functions: </strong></p>
+<ul>
+<li>It is perfectly possible to not give the function a name: <code>triple &lt;- function(x)  {3 * x}</code></li>
+<li>Anonymous function with the same implementation: <code>function(x)  {3 * x}</code></li>
+</ul>
+<p>Apply functions that return NULL: Using the str() function in lapply() will return NULL: lapply(list(1, “a”, TRUE), str). On the other hand, calling str(TRUE) on its own prints only the structure of the logical values to the console, not NULL. The str() function uses invisible() behind the scenes, which returns an invisible copy of the return value, NULL in this case. This prevents it from being printed when the result of str() is not assigned.</p>
+<p><strong>sapply</strong> - short for “simplify apply”, it calls lapply to apply the function over each element of the vector or a matrix, and then uses the simplify an array function to convert the list lapply generated to an array. The sapply function will also provide names to the vector (can exclude the names by setting the optional argument to FALSE - E.g. <code>sapply(cities, nchar, USE.NAMES = FALSE)</code> - USE.NAMES is TRUE by default). ○ There are cases in which the function you want to apply does not always return a vector of the same length at all times (simplification to a vector or matrix doesn’t make sense). In this case the simplification will remain a list. The <code>sapply()</code> function does not simplify lists of NULLs. This is because the ‘vector-version’ of a list of NULLs would simply be a NULL, which is no longer a vector with the same length as the input.</p>
+<p><strong>vapply</strong></p>
+<p>Recap of this chapter: * The <code>lapply()</code> function allows you to avoid for loops and apply a function over list or vector. The output list is the same length as the input list. Many cases in which the lists can be simplified into an array. * R provides an <code>sapply()</code> function, which will try to convert a list of elements the code generates into an array. If this is not possible, <code>sapply()</code> returns the same list that <code>lapply()</code> generates.</p>
+<p>The <code>vapply()</code> function is quite similar to <code>sapply()</code>. It will similarly try to convert the <code>lapply()</code> function, and then tries to simplify the results. When using <code>vapply()</code>, you must explicitly state what the type of the return value will be (output format).</p>
+<ul>
+<li>The FUN.VALUE argument should be a general template for the return value of FUN, the function you want to apply over the input, x. Must think of what the function will return:</li>
+<li>Numeric</li>
+<li>Character</li>
+<li>Logical</li>
+</ul>
+<p>The <code>vapply()</code> function is safer than <code>sapply()</code> if you want the simplified response that <code>lapply()</code> generates. <code>vapply()</code> can be considered a more robust version of <code>sapply()</code>, because you explicitly restrict the output of the function you want to apply. The USE.NAMES argument tries to generate a named array if possible, by default.</p>
+<p><strong>Regular Expressions:</strong></p>
+<p>Sequence of (meta)characters that form a search pattern, which can be used to match strings. Can be used to check whether certain patterns exist, to replace these patterns with other elements, or to extract certain patterns out of a string.</p>
+<ul>
+<li>\s: match a space.</li>
+<li>The “s” is normally a character, escaping it with (\) makes it a meta-character.</li>
+<li>[0-9]+: match the numbers 0 to 9, at least once (+).</li>
+<li>([0-9]+): The parentheses are used to make parts of the matching string available to define the replacement.
+<ul>
+<li>The \1 in the replacemetn argumetn of sub() gets set to the string that is captured by the regular expression [0-9]+. Selects the entire number that comes before the word specified in the string, and the entire match gets replaced by this number because of the \1 that reference to the content inside the parentheses.</li>
+</ul></li>
+</ul>
+<p><strong>Formatting dates:</strong></p>
+<ul>
+<li>%A = weekday (e.g. Wednesday)</li>
+<li>%a = abbreviated weekday (e.g. Wed)</li>
+<li>%B = month (e.g. December)</li>
+<li>%b = abbreviated month (Dec)</li>
+<li>E.g. The following R commands will all create the same Date object
+<ul>
+<li>as.Date(“1982-01-13”)</li>
+<li>as.Date(“Jan-13-82”, format = %b-%d-%y“)</li>
+<li>as.Date(“13 January, 1982, format =”%d %B, %Y“)</li>
+</ul></li>
+<li>Can convert dates to character strings that use a different date notation using the format() function.
+<ul>
+<li>E.g. today &lt;- Sys.Date() format(Sys.Date(), format = “%d %B, %Y”) [1] “07 July, 2017” format(Sys,Date(), format = “Today is a %A!”) [1] “Today is a Friday!”</li>
+</ul></li>
+<li>Create POSIXct objects. To convert a string denoting an exact time, the function as.POSIXct() can be used (e.g. as.POSIXct(“1971-05014 11:25:15”)).</li>
+</ul>
+<p><strong>Formatting times:</strong></p>
+<ul>
+<li>%H = hours as a decimal number (00-23)</li>
+<li>%I = hours as a decimal number (01-12)</li>
+<li>%M = minutes as a decimal number</li>
+<li>%S = seconds as a decimal number</li>
+<li>%T = shorthand notation for the typical format %H:%M:%S</li>
+<li>%p = AM/PM indicator</li>
+</ul>
+<p>For a full list of conversion symbols, consult the strptime documentation to the console: <code>?strptime</code>.</p>
+<blockquote>
+<p>Default format for as.POSIXct(): %Y-%m-%d %H:%M:%S</p>
+</blockquote>
+<ul>
+<li>Date arithmetic
+<ul>
+<li>Incrementing a date by one (i.e. my_date + 1) will change the date by one day: my_date &lt;- as.Date(“1971-05-14”) my_date2 &lt;- as.Date(“1998-09-29”)<br />
+my_date2 - my_date [1] Time difference of 10000 days</li>
+</ul></li>
+</ul>
+<p>POSIXct arithmetic: computations happen in the exact same fashion as date arithmetic. The only difference is that the time unit of POSIXct is not a day as for date objects, but is a second. Incrementing a POSIXct object by one will increment seconds by 1. For any time difference, R will automatically display an easy to interpret time difference. Under the hood (arithmetic): R represents dates and times as simple numerics. The date object is simply a more advanced representation of the number of days since the first date specified (1970-01-01). January 1, 1970 is the common origin representing times and dates in a wide range of programming languages for no particular reason (completely arbitrary). If you were to unclass the date of “1971-05-14”, using the <code>unclass()</code> function, thus converting it from a date to a numeric, 498 will be the output 498 days from January 1, 1970.. Unclassing a POSIXct object will provide a numeric that is the difference from January 1, 1970, 00:00:00 (midnight).</p>
+<p>Dedicated R Packages for date and time:</p>
+<ol style="list-style-type: decimal">
+<li>lubridate</li>
+<li>zoo</li>
+<li>xts</li>
+</ol>
+<p>Some useful notes:</p>
+<ul>
+<li>In combination with the <code>rev()</code> function, which reverses elements in a data structure, we could create a new version of a list that contains the same data in a different order. The <code>rev()</code> function first reverses the list, placing the in effect vector first, and the log value, TRUE, last. Then append concatenates the vector and its reversed version to create a list double the length of the original list.</li>
+<li>Good identifiers for emails addresses
+<ul>
+<li>@ sign, because a valid email must contain an at-sign</li>
+<li>.<em>, which makes any character (.) zero or more times (</em>)</li>
+<li>Both the dot and the asterisk are meta-characters</li>
+<li>Any character that is matched zero or more times</li>
+<li>\.edu$, to match the “.edu” part of the email at the end of the string
+<ul>
+<li>The \ part escapes the dot (tells R that you want to use the dot as an actual character)/</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="functions-10" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Functions</h3>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="15%" />
+<col width="30%" />
+<col width="21%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>lapply()</code></td>
+<td>Base R</td>
+<td>takes a vector or a list <code>x</code>, and applies the function FUN to each of its members</td>
+<td>x, FUN, …</td>
+<td><code>multiply &lt;- function(x factor)  { x * factor } lapply(list(1, 2, 3), multiply, factor = 3)</code></td>
+</tr>
+<tr class="even">
+<td><code>unlist()</code></td>
+<td>Base R</td>
+<td>Return code to the form of a vector.</td>
+<td>list</td>
+<td><code>unlist(list1)</code></td>
+</tr>
+<tr class="odd">
+<td><code>tolower()</code></td>
+<td>Base R</td>
+<td>Simply returns the strings with the characters in lowercase.</td>
+<td>object</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><code>sapply()</code></td>
+<td>Base R</td>
+<td>calls lapply to apply the function over each element of the vector or a matrix and generates array.</td>
+<td><code>sapply(x, FUN, …)</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>identical()</code></td>
+<td>Base R</td>
+<td>Compare variables.</td>
+<td>variables</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><code>vapply()</code></td>
+<td>Base R</td>
+<td>Similar to <code>sapply()</code>, but you must explicitely state output format.</td>
+<td>x, FUN, FUN.VALUE, …, USE.NAMES = TRUE</td>
+<td>vapply(x, FUN, FUN.VALUE, …, USE.NAMES = TRUE)</td>
+</tr>
+<tr class="odd">
+<td><code>round()</code></td>
+<td>Base R</td>
+<td>Rounds the input to whole integers.</td>
+<td>dataset</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><code>seq()</code></td>
+<td>Base R</td>
+<td>Generates a sequence of numbers.</td>
+<td>start, end, by (sets increment value)</td>
+<td><code>seq(1, 10, by = 2)</code></td>
+</tr>
+<tr class="odd">
+<td><code>rep()</code></td>
+<td>Base R</td>
+<td>Ability to replicate its input, which typically is a vector or a list.</td>
+<td>sequence, times, each</td>
+<td><code>rep(c(8, 6, 4, 2), times = 2)</code> [1] 8 6 4 2 8 6 4 2 or <code>rep(c(8, 6, 4, 2), each = 2)</code> [1] 8 8 6 6 4 4 2 2</td>
+</tr>
+<tr class="even">
+<td><code>sort()</code></td>
+<td>Base R</td>
+<td>Sorting an input vector (can be used on numerical values, character, or logical vectors).</td>
+<td>decreasing, dataset</td>
+<td><code>sort(c(8, 6, 4, 2, 8, 6, 4, 2), decreasing = TRUE)</code> [1] 8 8 6 6 4 4 2 2</td>
+</tr>
+<tr class="odd">
+<td><code>is.*()</code></td>
+<td>Base R</td>
+<td>Allows you to check the type of your data structure (returning a logical).</td>
+<td>object</td>
+<td><code>is.list(li)</code> [1] TRUE</td>
+</tr>
+<tr class="even">
+<td><code>as.*()</code></td>
+<td>Base R</td>
+<td>Allows you to convert vectors into lists (to convert a list into a vector, use the <code>unlist()</code> function).</td>
+<td>object</td>
+<td><code>as.list(li)</code></td>
+</tr>
+<tr class="odd">
+<td><code>append()</code></td>
+<td>Base R</td>
+<td>Allows you to add elements to a vector or list in a very readable way.</td>
+<td>object, element</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><code>rev()</code></td>
+<td>Base R</td>
+<td>Reverses elements in a data structure.</td>
+<td>data structure</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td><code>grepl()</code></td>
+<td>Base R</td>
+<td>Returns TRUE when a pattern is found in the corresponding character string; E.g. it can identify all names containing the letter “a” in a vector of animal names. If you wanted to select only for animal names that start with an “a”, can use <code>^a</code>. The <code>$</code> sign allows for selection of the last letter in the name.</td>
+<td>pattern = <regex>, x = <string></td>
+<td><code>grepl(pattern = &quot;^a&quot;, x = animals)</code></td>
+</tr>
+<tr class="even">
+<td><code>grep()</code></td>
+<td>Base R</td>
+<td>Returns a vector of the indices of the elements of x that yield a match. In other words, it returns of vector of indices of the character strings that contains the pattern. Gives the indices of the TRUE elements that <code>grepl()</code> returns.</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td><code>sub()</code></td>
+<td>Base R</td>
+<td>If inside the character vector x, the regular expression pattern is found, the matching element(s) will be replaced with the replacement argument.</td>
+<td>sub(pattern = <regex>, replacement = <str>, x = <str>)</td>
+<td><code>sub(pattern = &quot;a&quot;, replacement = &quot;o&quot;, x = animals)</code> All animals with an “a” in their name will have it replaced by an “o” (if there are two “a’s” only the first one will be replaced)</td>
+</tr>
+<tr class="even">
+<td>The sub function only looks for the first match in the string.</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>gsub()</code></td>
+<td>Base R</td>
+<td>Allows for the replacement of every single element within a string. Can use the <code>|</code> meta-character to match for different options.</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><code>Sys.Date()</code></td>
+<td>Base R</td>
+<td>Will tell us the “Year-Month-Day”.</td>
+<td>NA</td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td><code>Sys.time()</code></td>
+<td>Base R</td>
+<td>Will provide both the time and the date.</td>
+<td>NA</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><code>as.Date()</code></td>
+<td>Base R</td>
+<td>Can convert a character string into a date.</td>
+<td>Default format: “%Y-%m-%d” or “%Y/%m/%y”. (%Y = 4-digit year; %m = 2-digit month; %d = 2-digit day)</td>
+<td><code>as.Date(&quot;1971-14-05&quot;, format = &quot;%Y-%d-%m&quot;)</code></td>
+</tr>
+<tr class="odd">
+<td><code>diff()</code></td>
+<td>Base R</td>
+<td>will allow you to calculate differences between consecutive dates.</td>
+<td>–</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
