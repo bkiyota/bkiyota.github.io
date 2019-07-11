@@ -23,7 +23,7 @@ navbar:
     - text: "Personal"
       icon: fa-user-circle
       menu:
-        - text: "Resume"
+        - text: "Resume (draft)"
           icon: fa-file
           href: Resume_draft.pdf
 output:
