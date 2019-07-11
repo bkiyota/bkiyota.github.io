@@ -5,7 +5,7 @@ title: "Home"
 <script>
    $(document).ready(function() {
      $head = $('#header');
-     $head.prepend('<img src=\"Figures/Header.png\" style=\"float: center;width: 800px;\"/>')
+     $head.prepend('<img src=\"Figures/Header.jpg\" style=\"float: center;width: 800px;\"/>')
    });
 </script>
 
