@@ -4,11 +4,37 @@ author: "Brett Kiyota"
 output:
   html_document:
     toc: true
-    toc_float: true
+    toc_float: 
+      toc_collapsed: false
     toc_depth: 4
-    theme: yeti
-    highlight: textmate
+    number_sections: TRUE
+    css: style.css
 ---
+
+<style>
+#TOC {
+  top: 15%;
+  opacity: 0.5;
+}
+#TOC:hover {
+  opacity: 1;
+}
+</style>
+
+<style>
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #85A99B;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #ffffff;
+    background-color: #85A99B;
+}
+</style>  
+  
+<br><br>
 
 # Genres {.tabset .tabset-fade .tabset-pills}
 
@@ -16,7 +42,7 @@ output:
 ## Non-fiction
 ***
 
-### I. Medicine
+### MEDICINE
 
 #### Being Mortal (Gawande, Atul)
 
@@ -94,7 +120,7 @@ The 3 overarching laws of medicine include:
 
 A test can only be interpreted sanely in the context of prior probabilities (eludes to Bayes). There exists an illusion of the systematic understanding of diseases. For example, if cancer is a disease in which genes that control cell division are mutated, thus causing unbridled cellular growth, then why do the most exquisitely-targeteed inhibitors of cell division fail to cure most cancers? Why do certain autoimmune diseases cluster together in some people, while others only have one variant? If type 2 diabetes results from insensitivity of tissues to insulin signaling, then why does adding extra insulin reverse many, but not all features of the disease? Why do patients with some neurological diseases, such as Parkinson's disease, have a reduced risk of cancer. 
 
-### II. Biological sciences
+### BIOLOGICAL SCIENCES
 
 #### The Selfish Gene (Dawkins, Richard)
 
@@ -460,7 +486,7 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 | 2017 | Parasites | Informative, appreciative account | 6 |
 
 
-### III. Physical sciences
+### PHYSICAL SCIENCES
 
 #### what if? Serious Scientific Answers to Absurd Hypothetical Questions (Munrow, Randall)
 
@@ -490,7 +516,7 @@ I think this book would be much better now (2019), now that I have a bit more ex
 ------------------|-----------|---------------------|-----------------------|
 | 2016 | Physics | Important topics | 2 |
 
-### IV. Natural sciences
+### NATURAL SCIENCES
 
 #### A Walk in the Woods (Bryson, Bill)
 
@@ -502,7 +528,7 @@ I think this book would be much better now (2019), now that I have a bit more ex
 
 While it was definitely an entertaining read, I found that it became a bit stale by the end of the book -- as the initial phase of intruiging experiences, interactions, and events came to be repetitive. 
 
-### V. Social sciences
+### SOCIAL SCIENCES
 
 #### Thinking, Fast and Slow (Kahneman, Daniel)
 
@@ -566,7 +592,7 @@ Fechner was obsessed with the relation of mind and matter. On one side there is 
 He proposed a psychophysical law that could relate the subjective quantity in the observer's  mind to the objective quantity in the material world. He proposed that for many dimensions, the function is logarithmic -- which simply means that an increase of stimulus instensity by a given factor (e.g. say 1.5  or 10 times) always yields the same increment on the psychological scale. If raising the energy of the sound from 10 to 100 units of physical energy increases psychological intensity by 4 units, then a further increase of the stimulus intensity from 100 to 1000 will also increase psychological intensity by 4 units. 
 
 
-### VI. Computational sciences
+### COMPUTATIONAL SCIENCES
 
 #### The Code Book (Singh, Simon)
 
@@ -580,7 +606,7 @@ In Chadwick's account of their work, the Decipherment of Linear B, he writes:
 
 > "Cryptography is a science of deduction nad controlled experiment; hypotheses are formed, tested and often discarded. But the residue which passes the test grows until finally there comes a point when the experiment feels solid ground beneath his feet; his hypotheses cohere, and fragments of sense emerge from their camoflauge. The code 'breaks.' Perhaps this is best defined as the point when the likely leads appear faster then they can be followed up. It is like the initiation of a chain reaction in atomic physics; once the critical threshold is passed, the reaction propagates itself."
 
-### VII. Scientific theory
+### SCIENTIFIC THEORY
 
 #### Gödel, Escher, Bach: an Eternal Golden Braid (Hofstafter, Douglas R.)
 
@@ -630,7 +656,8 @@ This is definitely a challenging topic, with some areas ofthe book becoming quit
 The main premise or message that Wilson is advocating is a more holistic, multi-faceted approach that brings together many fields -- particularly the social sciences such as philosophy -- in order to study the origins of consciousness with the human mind. There were concerns that were presented where, despite the fact that science has progressed at an extraordinary rate, fields such as philosophy and art, which are equally important for evaluating what makes us humans, has become stagnant. This may be due to  our tendencies to anthropomorphize our own species in all regards, creating a division from the rest of the organisms that inhabit Earth. He urges the likelihood that we will never be able to form a suitable answer to the most profound questions of humankind through solely a scientific lens. 
 
 ***
-### VIII. Memoirs
+### MEMOIRS
+#### Educated (Westover, Tara)
 
 * Date of publication: 2018
 
@@ -640,7 +667,7 @@ The main premise or message that Wilson is advocating is a more holistic, multi-
 
 ## Fiction
 ***
-### I. Fantasy
+### FANTASY
 
 #### A Game of Thrones (Martin, George R. R.)
 
@@ -667,7 +694,7 @@ The main premise or message that Wilson is advocating is a more holistic, multi-
 ------------------|-----------|---------------------|-----------------------|
 | 2016 | GOT | Book III | 7 |
 
-### II. Science fiction
+### SCIENCE FICTION
 
 #### Brave New World (Huxley, Aldous)
 

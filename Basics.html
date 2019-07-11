@@ -19,8 +19,11 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
@@ -73,6 +76,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 </head>
 
@@ -171,6 +175,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -216,9 +315,12 @@ $(document).ready(function () {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-header">DataCamp: R courses</li>
-    <li class="dropdown-header">Introduction</li>
     <li>
-      <a href="Basics.html"></a>
+      <a href="Basics.html">
+        <span class="fa fa-chess-pawn"></span>
+         
+        Introduction
+      </a>
     </li>
   </ul>
 </li>
@@ -233,7 +335,13 @@ $(document).ready(function () {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li class="dropdown-header">Resume</li>
+    <li>
+      <a href="Resume_draft.pdf">
+        <span class="fa fa-file"></span>
+         
+        Resume
+      </a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -250,13 +358,36 @@ $(document).ready(function () {
 </div>
 
 
+<style>
+#TOC {
+  top: 15%;
+  opacity: 0.5;
+}
+#TOC:hover {
+  opacity: 1;
+}
+</style>
+<style>
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #85A99B;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #ffffff;
+    background-color: #85A99B;
+}
+</style>
+<p><br><br></p>
+<p><br><br></p>
 <hr />
 <div id="introduction-to-r" class="section level1">
-<h1>Introduction to R</h1>
+<h1><span class="header-section-number">1</span> Introduction to R</h1>
 <div id="introduction" class="section level2 tabset tabset-fade tabset-pills">
-<h2>Introduction</h2>
+<h2><span class="header-section-number">1.1</span> Introduction</h2>
 <div id="content" class="section level3">
-<h3>Content</h3>
+<h3><span class="header-section-number">1.1.1</span> <span style="color:darkseagreen">Content</span></h3>
 <p>Some useful notes:</p>
 <ul>
 <li>R is ‘case-sensitive’.</li>
@@ -281,7 +412,7 @@ $(document).ready(function () {
 </ul>
 </div>
 <div id="functions" class="section level3">
-<h3>Functions</h3>
+<h3><span class="header-section-number">1.1.2</span> Functions</h3>
 <table>
 <thead>
 <tr class="header">
@@ -309,12 +440,22 @@ $(document).ready(function () {
 </tr>
 </tbody>
 </table>
+<pre class="r"><code>.btn {
+    border-width: 0 0px 0px 0px;
+    font-weight: normal;
+    text-transform: ;
+}
+.btn-default {
+    color: #2ecc71;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}</code></pre>
 </div>
 </div>
 <div id="vectors" class="section level2 tabset tabset-fade tabset-pills">
-<h2>Vectors</h2>
+<h2><span class="header-section-number">1.2</span> Vectors</h2>
 <div id="content-1" class="section level3">
-<h3>Content</h3>
+<h3><span class="header-section-number">1.2.1</span> Content</h3>
 <p>Vectors are one-dimension arrays that can hold numeric data, character data, or logical data. In other words, vectors represent a simple tool to store data in. You can use square brackets (<code>[ ]</code>) in order to select elements of a vector, matrix, or data frame (indicate the elements to select in the square brackets). For example, <code>poker_vector[2:4]</code> generates a vector with all natural numbers from 2 up to 4. Can also use the names of vector elements instead of their numeric positions, as long as they are denoted between <code>&quot;&quot;</code>.</p>
 <p>Some useful notes:</p>
 <ul>
@@ -332,7 +473,7 @@ $(document).ready(function () {
 </ul>
 </div>
 <div id="functions-1" class="section level3">
-<h3>Functions</h3>
+<h3><span class="header-section-number">1.2.2</span> Functions</h3>
 <table>
 <colgroup>
 <col width="18%" />
@@ -377,9 +518,9 @@ $(document).ready(function () {
 </div>
 </div>
 <div id="matrices" class="section level2 tabset tabset-fade tabset-pills">
-<h2>Matrices</h2>
+<h2><span class="header-section-number">1.3</span> Matrices</h2>
 <div id="content-2" class="section level3">
-<h3>Content</h3>
+<h3><span class="header-section-number">1.3.1</span> Content</h3>
 <p>A matrix is a 2D collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns.</p>
 <p><strong>Selection of matrix elements:</strong></p>
 <p>Square brackets <code>[]</code> to select one or multiple elements from a matrix and use a comma to separate rows from columns.</p>
@@ -394,7 +535,7 @@ $(document).ready(function () {
 </ul>
 </div>
 <div id="functions-2" class="section level3">
-<h3>Functions</h3>
+<h3><span class="header-section-number">1.3.2</span> Functions</h3>
 <table>
 <colgroup>
 <col width="18%" />
@@ -467,9 +608,9 @@ $(document).ready(function () {
 </div>
 </div>
 <div id="factors" class="section level2 tabset tabset-fade tabset-pills">
-<h2>Factors</h2>
+<h2><span class="header-section-number">1.4</span> Factors</h2>
 <div id="content-3" class="section level3">
-<h3>Content</h3>
+<h3><span class="header-section-number">1.4.1</span> Content</h3>
 <p>The term factor refers to a statistical data type used to store categorical variables. The difference between a categorical variable and a statistical variable is that a categorical variable can belong to a limited number of categories. A continuous variable on the other hand, can correspond to an infinite number of values.</p>
 <p>There are two types of categorical variables: a nominal categorical variable and an ordinal categorical variable:</p>
 <ul>
@@ -482,7 +623,7 @@ $(document).ready(function () {
 </ul>
 </div>
 <div id="functions-3" class="section level3">
-<h3>Functions</h3>
+<h3><span class="header-section-number">1.4.2</span> Functions</h3>
 <table>
 <colgroup>
 <col width="18%" />
@@ -520,9 +661,9 @@ $(document).ready(function () {
 </div>
 </div>
 <div id="data-frames" class="section level2 tabset tabset-fade tabset-pills">
-<h2>Data Frames</h2>
+<h2><span class="header-section-number">1.5</span> Data Frames</h2>
 <div id="content-4" class="section level3">
-<h3>Content</h3>
+<h3><span class="header-section-number">1.5.1</span> Content</h3>
 <p>A data frame has the variables of a data set as columns and the observations as rows. Utilizing data frames allow you to use data sets with different data types, and they are often involved in working with (extremely) large data sets. Understanding the structure and main elements is very important.</p>
 <p>Some useful notes:</p>
 <ul>
@@ -540,7 +681,7 @@ $(document).ready(function () {
 </ul>
 </div>
 <div id="functions-4" class="section level3">
-<h3>Functions</h3>
+<h3><span class="header-section-number">1.5.2</span> Functions</h3>
 <table>
 <colgroup>
 <col width="18%" />
@@ -606,9 +747,9 @@ $(document).ready(function () {
 </div>
 </div>
 <div id="lists" class="section level2 tabset tabset-fade tabset-pills">
-<h2>Lists</h2>
+<h2><span class="header-section-number">1.6</span> Lists</h2>
 <div id="content-5" class="section level3">
-<h3>Content</h3>
+<h3><span class="header-section-number">1.6.1</span> Content</h3>
 <p>A list allows you to gather a variety of objects under one name, in an ordered way. These objects can be matrices, vectors, data frames, even other lists, etc… (it’s not required that the objects be related in any way).</p>
 <p>Some useful notes:</p>
 <ul>
@@ -632,7 +773,7 @@ $(document).ready(function () {
 </ul>
 </div>
 <div id="functions-5" class="section level3">
-<h3>Functions</h3>
+<h3><span class="header-section-number">1.6.2</span> Functions</h3>
 <table>
 <colgroup>
 <col width="18%" />
@@ -667,6 +808,8 @@ $(document).ready(function () {
 
 
 
+</div>
+</div>
 
 </div>
 

@@ -24,7 +24,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
 <script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
@@ -75,6 +75,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 </head>
 
@@ -330,7 +331,13 @@ div.tocify {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li class="dropdown-header">Resume</li>
+    <li>
+      <a href="Resume_draft.pdf">
+        <span class="fa fa-file"></span>
+         
+        Resume
+      </a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -348,16 +355,38 @@ div.tocify {
 </div>
 
 
+<style>
+#TOC {
+  top: 15%;
+  opacity: 0.5;
+}
+#TOC:hover {
+  opacity: 1;
+}
+</style>
+<style>
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #85A99B;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #ffffff;
+    background-color: #85A99B;
+}
+</style>
+<p><br><br></p>
 <div id="genres" class="section level1 tabset tabset-fade tabset-pills">
-<h1>Genres</h1>
+<h1><span class="header-section-number">1</span> Genres</h1>
 <hr />
 <div id="non-fiction" class="section level2">
-<h2>Non-fiction</h2>
+<h2><span class="header-section-number">1.1</span> Non-fiction</h2>
 <hr />
-<div id="i.-medicine" class="section level3">
-<h3>I. Medicine</h3>
+<div id="medicine" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> MEDICINE</h3>
 <div id="being-mortal-gawande-atul" class="section level4">
-<h4>Being Mortal (Gawande, Atul)</h4>
+<h4><span class="header-section-number">1.1.1.1</span> Being Mortal (Gawande, Atul)</h4>
 <ul>
 <li>Date of publication: 2014</li>
 </ul>
@@ -394,7 +423,7 @@ div.tocify {
 </blockquote>
 </div>
 <div id="bad-pharma-how-drug-companies-mislead-doctors-and-harm-patients-goldacre-ben" class="section level4">
-<h4>Bad Pharma: How Drug Companies Mislead Doctors and Harm Patients (Goldacre, Ben)</h4>
+<h4><span class="header-section-number">1.1.1.2</span> Bad Pharma: How Drug Companies Mislead Doctors and Harm Patients (Goldacre, Ben)</h4>
 <ul>
 <li>Date of publication: 2014</li>
 </ul>
@@ -444,7 +473,7 @@ div.tocify {
 </blockquote>
 </div>
 <div id="when-breath-becomes-air-kalanithi-paul" class="section level4">
-<h4>When Breath Becomes Air (Kalanithi, Paul)</h4>
+<h4><span class="header-section-number">1.1.1.3</span> When Breath Becomes Air (Kalanithi, Paul)</h4>
 <ul>
 <li>Date of publication: 2016</li>
 </ul>
@@ -477,7 +506,7 @@ div.tocify {
 </blockquote>
 </div>
 <div id="do-no-harm-marsh-henry" class="section level4">
-<h4>Do No Harm (Marsh, Henry)</h4>
+<h4><span class="header-section-number">1.1.1.4</span> Do No Harm (Marsh, Henry)</h4>
 <ul>
 <li>Date of publication: 2014</li>
 </ul>
@@ -507,7 +536,7 @@ div.tocify {
 </table>
 </div>
 <div id="the-laws-of-medicine-mukherjee-siddhartha" class="section level4">
-<h4>The Laws of Medicine (Mukherjee, Siddhartha)</h4>
+<h4><span class="header-section-number">1.1.1.5</span> The Laws of Medicine (Mukherjee, Siddhartha)</h4>
 <ul>
 <li>Date of publication: 2015</li>
 </ul>
@@ -544,10 +573,10 @@ div.tocify {
 <p>A test can only be interpreted sanely in the context of prior probabilities (eludes to Bayes). There exists an illusion of the systematic understanding of diseases. For example, if cancer is a disease in which genes that control cell division are mutated, thus causing unbridled cellular growth, then why do the most exquisitely-targeteed inhibitors of cell division fail to cure most cancers? Why do certain autoimmune diseases cluster together in some people, while others only have one variant? If type 2 diabetes results from insensitivity of tissues to insulin signaling, then why does adding extra insulin reverse many, but not all features of the disease? Why do patients with some neurological diseases, such as Parkinson’s disease, have a reduced risk of cancer.</p>
 </div>
 </div>
-<div id="ii.-biological-sciences" class="section level3">
-<h3>II. Biological sciences</h3>
+<div id="biological-sciences" class="section level3">
+<h3><span class="header-section-number">1.1.2</span> BIOLOGICAL SCIENCES</h3>
 <div id="the-selfish-gene-dawkins-richard" class="section level4">
-<h4>The Selfish Gene (Dawkins, Richard)</h4>
+<h4><span class="header-section-number">1.1.2.1</span> The Selfish Gene (Dawkins, Richard)</h4>
 <ul>
 <li>Date of publication: 1976</li>
 </ul>
@@ -571,7 +600,7 @@ div.tocify {
 </table>
 </div>
 <div id="let-them-eat-dirt-finlay-brett-arrieta-marie-claire" class="section level4">
-<h4>Let Them Eat Dirt (Finlay, Brett &amp; Arrieta, Marie-Claire)</h4>
+<h4><span class="header-section-number">1.1.2.2</span> Let Them Eat Dirt (Finlay, Brett &amp; Arrieta, Marie-Claire)</h4>
 <ul>
 <li>Date of publication: 2016</li>
 </ul>
@@ -599,7 +628,7 @@ div.tocify {
 </ul>
 </div>
 <div id="the-whole-body-microbiome-finlay-brett-finlay-jessica" class="section level4">
-<h4>The Whole-Body Microbiome (Finlay, Brett &amp; Finlay, Jessica)</h4>
+<h4><span class="header-section-number">1.1.2.3</span> The Whole-Body Microbiome (Finlay, Brett &amp; Finlay, Jessica)</h4>
 <ul>
 <li>Date of publication: 2019</li>
 </ul>
@@ -857,7 +886,7 @@ div.tocify {
 </ul>
 </div>
 <div id="bad-science-goldacre-ben" class="section level4">
-<h4>Bad Science (Goldacre, Ben)</h4>
+<h4><span class="header-section-number">1.1.2.4</span> Bad Science (Goldacre, Ben)</h4>
 <ul>
 <li>Date of publication: 2008</li>
 </ul>
@@ -890,7 +919,7 @@ div.tocify {
 </ol>
 </div>
 <div id="advice-for-a-young-investigator-ramon-y-cajal-santiago" class="section level4">
-<h4>Advice for a Young Investigator (Ramón y Cajal, Santiago)</h4>
+<h4><span class="header-section-number">1.1.2.5</span> Advice for a Young Investigator (Ramón y Cajal, Santiago)</h4>
 <ul>
 <li>Date of publication: 1897</li>
 </ul>
@@ -1124,7 +1153,7 @@ div.tocify {
 <p>It’s really amazing how many of these pieces of advice have stayed relevant over time, or maybe not given the structure and foundation that make up empirical investigation. Nonetheless, there are definitely some interesting takes, particularly when discussing the some of the traits <em>required</em> to be a suitable investigator in the lens of Santiago.</p>
 </div>
 <div id="the-emperor-of-all-maladies-mukherjee-siddhartha" class="section level4">
-<h4>The Emperor of All Maladies (Mukherjee, Siddhartha)</h4>
+<h4><span class="header-section-number">1.1.2.6</span> The Emperor of All Maladies (Mukherjee, Siddhartha)</h4>
 <ul>
 <li>Date of publication: 2010</li>
 </ul>
@@ -1148,7 +1177,7 @@ div.tocify {
 </table>
 </div>
 <div id="the-gene-mukherjee-siddhartha" class="section level4">
-<h4>The Gene (Mukherjee, Siddhartha)</h4>
+<h4><span class="header-section-number">1.1.2.7</span> The Gene (Mukherjee, Siddhartha)</h4>
 <ul>
 <li>Date of publication: 2016</li>
 </ul>
@@ -1188,7 +1217,7 @@ div.tocify {
 </ol>
 </div>
 <div id="the-immortal-life-of-henrietta-lacks-skloot-rebecca" class="section level4">
-<h4>The Immortal Life of Henrietta Lacks (Skloot, Rebecca)</h4>
+<h4><span class="header-section-number">1.1.2.8</span> The Immortal Life of Henrietta Lacks (Skloot, Rebecca)</h4>
 <ul>
 <li>Date of publication: 2010</li>
 </ul>
@@ -1212,7 +1241,7 @@ div.tocify {
 </table>
 </div>
 <div id="bee-time-winston-mark-l." class="section level4">
-<h4>Bee Time (Winston, Mark L.)</h4>
+<h4><span class="header-section-number">1.1.2.9</span> Bee Time (Winston, Mark L.)</h4>
 <ul>
 <li>Date of publication: 2014</li>
 </ul>
@@ -1236,7 +1265,7 @@ div.tocify {
 </table>
 </div>
 <div id="i-contain-multitudes-yong-ed" class="section level4">
-<h4>I Contain Multitudes (Yong, Ed)</h4>
+<h4><span class="header-section-number">1.1.2.10</span> I Contain Multitudes (Yong, Ed)</h4>
 <ul>
 <li>Date of publication: 2016</li>
 </ul>
@@ -1279,7 +1308,7 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </ul>
 </div>
 <div id="parasite-rex-zimmer-carl" class="section level4">
-<h4>Parasite Rex (Zimmer, Carl)</h4>
+<h4><span class="header-section-number">1.1.2.11</span> Parasite Rex (Zimmer, Carl)</h4>
 <ul>
 <li>Date of publication: 2000</li>
 </ul>
@@ -1303,10 +1332,10 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </table>
 </div>
 </div>
-<div id="iii.-physical-sciences" class="section level3">
-<h3>III. Physical sciences</h3>
+<div id="physical-sciences" class="section level3">
+<h3><span class="header-section-number">1.1.3</span> PHYSICAL SCIENCES</h3>
 <div id="what-if-serious-scientific-answers-to-absurd-hypothetical-questions-munrow-randall" class="section level4">
-<h4>what if? Serious Scientific Answers to Absurd Hypothetical Questions (Munrow, Randall)</h4>
+<h4><span class="header-section-number">1.1.3.1</span> what if? Serious Scientific Answers to Absurd Hypothetical Questions (Munrow, Randall)</h4>
 <ul>
 <li>Date of publication: 2014</li>
 </ul>
@@ -1337,7 +1366,7 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 <p>It is always interesting getting into the details that may be hidden from plain-sight which can come from simple, silly questions. Some of which become quite complex and even more entertaining when setting the questions in the context of a background of scientific principles. I found some of the questions to be entertaining, while others were so absurd or random that it was difficult to give too many shits about what the answer to the question may be. But overall, it was a very fun, light read.</p>
 </div>
 <div id="proof-rogers-adam" class="section level4">
-<h4>Proof (Rogers, Adam)</h4>
+<h4><span class="header-section-number">1.1.3.2</span> Proof (Rogers, Adam)</h4>
 <ul>
 <li>Date of publication</li>
 </ul>
@@ -1368,7 +1397,7 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 <p>I think this book would be much better now (2019), now that I have a bit more experience and a more refined understanding of alcohol, in general. It may have been a bit early in order to fully appreciate the book.</p>
 </div>
 <div id="seven-brief-lessons-on-physics-rovelli-carlo" class="section level4">
-<h4>Seven Brief Lessons on Physics (Rovelli, Carlo)</h4>
+<h4><span class="header-section-number">1.1.3.3</span> Seven Brief Lessons on Physics (Rovelli, Carlo)</h4>
 <ul>
 <li>Date of publication</li>
 </ul>
@@ -1392,10 +1421,10 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </table>
 </div>
 </div>
-<div id="iv.-natural-sciences" class="section level3">
-<h3>IV. Natural sciences</h3>
+<div id="natural-sciences" class="section level3">
+<h3><span class="header-section-number">1.1.4</span> NATURAL SCIENCES</h3>
 <div id="a-walk-in-the-woods-bryson-bill" class="section level4">
-<h4>A Walk in the Woods (Bryson, Bill)</h4>
+<h4><span class="header-section-number">1.1.4.1</span> A Walk in the Woods (Bryson, Bill)</h4>
 <ul>
 <li>Date of publication</li>
 </ul>
@@ -1420,10 +1449,10 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 <p>While it was definitely an entertaining read, I found that it became a bit stale by the end of the book – as the initial phase of intruiging experiences, interactions, and events came to be repetitive.</p>
 </div>
 </div>
-<div id="v.-social-sciences" class="section level3">
-<h3>V. Social sciences</h3>
+<div id="social-sciences" class="section level3">
+<h3><span class="header-section-number">1.1.5</span> SOCIAL SCIENCES</h3>
 <div id="thinking-fast-and-slow-kahneman-daniel" class="section level4">
-<h4>Thinking, Fast and Slow (Kahneman, Daniel)</h4>
+<h4><span class="header-section-number">1.1.5.1</span> Thinking, Fast and Slow (Kahneman, Daniel)</h4>
 <ul>
 <li>Date of publication</li>
 </ul>
@@ -1498,10 +1527,10 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 <p>He proposed a psychophysical law that could relate the subjective quantity in the observer’s mind to the objective quantity in the material world. He proposed that for many dimensions, the function is logarithmic – which simply means that an increase of stimulus instensity by a given factor (e.g. say 1.5 or 10 times) always yields the same increment on the psychological scale. If raising the energy of the sound from 10 to 100 units of physical energy increases psychological intensity by 4 units, then a further increase of the stimulus intensity from 100 to 1000 will also increase psychological intensity by 4 units.</p>
 </div>
 </div>
-<div id="vi.-computational-sciences" class="section level3">
-<h3>VI. Computational sciences</h3>
+<div id="computational-sciences" class="section level3">
+<h3><span class="header-section-number">1.1.6</span> COMPUTATIONAL SCIENCES</h3>
 <div id="the-code-book-singh-simon" class="section level4">
-<h4>The Code Book (Singh, Simon)</h4>
+<h4><span class="header-section-number">1.1.6.1</span> The Code Book (Singh, Simon)</h4>
 <ul>
 <li>Date of publication</li>
 </ul>
@@ -1529,10 +1558,10 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </blockquote>
 </div>
 </div>
-<div id="vii.-scientific-theory" class="section level3">
-<h3>VII. Scientific theory</h3>
+<div id="scientific-theory" class="section level3">
+<h3><span class="header-section-number">1.1.7</span> SCIENTIFIC THEORY</h3>
 <div id="godel-escher-bach-an-eternal-golden-braid-hofstafter-douglas-r." class="section level4">
-<h4>Gödel, Escher, Bach: an Eternal Golden Braid (Hofstafter, Douglas R.)</h4>
+<h4><span class="header-section-number">1.1.7.1</span> Gödel, Escher, Bach: an Eternal Golden Braid (Hofstafter, Douglas R.)</h4>
 <ul>
 <li>Date of publication</li>
 </ul>
@@ -1570,7 +1599,7 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 <p>This is definitely a challenging topic, with some areas ofthe book becoming quite convoluted in the ideas that are suggested, but it’s definitely a book that can (and has) had an enormous impact on the outlook in our quest for understanding what makes us human. This book was more of challenging read as it included many topics that I’m not necessarily versed in, so I don’t know if I had the breadth of knowledge to really extract all of the ideas he postulated in this book and translate that into something both moving and meaningful.</p>
 </div>
 <div id="the-origins-of-creativity-wilson-edward-o." class="section level4">
-<h4>The Origins of Creativity (Wilson, Edward O.)</h4>
+<h4><span class="header-section-number">1.1.7.2</span> The Origins of Creativity (Wilson, Edward O.)</h4>
 <ul>
 <li>Date of publication</li>
 </ul>
@@ -1612,8 +1641,10 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 <hr />
 </div>
 </div>
-<div id="viii.-memoirs" class="section level3">
-<h3>VIII. Memoirs</h3>
+<div id="memoirs" class="section level3">
+<h3><span class="header-section-number">1.1.8</span> MEMOIRS</h3>
+<div id="educated-westover-tara" class="section level4">
+<h4><span class="header-section-number">1.1.8.1</span> Educated (Westover, Tara)</h4>
 <ul>
 <li>Date of publication: 2018</li>
 </ul>
@@ -1643,13 +1674,14 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </table>
 </div>
 </div>
+</div>
 <div id="fiction" class="section level2">
-<h2>Fiction</h2>
+<h2><span class="header-section-number">1.2</span> Fiction</h2>
 <hr />
-<div id="i.-fantasy" class="section level3">
-<h3>I. Fantasy</h3>
+<div id="fantasy" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> FANTASY</h3>
 <div id="a-game-of-thrones-martin-george-r.-r." class="section level4">
-<h4>A Game of Thrones (Martin, George R. R.)</h4>
+<h4><span class="header-section-number">1.2.1.1</span> A Game of Thrones (Martin, George R. R.)</h4>
 <ul>
 <li>Date of publication: 1996</li>
 </ul>
@@ -1673,7 +1705,7 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </table>
 </div>
 <div id="a-clash-of-kings-martin-george-r.-r." class="section level4">
-<h4>A Clash of Kings (Martin, George R. R.)</h4>
+<h4><span class="header-section-number">1.2.1.2</span> A Clash of Kings (Martin, George R. R.)</h4>
 <ul>
 <li>Date of publication: 1998</li>
 </ul>
@@ -1697,7 +1729,7 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </table>
 </div>
 <div id="a-storm-of-swords-martin-george-r.-r." class="section level4">
-<h4>A Storm of Swords (Martin, George R. R.)</h4>
+<h4><span class="header-section-number">1.2.1.3</span> A Storm of Swords (Martin, George R. R.)</h4>
 <ul>
 <li>Date of publication: 2000</li>
 </ul>
@@ -1721,10 +1753,10 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </table>
 </div>
 </div>
-<div id="ii.-science-fiction" class="section level3">
-<h3>II. Science fiction</h3>
+<div id="science-fiction" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> SCIENCE FICTION</h3>
 <div id="brave-new-world-huxley-aldous" class="section level4">
-<h4>Brave New World (Huxley, Aldous)</h4>
+<h4><span class="header-section-number">1.2.2.1</span> Brave New World (Huxley, Aldous)</h4>
 <ul>
 <li>Date of publication: 1932</li>
 </ul>
@@ -1751,6 +1783,572 @@ Obese people (mice) have different communities of microbes in their guts. Prelim
 </div>
 </div>
 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">bkiyota</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-about"></span>
+     
+    About
+  </a>
+</li>
+<li>
+  <a href="Books.html">
+    <span class="fa fa-align-right"></span>
+     
+    Reading log
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-laptop-code"></span>
+     
+    Coding
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">DataCamp: R courses</li>
+    <li class="dropdown-header">Introduction</li>
+    <li>
+      <a href="Basics.html"></a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-user-circle"></span>
+     
+    Personal
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Resume</li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br><br></p>
+<p><a href="mailto:brettckiyota@gmail.com">brettckiyota@gmail.com</a></p>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">bkiyota</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-about"></span>
+     
+    About
+  </a>
+</li>
+<li>
+  <a href="Books.html">
+    <span class="fa fa-align-right"></span>
+     
+    Reading log
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-laptop-code"></span>
+     
+    Coding
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">DataCamp: R courses</li>
+    <li class="dropdown-header">Introduction</li>
+    <li>
+      <a href="Basics.html"></a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-user-circle"></span>
+     
+    Personal
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Resume</li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br><br></p>
+<p><a href="mailto:brettckiyota@gmail.com">brettckiyota@gmail.com</a></p>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
 
 
 </div>

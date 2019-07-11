@@ -17,13 +17,16 @@ navbar:
       menu:
         - text: "DataCamp: R courses"
         - text: "Introduction"
-        - href: Basics.html
+          icon: fa-chess-pawn
+          href: Basics.html
   right: 
     - text: "Personal"
       icon: fa-user-circle
       menu:
         - text: "Resume"
           icon: fa-file
+          href: Resume_draft.pdf
 output:
   html_document:
     theme: yeti
+    css: style.css

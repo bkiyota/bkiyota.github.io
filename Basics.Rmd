@@ -3,9 +3,42 @@ title: "Basics of R Programming Language"
 output:
   html_document:
     df_print: paged
-    theme: yeti
-    highlight: textmate
+    toc: true
+    toc_float: 
+      toc_collapsed: false
+    toc_depth: 4
+    number_sections: TRUE
+    css: style.css
 ---
+
+
+<style>
+#TOC {
+  top: 15%;
+  opacity: 0.5;
+}
+#TOC:hover {
+  opacity: 1;
+}
+</style>
+  
+<style>
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #85A99B;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #ffffff;
+    background-color: #85A99B;
+}
+</style>  
+  
+<br><br>
+  
+  
+<br><br>
 
 ***
 
@@ -13,7 +46,7 @@ output:
 
 ## Introduction {.tabset .tabset-fade .tabset-pills}
 
-### Content
+### <span style="color:darkseagreen">Content</span>
 
 Some useful notes:
 
@@ -39,6 +72,19 @@ Some useful notes:
 |--------------|-------------|-----------------|-------------------|-------------|
 | `class()` | Base R | Check the data type of a variable. | *variable* | `class(x)` | 
 | `c()` | Base R | Combines; creates vector. | vector elements | `c(1, 2, 3, 4)` |
+
+```{r, eval=FALSE}
+.btn {
+    border-width: 0 0px 0px 0px;
+    font-weight: normal;
+    text-transform: ;
+}
+.btn-default {
+    color: #2ecc71;
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+```
  
 ## Vectors {.tabset .tabset-fade .tabset-pills}
 
