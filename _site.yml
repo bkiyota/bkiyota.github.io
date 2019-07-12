@@ -19,6 +19,10 @@ navbar:
         - text: "Introduction"
           icon: fa-chess-pawn
           href: Basics.html
+        - text: "DataCamp: Python courses"
+        - text: "Introduction"
+          icon: fa-chess-pawn
+          href: Python_Introduction.html
   right: 
     - text: "Personal"
       icon: fa-user-circle

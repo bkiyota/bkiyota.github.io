@@ -1,0 +1,128 @@
+---
+title: "Python for R users"
+author: "Brett Kiyota"
+date: '2019-04-18'
+output:
+  prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
+    toc: true
+    toc_depth: 4
+---
+
+# Basics
+
+## Data types
+
+**R**
+
+* numeric - integers, floating point numbers
+* logical - `TRUE` or `FALSE` values
+* character - strings 
+
+**Python**
+
+* int - integers
+* float - floating point numbers
+* bool - `True` or `False` values
+* str - strings
+
+## Assignment
+
+**R**
+
+* `x <- 3`
+* `y = 0.5`
+* `z <- TRUE`
+
+**Python**
+
+* `x = 3`
+* `y = 0.5`
+* `z = True`
+
+Unlike R, the `=` sign is the only way to assign values to variables. 
+
+## Scripting and print statements
+
+For both languages, it is necessary to explicitely use the `print()` function to print the objects. 
+
+## Determining the data type
+
+**R**
+
+* The `class()` function is used to determine the data type of the object you're working with. 
+
+**Python**
+
+* The `type()` function returns the type of the object in Python. 
+
+Knowing the type is important because you will get different behaviours from different data types. 
+
+## Operators
+
+You cannot perform mathematical operations (operators) with non-numeric values in R. 
+
+**Python**
+
+* In Python, when you add two strings using the `+` operator, the two strings are concatenated.
+* A string multiplied by the integer *n* will repeat the string *n* times. 
+* Strings that are placed next to each other are autmatically concatenated. 
+    + Can be useful if you want to break up long strings across multiple lines of code. 
+    
+# Containers - Lists and dictionaries
+
+Finding the lenght, or the number of elements in a list or dictionary, can be done with the `len()` function. 
+
+## Lists
+
+Lists in Python are created with a pair of square brackets. Python is a 0-indexed language, in that the index is counted from zero instead of one (this is one of the major sources of confusion). This means that, to extract an element out of a Python list, you use a pair of square brakets, and, since Python is a 0-index language, to get the first element, you use the index zero. Lists, which are unlabeled, are typically a great way to store information. 
+
+* Similar to the R vector and list, it can hold heterogeneous information (e.g. [3, 2.718, True, 'hello']).
+
+Another difference in Python is the use of **negative indices** to select elements from the end. In Python, a [-1] call, for example, will select the last item in the list, [-2] selects the penultimate item in the list, and so on. 
+
+It is also important to account for the left-inclusive, right-exclusive nature of Python. When simultaneously selecting multiple elements from a lits, you can use the colon notation (e.g. [0:3]). However, in Python, you can also have an additional third value, which corresponds to a step size. For example, `[0:10:2]` would achieve something similar to the `seq()` function in R. 
+
+* If you leave the first value of the column notation blank (`[:3]`), Python will slice from the beginning all the way to the second, specified index. 
+* If you leave the second value missing (`[1:]`), Python will slice from the first specified index until the end. 
+* You can also leave the first two values blank (`[::2]`), which will just specifiy a step-size. 
+    + This will go through the entire list and return the elements depending on the specified step size. 
+
+## Dictionaries
+
+Dictonaries provide key:value pairs, or an association of a particular label with those elements. You cannot have named lists in Python $\rightarrow$ Python dictionaries are one solution to this. Dictionaries are created with a pair of curly brackets (`{}`), with each key:value pair including a colon (multiple key:value pairs are separated by a column).
+
+* The order of the keys are not guaranteed (i.e. don't rely on the printed order of the keys). 
+
+To extract a value from the dictionary, you can simply place the "key" of the dictionary in square (`[]`) brackets. 
+
+## Functions, Methods, and Libraries
+
+Whereas R relies heavily on functions, Python relies on both functions and methods. Methods and functions have similar behaviour, but they are different in that Python is an *object-oriented* programming language, which means that all variables, lists, and other data structures are objects that can have attributes and methods associated with them. 
+
+Methods are functions that an object can call on itself. Functions are called on an object. Periods have very specific meanings and uses in Python. They cannot be used in a variable or function name because periods are used in several important contexts. Everything in Python is an object (e.g., list object, dictionary object, etc). Objects can all perform certain tasks (e.g., add values to a list, update values in a dictionary). Instead of calling functions on the object you want to manipulate, you use dot notation to have the object perform an action on itself by calling a method.
+
+**Python**
+
+* You can add elements to a list using the `append()` method with the following syntax: `l.append('appended value')`, where `l` is an already-defined variable. 
+    + The `"appended value"` represents the element that is to be added onto the list. 
+    + You are calling the function `append()` onto the list `l`, in this case. 
+    + The method defined for a list. 
+* Updating a dictionary
+    + Call the `update()` method. 
+        + Example: `d.update({'str_value':'new_value', 'new_key:'new_value'})`
+        + If the keys already exist, they will be updated with the new value; if not, new keys will be added to the dictionary. 
+        + The method defined for a dictionary. 
+* The array and Data frame objects are not available in Python by default. 
+    + Arrays and matricies come from `numpy`; data frames come from `pandas`.
+    + Libraries can provide more functionality. 
+    
+When you load a library in R, you can use any of the functions from the library directly. In Python, to load the `numpy` library for example, first you use the `import` keyword, and then in order to use any function from the `numpy` library, you need to include the library (e.g. `arr = numpy.loadtxt('my_file.csv', delimiter = ',')`). However, writing the library dot function name can often be tedious, so you have the option of creating an *alias*. An alias is a short-hand notation of representing a library. To use an alias, you use an `as` keyword. Within the numpy library, you can use the `loadtxt()` function to import files. For example, you can load a file named data.csv using numpy with `numpy.loadtxt('data.csv')`. The `loadtxt()` function has a `delimiter` parameter which lets you specify that your data is separated by commas.
+
+* Example: `import numpy as np` $\rightarrow$ `arr = np.loadtxt()`
+* While "np" is the common convention for referring to numpy, "pd" is convention for referring to pandas. 
+* Pandas
+    + `df.head()` function can be used to see the first 5 rows. 
+    
+

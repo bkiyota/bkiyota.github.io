@@ -1,0 +1,359 @@
+---
+title: "Introduction"
+output:
+  html_document:
+    df_print: paged
+    toc: true
+    toc_float: 
+      toc_collapsed: false
+    toc_depth: 4
+    number_sections: TRUE
+    css: style.css
+---
+
+<style>
+#TOC {
+  top: 15%;
+  opacity: 0.5;
+}
+#TOC:hover {
+  opacity: 1;
+}
+</style>
+  
+<style>
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #85A99B;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #ffffff;
+    background-color: #85A99B;
+}
+</style>  
+  
+<br><br>
+  
+  
+<br><br>
+
+***
+
+# Introduction to Python
+
+## Learning objectives
+
+* Python
+* Specifically for data science
+* Store data
+* Manipulate data
+* Tools for data analysis
+
+## Python basics {.tabset .tabset-fade .tabset-pills}
+
+Python was conceived by **Guido Van Rossum**. It is a open-source, general-purpose programming language to build *anything* (software). Similar to R, it is very easy to build packages in Python. It is a very simple language with very straightforward syntax. 
+Two common versions of Python that are relatively similar, but have some key distinctions. 
+
+* Version 2.7
+* Version 3.5 and later (this course is focused on Version 3.*X*)
+
+Both are used throughout the world, but the most signficant difference is how you write the `print` statement. In Python 3, `print` has parenthases. 
+
+Python uses indentation for blocks, instead of curly brackets. The standard indentation requires Python code to use four spaces. 
+
+The `print` statement is the easiest way to get your Python program to communicate with you, which will be one of the most valuable tools in your programming toolbox. 
+
+### IPython Shell
+
+IPython is short for interactive Python.
+
+* A place to execute Python commands
+
+### Python Script
+
+Text files with the extension: -.py, that are basically a list of Python commands that can be executed and stored for record-keeping. 
+
+* You can add comments to Python scripts to make sure that you and others can understand what your code is about. 
+    + Add comments with the `#` tag. 
+    + Comments are not run as Python code, so they will not influence your result.
+
+## Control flow {.tabset .tabset-fade .tabset-pills}
+
+Your computer goes through a similar flow everytime a code gets executed. The program will run and start moving through a series of checklists and, if certain conditions are satisfied, the code will be executed and a value will be returned. This is what is referred to as the *Control flow* of your program. 
+
+In Python, your script will executre from the top down, until there is nothing left to run. And it is your job to include conditional statements (gateways) to tell the computer when it should execute certain blocks of code. 
+
+A distinguishing characteristic of control flow is that every decision should be answered as a conditional statement - as either "Yes" or "No"; i.e. so, they must be binary. Python control flow works by utilizing Boolean expressions. We can create boolean expressions by using *relational operators*, which compare two items and return either `True` or `False`. For this reason, you will sometimes hear them referred to as *comparators*. 
+
+The main boolean operators we'll cover are:
+
+* Equals: `==`
+    + Note: in Python, the operators `=` and `==` serve very different purposes, and don't have much relation at all other than similar syntax.
+        + The `=` operator is used for assignment, such as when assigning a value to a  variable.
+        + The `==` operator is the relational operator for checking equality of two values. If the values are the same, it will return `True` and will return `False` otherwise. 
+* Not equals: `!=`
+* Greater than: `>`
+* Less than: `<`
+* Greater than or equal to: `>=`
+* Less than or equal to: `<=`
+
+These operators compare two items and return either `True` or `False` if they are equal or not equal, respectively. When running boolean expressions, `>>>` is the prompt when you run Python in your terminal. Understanding boolean variables is essential because they are the building blocks of *conditional statements*. 
+
+Often, the conditions you want to check in your conditional statement will require more than one boolean expression to cover. In these cases, you can build larger boolean expressions using *boolean operators*. These operators (also known as logical operators) combine smaller boolean expressions into larger boolean expressions. 
+
+There are 3 boolean operators that we'll cover:
+
+* `and`
+    + Combines two boolean expressions and evaluates as `True` if both its components are `True`, but `False` otherwise. In otherwords, the entire statement must be true in order for the system to return `True`. 
+* `or`
+    + Combines two expressions into a larger expression that is `True` if either component is `True`. With this expression, the system will return `True` if either one or both conditions are met. 
+* `not`
+    + When applied to any boolean expression, it reverses the boolean value. So, if we have a `True` statement and apply a `not` operator, we get a `False` statement. 
+    + Example: `not True == False`; `not False == True`
+
+### If statements
+
+For if statements, the "then" aspect is specified with a colon, which tells the computer that what's coming next is what should be expected if the condition is met. If you are using the `and`, `or`, or `not` boolean operators in an if statement, you will want to put each expression in parentheses.
+
+### Else statements
+
+Once you start including lots of `if`  statements in a function, the code can start becoming a little cluttered and clunky. `else` statements allow us to elegantly describe what we want our code to do when certain conditions are **not** met. They always appear in conjugation with `if` statements. 
+
+Using else statements can help by preventing us from needing to write `if` statements for each possible condition since we can instead write a blanket `else` statement for all the times the condition is not met. 
+
+### Else If statements
+
+An `elif` statements checks another condition after the previous `if` statements' conditions are not met. You can use `elif` statements to control the order we want our program to check each of our conditional statements. First, the `if` statement is checked, then each `elif` statement is checked from top to bottom, then, finally, the `else` code is executed if none of the previous conditions have been met. Thus, it adds a way to sequentially test whether the specified conditions are met, and it will only result in one of them being printed out. 
+    
+### Try and Except statements
+
+`if`, `elif`, and `else` statements aren't the only way to build a control flow into your program. You can also use `try` and `except` statements to check possible errors that a user might encounter. 
+
+> try:
+    # some statement
+      except:
+    # some statement
+    
+Basically, the statement under `try` will be executed. If, at some point, an exception is raised during this execution, and that exception happens to match the keyword in the `except` statement, then the `try` statement will terminate and the `except` statement will execute. 
+    
+## Basics
+
+### Calculations
+
+Operations
+
+* Addition: `+`
+* Subtraction: `-`
+* Multiplication: `*`
+* Division: `/`
+    + Python 2: when you divide two integers, we get an integer as a result. This is not an issue when the quotient is a whole number, but if the numbers do not divide evenly, the result of the division is truncated into an integer (i.e. the quotient is rounded down to a whole number).
+    + Python 3: 
+* Exponentiation: `**`
+    + This operator raises the number to its left to the power of the number to its right. 
+    + Example: `4**2` = 16
+* Modulo: `%`
+    + This operator returns the remainder of the division of the number to the left by the number on its right.
+    + Example: `18 % 7` = 4
+
+### Variables and Types
+
+A variable is a specific, case-sensitive name. Once you declare a particular Variable, you can then call up the value through that variable name. This can help make the code reproducible and add a level of functionality. 
+
+* Example of storing a value as a variable:
+    + `height = 1.79`
+    + `weight = 68.7`
+    + `bmi = weight / height ** 2`
+        
+You can check out the type of a value with the type function: `type()`. 
+
+**Types of variables:**
+
+In Python, we need to build systems for dealing with data that changes over time. Python uses *variables* to define things that are subject to change. 
+
+* "float" is a way to represent real numbers, which can have both an integer part and a fractional part (separated by a point). 
+* "int" is a way to represent integers, which are numbers without a fractional part. 
+* "str" is a way to represent text (short for string). 
+    + Can be built with both double and single quotes. 
+* "bool" is a way to represent Boolean values or logical values (*True* or *False*).
+
+Interestingly, one functionality in Python is that it will sum integers and strings differenty. For integers, it will act as a normal calculator to add the two values together, but for strings, it will paste the two strings as one. 
+
+* Example: `"ab" + "cd"` $\rightarrow$ `"abcd"`
+
+Thus, the plus-operator behaves differently for different data types. This can be expanded as a general principle in that how the code behaves will depend on the type of the data structure. 
+
+#### Type conversion
+
+Using the concatenation`+` operator to paste together two strings can be very useful in building custom messages. If you wanted to sum strings and floats, which you cannot do simply using the `+` operator, you'll need to explicitely convert the types of your variables. 
+
+* `str()` function can be used to convert a value into a string.
+    + **Multi-line strings: if you want a string to span multiple lines, we can also use triple quotes. 
+        + When a multi-line string is not assigned to a variable, it works as a multi-line comment. This can be helpful as your code gets more complex. 
+* `int()` convert something into an integer value.
+* `float()` convert something into a float.
+    + Can also be defined using scientific notation, with `e` indicating the power of 10. 
+    + Can also specify a number a being a float by putting a `.` after the integer. 
+* `bool()` convert something into Boolean type. 
+    + `True` corresponds to an integer value of 1
+    + `False` corresponds to an integer value of 0
+
+### Syntax {.tabset .tabset-fade .tabset-pills}
+
+#### Plus equals
+ 
+* Python offers a shorthand for updating variables. When you have a number saved in a variable and want to add to the current value of the variable, you can use the `+=` (plus-equals) operator. 
+
+#### Returns
+
+* We use the keyword `return` to do this. Functions can also return a value to the user so that this value can be modified or used later. When there is a result from a function that can be stored in a variable, it is called a *returned* function value.
+* If you'd like to return more than one value from a function, you can do so by separating them with a comma. 
+    + Example: `def square_point(x_value, y_value): x_2 = x_value * x_value  y_2 = y_value * y_value return x_2, y_2`
+        + You can get the values from this function by assigning them both to variables  when we call the function: `x_squared, y_squared = square_point(1, 3)`.
+
+### Handling errors
+
+* If the quotes are mismateched, for example, Python will inform you that your code has an error in its syntax because the line ended (EOL) before the double-quote that was supposed to close the string appeared. 
+    
+> `SyntaxError: EOL while scanning a string literal`
+
+* Another issue is when you create a string without quotes at all. Python treats words not in quotes as commands, like the `print` statement. If it fails to recognize these words as defined, Pythin will complain the code as a `NameError`. 
+    + This means that Python found what it things is a command, but doesn't know what it means because it's not defined anywhere. 
+* Python will point to the location where an error occured with a `^` character. 
+* Bugs are typically defined as those errors that unexpectedly occur. Programmers call the process of updating the program so that it no longer produces unexpected errors *debugging*.
+
+Two common errors that we encounter while writing Python are `SyntaxError` and `NameError`.
+
+* `SyntaxError` means there is something wrong with the way your program is written - punctuation that does not belong, a command where it is not expected, or a missing parenthesis can all trigger a `SyntaxError`. 
+* `NameError` occurs when the Python interpreter sees a word it does not recognize. Code that contains something that looks like a variable but was never defined will throw a `NameError`. 
+
+### Writing functions 
+
+A *function* is code, or tool, that can be applied in many ways and scenarios. From a given input, it will produce a consistent output (in terms of what it intends to do), and it prevents the need to write out several lines of code repetitively. 
+
+Writing functions invovles a head and an indented block of code. The heading starts out with the keyword `def` and the name of the function, followed by parentheses and a colon. The indented block of code performs some sort of operation. The syntax follows a general format as shown below:
+
+> `def function_name():`
+
+The `def` keyword simply tells Python that we are defining a function. Everything that is indented after the `:` is what is run when the function is called. Whitespace, or indentation, effectively tells the computer what is, and is not, part of the function. 
+
+* Codeacademy uses 2 spaces for the default indentation, but many other platforms use 4 spaces and some people even use tabs. 
+    + In Python, a single tab is equivalent to 2 spaces or 4 spaces. 
+    
+**Parameters** are variables that you can pass into the function when you call it. These can be specified as arguments in the function call, and that arguement is what is to be used in the execution of the function call. Multiple parameters can be easily defined by using commas. 
+
+* Notes that a function could hypothetically still work as normal even if none of the parameters are actually used within the code itself. But, is counterintuitive in the sense that you're using parameters as a means to allow for different inputs when running a function so that it will produce results based on the input. 
+    + Not using paramters can be considered a waste of space or memory, which can be an issue when the input is scaled up. 
+* The arguments in a function call are referred to as *positional arguments* because their assignments depend on their positions in the function call. 
+    + However, arguments can also be passed as *keyword arguments*, where we explicitely refer to what each argument is assigned to in the function call. This may be helpful for clarity if you're working with a function for many arguments. 
+* We can also define default arguments for a function using syntax very similar to our keyword-argument syntax, but used during the function definition. If the function is called without an argument for that parameter, it relies on the default. 
+* Note that the variables defined in the function have only been defined inside the space of the function, so it does not exist outside the function. 
+    + You call the part of the program where a variable of a function can be accessed its *scope*. 
+    + Variables defined outside the scope of a function may be accessible inside the body of the function. 
+* If a parameter were to have the same name as a variable defined outside, instead of the function using the variable defined outside, it will only reference the value that was passed to the paramter. 
+    + So, parameters will be used over other variables of the same name within a function. 
+    
+## Lists
+
+A *list* is an ordered set of objects in Python; it is a way to give a single name to a collection of values (compound data type). A list begins, and ends, with square brackets (`[` and `]`), and each item in the list is separated by a comma. Lists can contain more than just numbers; i.e., they can contain any data type, and they can also combine multiple data types in a single list (a list can contain both a string and an integer). Extending the definition of lists, they can also be composed of other lists! So you can nest several lists into one list, such that each entry in the lists represents another list. This can be helpful, for example, if you were creating a list representing students and their respective heights, with each student composing their own list. 
+
+Behind the scenes: you're storing a list in your computer memory, and then storing the address of that list (where the list is in your computer memory) in the variable name assigned to that list. This means that the variable name does not actually contain all of the list elements, it rather contains a reference to the list. This is important to consider when copying lists - if a list is defined by two variables, changing either one will result in the actual list being changed, which results in both variables taking on the change. If you only want to change one of the variables, you can either create a new list that is identical to the previous one and then store it in a different variable,  or you can slice the entirety of the list under a new variable (e.g. `y = x[:]`). 
+
+* Note: it's considered good practice to insert a space after each comma, but your code will run just fine if you forget the space. 
+
+The `;` sign is used to place commands on the same line. The following two code chunks are equivalent:
+
+> command1; command2
+
+Is equal to:
+
+> command1
+
+> command2
+
+### List syntax
+
+> `my_list = [el1, el2, el3]`
+
+### Subsetting lists {.tabset .tabset-fade .tabset-pills}
+
+#### Index
+
+Python uses *zero-based indexing* to provide access to a stored list; i.e. the first element in the list is denoted as 0. You can simply use `list_name[]` to select an element. 
+
+You can also count backward using negative indexes, which is useful if you want to get to the end of your list. The last element of the list is denoted as -1. 
+
+#### List slicing
+
+Allows you to select multiple elements from a list, thus creating a new list. You can do this by specifying the range using `:`. For example: `list_name[2:5]`. However, with this method it should be noted that the start of the slice is inclusive, whereas the end of the slice is exclusive - in other words, in the previous example, the 2^nd^, 3^rd^, and 4^th^ elements will be selected, but not the 5^th^ element. 
+
+* Example: a call such as `fam[:4]` would be telling Python to just start from element 0. Conversely, `fam[5:]` would take the 5th element to the end  element. 
+
+#### Notes on subsetting
+
+After you've extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list x are extracted. The strings that result are pasted together using the + operator: `x = ["a", "b", "c", "d"]`, `print(x[1] + x[3])`.
+
+### List manipulation
+
+List manipulation includes changing list elements, adding list elements, or removing elements from your list. Using the same square brackets `[]` that are used to subset lists, you can change or add new elements to a list. For example, `list_name[7] = 1.86` would change the 8^th^ element of the list by coercing the value 1.86 in place of what was previously stored. This can be done for a number of elements at once. 
+
+Adding and removing elements from a list is different than for a vector. Adding is as simple as adding a list to the current variable storing the list (e.g. `list_name + [x, y]`). Deleting an element requires the use of the function `del()`. For example, `del(list_name[2])` deletes the element located at the  second index. Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!
+
+## Functions
+
+A function is a piece of re-usable code aimed at solving a particular task. You can call them instead of having to write a code yourself. 
+
+|   Function   |   Package   |   Explanation        |   Key arguments   |   Example   |
+|--------------|-------------|----------------------|-------------------|-------------|
+| `max()` | Base Python | Obtain maximum value in a data object | *data* | `max(x)` |
+| `round()` | Base Python |Round a number to a given precision of decimal digits (default is 0). | Two inputs: the number you want to round, and the precision with which to round (ndigits). | `round(1.68, 1)`; [1] 1.7 | 
+| `help()` | Base Python | Open up the documentation for a given function. Can also use `?function_name`. | function name | `help(round)` |
+| `len()` | Base Python | To obtain the length of a data object. | data object | `len(variable)` | 
+
+### Methods
+
+While built-in functions are capable of achieving a multitude of tasks. However, there are a select number of actions for which there are no built in functions (e.g. getting the index of a list, or reversing a list). The methods corresponding to a given function can be observed with the `help()` function. 
+
+Python objects come with a number of so-called methods. Methods can be thought of as functions that belong to objects, depending on the type. 
+
+* A Pyton object of type string has methods such as `capitalize()` and `replace()`. 
+* Python object for type float: `bit_length()`, `conjugate()`
+* Python object for type list: `index()`, `count()`
+
+In Python, everything is an object, and each object has different methods associated with it. Depending on the type of object, the available methods are different. Objects of different types can have methods with the same name (e.g. the `index()` method is available for both strings and lists. When called on a string, you get the index of the letters of the string; when called on a list, you get the index for the elements in the list). 
+
+Some methods can change the objects that they are called on. For example, passing the `append()` method on a list will add an additional element onto the list. 
+
+#### Examples {.tabset .tabset-fade .tabset-pills}
+
+##### String
+
+The `capitalize()` method, without any inputs will return a string where the first letter of the string is capitalized. 
+
+You can use the `replace()` method to replace some parts of the string with other parts. This method call should include two inputs: in the output, the first argument is replaced with the content in the second argument (both should be in quotes). 
+
+##### Float
+
+##### List
+
+Suppose you want to get the index for a list type object. To call the methods, you  use the **dot-notation* -- e.g. `list_name.index("variable")`. Python, in this case, should return the specified index for that variable. 
+
+The `count()` method can be used to count the number of times a given element occurs in the list. 
+
+Some other methods:
+
+* `remove()`, that removes the first element of a list that matches the input.
+* `reverse()`, that reverses the order of the elements in the list it is called on.
+
+### Packages
+
+Packages can be thought of as a directory of Python scripts, with each such script being classified as a 'module'. These 'modules' specify functions, methods, and new types aimed at solving particular problems.
+
+There are thousands of Python packages available from the internet. Some examples include:
+
+* **Numpy** to efficiently work with arrays.
+* **Matplotlib** for data visualization. 
+* **Scikit-learn** for machine learning.
+
+To use Python packages, they must first be intalled on your own system. To install a package, you will want to use `pip` -- a package maintenance system for Python. 

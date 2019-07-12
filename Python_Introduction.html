@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Introduction</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
+<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
+<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 45px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.section h2 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h3 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h4 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h5 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+.section h6 {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">bkiyota</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="about.html">
+    <span class="fa fa-about"></span>
+     
+    About
+  </a>
+</li>
+<li>
+  <a href="Books.html">
+    <span class="fa fa-align-right"></span>
+     
+    Reading log
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-laptop-code"></span>
+     
+    Coding
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">DataCamp: R courses</li>
+    <li>
+      <a href="Basics.html">
+        <span class="fa fa-chess-pawn"></span>
+         
+        Introduction
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    <span class="fa fa-user-circle"></span>
+     
+    Personal
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Resume_draft.pdf">
+        <span class="fa fa-file"></span>
+         
+        Resume (draft)
+      </a>
+    </li>
+  </ul>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Introduction</h1>
+
+</div>
+
+
+<style>
+#TOC {
+  top: 15%;
+  opacity: 0.5;
+}
+#TOC:hover {
+  opacity: 1;
+}
+</style>
+<style>
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #85A99B;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #ffffff;
+    background-color: #85A99B;
+}
+</style>
+<p><br><br></p>
+<p><br><br></p>
+<hr />
+<div id="introduction-to-python" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction to Python</h1>
+<div id="learning-objectives" class="section level2">
+<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
+<ul>
+<li>Python</li>
+<li>Specifically for data science</li>
+<li>Store data</li>
+<li>Manipulate data</li>
+<li>Tools for data analysis</li>
+</ul>
+</div>
+<div id="python-basics" class="section level2 tabset tabset-fade tabset-pills">
+<h2><span class="header-section-number">1.2</span> Python basics</h2>
+<p>Python was conceived by <strong>Guido Van Rossum</strong>. It is a open-source, general-purpose programming language to build <em>anything</em> (software). Similar to R, it is very easy to build packages in Python. It is a very simple language with very straightforward syntax. Two common versions of Python that are relatively similar, but have some key distinctions.</p>
+<ul>
+<li>Version 2.7</li>
+<li>Version 3.5 and later (this course is focused on Version 3.<em>X</em>)</li>
+</ul>
+<p>Both are used throughout the world, but the most signficant difference is how you write the <code>print</code> statement. In Python 3, <code>print</code> has parenthases.</p>
+<p>Python uses indentation for blocks, instead of curly brackets. The standard indentation requires Python code to use four spaces.</p>
+<p>The <code>print</code> statement is the easiest way to get your Python program to communicate with you, which will be one of the most valuable tools in your programming toolbox.</p>
+<div id="ipython-shell" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> IPython Shell</h3>
+<p>IPython is short for interactive Python.</p>
+<ul>
+<li>A place to execute Python commands</li>
+</ul>
+</div>
+<div id="python-script" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Python Script</h3>
+<p>Text files with the extension: -.py, that are basically a list of Python commands that can be executed and stored for record-keeping.</p>
+<ul>
+<li>You can add comments to Python scripts to make sure that you and others can understand what your code is about.
+<ul>
+<li>Add comments with the <code>#</code> tag.</li>
+<li>Comments are not run as Python code, so they will not influence your result.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="control-flow" class="section level2 tabset tabset-fade tabset-pills">
+<h2><span class="header-section-number">1.3</span> Control flow</h2>
+<p>Your computer goes through a similar flow everytime a code gets executed. The program will run and start moving through a series of checklists and, if certain conditions are satisfied, the code will be executed and a value will be returned. This is what is referred to as the <em>Control flow</em> of your program.</p>
+<p>In Python, your script will executre from the top down, until there is nothing left to run. And it is your job to include conditional statements (gateways) to tell the computer when it should execute certain blocks of code.</p>
+<p>A distinguishing characteristic of control flow is that every decision should be answered as a conditional statement - as either “Yes” or “No”; i.e. so, they must be binary. Python control flow works by utilizing Boolean expressions. We can create boolean expressions by using <em>relational operators</em>, which compare two items and return either <code>True</code> or <code>False</code>. For this reason, you will sometimes hear them referred to as <em>comparators</em>.</p>
+<p>The main boolean operators we’ll cover are:</p>
+<ul>
+<li>Equals: <code>==</code>
+<ul>
+<li>Note: in Python, the operators <code>=</code> and <code>==</code> serve very different purposes, and don’t have much relation at all other than similar syntax.
+<ul>
+<li>The <code>=</code> operator is used for assignment, such as when assigning a value to a variable.</li>
+<li>The <code>==</code> operator is the relational operator for checking equality of two values. If the values are the same, it will return <code>True</code> and will return <code>False</code> otherwise.</li>
+</ul></li>
+</ul></li>
+<li>Not equals: <code>!=</code></li>
+<li>Greater than: <code>&gt;</code></li>
+<li>Less than: <code>&lt;</code></li>
+<li>Greater than or equal to: <code>&gt;=</code></li>
+<li>Less than or equal to: <code>&lt;=</code></li>
+</ul>
+<p>These operators compare two items and return either <code>True</code> or <code>False</code> if they are equal or not equal, respectively. When running boolean expressions, <code>&gt;&gt;&gt;</code> is the prompt when you run Python in your terminal. Understanding boolean variables is essential because they are the building blocks of <em>conditional statements</em>.</p>
+<p>Often, the conditions you want to check in your conditional statement will require more than one boolean expression to cover. In these cases, you can build larger boolean expressions using <em>boolean operators</em>. These operators (also known as logical operators) combine smaller boolean expressions into larger boolean expressions.</p>
+<p>There are 3 boolean operators that we’ll cover:</p>
+<ul>
+<li><code>and</code>
+<ul>
+<li>Combines two boolean expressions and evaluates as <code>True</code> if both its components are <code>True</code>, but <code>False</code> otherwise. In otherwords, the entire statement must be true in order for the system to return <code>True</code>.</li>
+</ul></li>
+<li><code>or</code>
+<ul>
+<li>Combines two expressions into a larger expression that is <code>True</code> if either component is <code>True</code>. With this expression, the system will return <code>True</code> if either one or both conditions are met.</li>
+</ul></li>
+<li><code>not</code>
+<ul>
+<li>When applied to any boolean expression, it reverses the boolean value. So, if we have a <code>True</code> statement and apply a <code>not</code> operator, we get a <code>False</code> statement.</li>
+<li>Example: <code>not True == False</code>; <code>not False == True</code></li>
+</ul></li>
+</ul>
+<div id="if-statements" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> If statements</h3>
+<p>For if statements, the “then” aspect is specified with a colon, which tells the computer that what’s coming next is what should be expected if the condition is met. If you are using the <code>and</code>, <code>or</code>, or <code>not</code> boolean operators in an if statement, you will want to put each expression in parentheses.</p>
+</div>
+<div id="else-statements" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Else statements</h3>
+<p>Once you start including lots of <code>if</code> statements in a function, the code can start becoming a little cluttered and clunky. <code>else</code> statements allow us to elegantly describe what we want our code to do when certain conditions are <strong>not</strong> met. They always appear in conjugation with <code>if</code> statements.</p>
+<p>Using else statements can help by preventing us from needing to write <code>if</code> statements for each possible condition since we can instead write a blanket <code>else</code> statement for all the times the condition is not met.</p>
+</div>
+<div id="else-if-statements" class="section level3">
+<h3><span class="header-section-number">1.3.3</span> Else If statements</h3>
+<p>An <code>elif</code> statements checks another condition after the previous <code>if</code> statements’ conditions are not met. You can use <code>elif</code> statements to control the order we want our program to check each of our conditional statements. First, the <code>if</code> statement is checked, then each <code>elif</code> statement is checked from top to bottom, then, finally, the <code>else</code> code is executed if none of the previous conditions have been met. Thus, it adds a way to sequentially test whether the specified conditions are met, and it will only result in one of them being printed out.</p>
+</div>
+<div id="try-and-except-statements" class="section level3">
+<h3><span class="header-section-number">1.3.4</span> Try and Except statements</h3>
+<p><code>if</code>, <code>elif</code>, and <code>else</code> statements aren’t the only way to build a control flow into your program. You can also use <code>try</code> and <code>except</code> statements to check possible errors that a user might encounter.</p>
+<blockquote>
+<p>try: # some statement except: # some statement</p>
+</blockquote>
+<p>Basically, the statement under <code>try</code> will be executed. If, at some point, an exception is raised during this execution, and that exception happens to match the keyword in the <code>except</code> statement, then the <code>try</code> statement will terminate and the <code>except</code> statement will execute.</p>
+</div>
+</div>
+<div id="basics" class="section level2">
+<h2><span class="header-section-number">1.4</span> Basics</h2>
+<div id="calculations" class="section level3">
+<h3><span class="header-section-number">1.4.1</span> Calculations</h3>
+<p>Operations</p>
+<ul>
+<li>Addition: <code>+</code></li>
+<li>Subtraction: <code>-</code></li>
+<li>Multiplication: <code>*</code></li>
+<li>Division: <code>/</code>
+<ul>
+<li>Python 2: when you divide two integers, we get an integer as a result. This is not an issue when the quotient is a whole number, but if the numbers do not divide evenly, the result of the division is truncated into an integer (i.e. the quotient is rounded down to a whole number).</li>
+<li>Python 3:</li>
+</ul></li>
+<li>Exponentiation: <code>**</code>
+<ul>
+<li>This operator raises the number to its left to the power of the number to its right.</li>
+<li>Example: <code>4**2</code> = 16</li>
+</ul></li>
+<li>Modulo: <code>%</code>
+<ul>
+<li>This operator returns the remainder of the division of the number to the left by the number on its right.</li>
+<li>Example: <code>18 % 7</code> = 4</li>
+</ul></li>
+</ul>
+</div>
+<div id="variables-and-types" class="section level3">
+<h3><span class="header-section-number">1.4.2</span> Variables and Types</h3>
+<p>A variable is a specific, case-sensitive name. Once you declare a particular Variable, you can then call up the value through that variable name. This can help make the code reproducible and add a level of functionality.</p>
+<ul>
+<li>Example of storing a value as a variable:
+<ul>
+<li><code>height = 1.79</code></li>
+<li><code>weight = 68.7</code></li>
+<li><code>bmi = weight / height ** 2</code></li>
+</ul></li>
+</ul>
+<p>You can check out the type of a value with the type function: <code>type()</code>.</p>
+<p><strong>Types of variables:</strong></p>
+<p>In Python, we need to build systems for dealing with data that changes over time. Python uses <em>variables</em> to define things that are subject to change.</p>
+<ul>
+<li>“float” is a way to represent real numbers, which can have both an integer part and a fractional part (separated by a point).</li>
+<li>“int” is a way to represent integers, which are numbers without a fractional part.</li>
+<li>“str” is a way to represent text (short for string).
+<ul>
+<li>Can be built with both double and single quotes.</li>
+</ul></li>
+<li>“bool” is a way to represent Boolean values or logical values (<em>True</em> or <em>False</em>).</li>
+</ul>
+<p>Interestingly, one functionality in Python is that it will sum integers and strings differenty. For integers, it will act as a normal calculator to add the two values together, but for strings, it will paste the two strings as one.</p>
+<ul>
+<li>Example: <code>&quot;ab&quot; + &quot;cd&quot;</code> <span class="math inline">\(\rightarrow\)</span> <code>&quot;abcd&quot;</code></li>
+</ul>
+<p>Thus, the plus-operator behaves differently for different data types. This can be expanded as a general principle in that how the code behaves will depend on the type of the data structure.</p>
+<div id="type-conversion" class="section level4">
+<h4><span class="header-section-number">1.4.2.1</span> Type conversion</h4>
+<p>Using the concatenation<code>+</code> operator to paste together two strings can be very useful in building custom messages. If you wanted to sum strings and floats, which you cannot do simply using the <code>+</code> operator, you’ll need to explicitely convert the types of your variables.</p>
+<ul>
+<li><code>str()</code> function can be used to convert a value into a string.
+<ul>
+<li>**Multi-line strings: if you want a string to span multiple lines, we can also use triple quotes.
+<ul>
+<li>When a multi-line string is not assigned to a variable, it works as a multi-line comment. This can be helpful as your code gets more complex.</li>
+</ul></li>
+</ul></li>
+<li><code>int()</code> convert something into an integer value.</li>
+<li><code>float()</code> convert something into a float.
+<ul>
+<li>Can also be defined using scientific notation, with <code>e</code> indicating the power of 10.</li>
+<li>Can also specify a number a being a float by putting a <code>.</code> after the integer.</li>
+</ul></li>
+<li><code>bool()</code> convert something into Boolean type.
+<ul>
+<li><code>True</code> corresponds to an integer value of 1</li>
+<li><code>False</code> corresponds to an integer value of 0</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="syntax" class="section level3 tabset tabset-fade tabset-pills">
+<h3><span class="header-section-number">1.4.3</span> Syntax</h3>
+<div id="plus-equals" class="section level4">
+<h4><span class="header-section-number">1.4.3.1</span> Plus equals</h4>
+<ul>
+<li>Python offers a shorthand for updating variables. When you have a number saved in a variable and want to add to the current value of the variable, you can use the <code>+=</code> (plus-equals) operator.</li>
+</ul>
+</div>
+<div id="returns" class="section level4">
+<h4><span class="header-section-number">1.4.3.2</span> Returns</h4>
+<ul>
+<li>We use the keyword <code>return</code> to do this. Functions can also return a value to the user so that this value can be modified or used later. When there is a result from a function that can be stored in a variable, it is called a <em>returned</em> function value.</li>
+<li>If you’d like to return more than one value from a function, you can do so by separating them with a comma.
+<ul>
+<li>Example: <code>def square_point(x_value, y_value): x_2 = x_value * x_value  y_2 = y_value * y_value return x_2, y_2</code>
+<ul>
+<li>You can get the values from this function by assigning them both to variables when we call the function: <code>x_squared, y_squared = square_point(1, 3)</code>.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="handling-errors" class="section level3">
+<h3><span class="header-section-number">1.4.4</span> Handling errors</h3>
+<ul>
+<li>If the quotes are mismateched, for example, Python will inform you that your code has an error in its syntax because the line ended (EOL) before the double-quote that was supposed to close the string appeared.</li>
+</ul>
+<blockquote>
+<p><code>SyntaxError: EOL while scanning a string literal</code></p>
+</blockquote>
+<ul>
+<li>Another issue is when you create a string without quotes at all. Python treats words not in quotes as commands, like the <code>print</code> statement. If it fails to recognize these words as defined, Pythin will complain the code as a <code>NameError</code>.
+<ul>
+<li>This means that Python found what it things is a command, but doesn’t know what it means because it’s not defined anywhere.</li>
+</ul></li>
+<li>Python will point to the location where an error occured with a <code>^</code> character.</li>
+<li>Bugs are typically defined as those errors that unexpectedly occur. Programmers call the process of updating the program so that it no longer produces unexpected errors <em>debugging</em>.</li>
+</ul>
+<p>Two common errors that we encounter while writing Python are <code>SyntaxError</code> and <code>NameError</code>.</p>
+<ul>
+<li><code>SyntaxError</code> means there is something wrong with the way your program is written - punctuation that does not belong, a command where it is not expected, or a missing parenthesis can all trigger a <code>SyntaxError</code>.</li>
+<li><code>NameError</code> occurs when the Python interpreter sees a word it does not recognize. Code that contains something that looks like a variable but was never defined will throw a <code>NameError</code>.</li>
+</ul>
+</div>
+<div id="writing-functions" class="section level3">
+<h3><span class="header-section-number">1.4.5</span> Writing functions</h3>
+<p>A <em>function</em> is code, or tool, that can be applied in many ways and scenarios. From a given input, it will produce a consistent output (in terms of what it intends to do), and it prevents the need to write out several lines of code repetitively.</p>
+<p>Writing functions invovles a head and an indented block of code. The heading starts out with the keyword <code>def</code> and the name of the function, followed by parentheses and a colon. The indented block of code performs some sort of operation. The syntax follows a general format as shown below:</p>
+<blockquote>
+<p><code>def function_name():</code></p>
+</blockquote>
+<p>The <code>def</code> keyword simply tells Python that we are defining a function. Everything that is indented after the <code>:</code> is what is run when the function is called. Whitespace, or indentation, effectively tells the computer what is, and is not, part of the function.</p>
+<ul>
+<li>Codeacademy uses 2 spaces for the default indentation, but many other platforms use 4 spaces and some people even use tabs.
+<ul>
+<li>In Python, a single tab is equivalent to 2 spaces or 4 spaces.</li>
+</ul></li>
+</ul>
+<p><strong>Parameters</strong> are variables that you can pass into the function when you call it. These can be specified as arguments in the function call, and that arguement is what is to be used in the execution of the function call. Multiple parameters can be easily defined by using commas.</p>
+<ul>
+<li>Notes that a function could hypothetically still work as normal even if none of the parameters are actually used within the code itself. But, is counterintuitive in the sense that you’re using parameters as a means to allow for different inputs when running a function so that it will produce results based on the input.
+<ul>
+<li>Not using paramters can be considered a waste of space or memory, which can be an issue when the input is scaled up.</li>
+</ul></li>
+<li>The arguments in a function call are referred to as <em>positional arguments</em> because their assignments depend on their positions in the function call.
+<ul>
+<li>However, arguments can also be passed as <em>keyword arguments</em>, where we explicitely refer to what each argument is assigned to in the function call. This may be helpful for clarity if you’re working with a function for many arguments.</li>
+</ul></li>
+<li>We can also define default arguments for a function using syntax very similar to our keyword-argument syntax, but used during the function definition. If the function is called without an argument for that parameter, it relies on the default.</li>
+<li>Note that the variables defined in the function have only been defined inside the space of the function, so it does not exist outside the function.
+<ul>
+<li>You call the part of the program where a variable of a function can be accessed its <em>scope</em>.</li>
+<li>Variables defined outside the scope of a function may be accessible inside the body of the function.</li>
+</ul></li>
+<li>If a parameter were to have the same name as a variable defined outside, instead of the function using the variable defined outside, it will only reference the value that was passed to the paramter.
+<ul>
+<li>So, parameters will be used over other variables of the same name within a function.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="lists" class="section level2">
+<h2><span class="header-section-number">1.5</span> Lists</h2>
+<p>A <em>list</em> is an ordered set of objects in Python; it is a way to give a single name to a collection of values (compound data type). A list begins, and ends, with square brackets (<code>[</code> and <code>]</code>), and each item in the list is separated by a comma. Lists can contain more than just numbers; i.e., they can contain any data type, and they can also combine multiple data types in a single list (a list can contain both a string and an integer). Extending the definition of lists, they can also be composed of other lists! So you can nest several lists into one list, such that each entry in the lists represents another list. This can be helpful, for example, if you were creating a list representing students and their respective heights, with each student composing their own list.</p>
+<p>Behind the scenes: you’re storing a list in your computer memory, and then storing the address of that list (where the list is in your computer memory) in the variable name assigned to that list. This means that the variable name does not actually contain all of the list elements, it rather contains a reference to the list. This is important to consider when copying lists - if a list is defined by two variables, changing either one will result in the actual list being changed, which results in both variables taking on the change. If you only want to change one of the variables, you can either create a new list that is identical to the previous one and then store it in a different variable, or you can slice the entirety of the list under a new variable (e.g. <code>y = x[:]</code>).</p>
+<ul>
+<li>Note: it’s considered good practice to insert a space after each comma, but your code will run just fine if you forget the space.</li>
+</ul>
+<p>The <code>;</code> sign is used to place commands on the same line. The following two code chunks are equivalent:</p>
+<blockquote>
+<p>command1; command2</p>
+</blockquote>
+<p>Is equal to:</p>
+<blockquote>
+<p>command1</p>
+</blockquote>
+<blockquote>
+<p>command2</p>
+</blockquote>
+<div id="list-syntax" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> List syntax</h3>
+<blockquote>
+<p><code>my_list = [el1, el2, el3]</code></p>
+</blockquote>
+</div>
+<div id="subsetting-lists" class="section level3 tabset tabset-fade tabset-pills">
+<h3><span class="header-section-number">1.5.2</span> Subsetting lists</h3>
+<div id="index" class="section level4">
+<h4><span class="header-section-number">1.5.2.1</span> Index</h4>
+<p>Python uses <em>zero-based indexing</em> to provide access to a stored list; i.e. the first element in the list is denoted as 0. You can simply use <code>list_name[]</code> to select an element.</p>
+<p>You can also count backward using negative indexes, which is useful if you want to get to the end of your list. The last element of the list is denoted as -1.</p>
+</div>
+<div id="list-slicing" class="section level4">
+<h4><span class="header-section-number">1.5.2.2</span> List slicing</h4>
+<p>Allows you to select multiple elements from a list, thus creating a new list. You can do this by specifying the range using <code>:</code>. For example: <code>list_name[2:5]</code>. However, with this method it should be noted that the start of the slice is inclusive, whereas the end of the slice is exclusive - in other words, in the previous example, the 2<sup>nd</sup>, 3<sup>rd</sup>, and 4<sup>th</sup> elements will be selected, but not the 5<sup>th</sup> element.</p>
+<ul>
+<li>Example: a call such as <code>fam[:4]</code> would be telling Python to just start from element 0. Conversely, <code>fam[5:]</code> would take the 5th element to the end element.</li>
+</ul>
+</div>
+<div id="notes-on-subsetting" class="section level4">
+<h4><span class="header-section-number">1.5.2.3</span> Notes on subsetting</h4>
+<p>After you’ve extracted values from a list, you can use them to perform additional calculations. Take this example, where the second and fourth element of a list x are extracted. The strings that result are pasted together using the + operator: <code>x = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</code>, <code>print(x[1] + x[3])</code>.</p>
+</div>
+</div>
+<div id="list-manipulation" class="section level3">
+<h3><span class="header-section-number">1.5.3</span> List manipulation</h3>
+<p>List manipulation includes changing list elements, adding list elements, or removing elements from your list. Using the same square brackets <code>[]</code> that are used to subset lists, you can change or add new elements to a list. For example, <code>list_name[7] = 1.86</code> would change the 8<sup>th</sup> element of the list by coercing the value 1.86 in place of what was previously stored. This can be done for a number of elements at once.</p>
+<p>Adding and removing elements from a list is different than for a vector. Adding is as simple as adding a list to the current variable storing the list (e.g. <code>list_name + [x, y]</code>). Deleting an element requires the use of the function <code>del()</code>. For example, <code>del(list_name[2])</code> deletes the element located at the second index. Pay attention here: as soon as you remove an element from a list, the indexes of the elements that come after the deleted element all change!</p>
+</div>
+</div>
+<div id="functions" class="section level2">
+<h2><span class="header-section-number">1.6</span> Functions</h2>
+<p>A function is a piece of re-usable code aimed at solving a particular task. You can call them instead of having to write a code yourself.</p>
+<table>
+<colgroup>
+<col width="17%" />
+<col width="16%" />
+<col width="26%" />
+<col width="23%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Package</th>
+<th>Explanation</th>
+<th>Key arguments</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>max()</code></td>
+<td>Base Python</td>
+<td>Obtain maximum value in a data object</td>
+<td><em>data</em></td>
+<td><code>max(x)</code></td>
+</tr>
+<tr class="even">
+<td><code>round()</code></td>
+<td>Base Python</td>
+<td>Round a number to a given precision of decimal digits (default is 0).</td>
+<td>Two inputs: the number you want to round, and the precision with which to round (ndigits).</td>
+<td><code>round(1.68, 1)</code>; [1] 1.7</td>
+</tr>
+<tr class="odd">
+<td><code>help()</code></td>
+<td>Base Python</td>
+<td>Open up the documentation for a given function. Can also use <code>?function_name</code>.</td>
+<td>function name</td>
+<td><code>help(round)</code></td>
+</tr>
+<tr class="even">
+<td><code>len()</code></td>
+<td>Base Python</td>
+<td>To obtain the length of a data object.</td>
+<td>data object</td>
+<td><code>len(variable)</code></td>
+</tr>
+</tbody>
+</table>
+<div id="methods" class="section level3">
+<h3><span class="header-section-number">1.6.1</span> Methods</h3>
+<p>While built-in functions are capable of achieving a multitude of tasks. However, there are a select number of actions for which there are no built in functions (e.g. getting the index of a list, or reversing a list). The methods corresponding to a given function can be observed with the <code>help()</code> function.</p>
+<p>Python objects come with a number of so-called methods. Methods can be thought of as functions that belong to objects, depending on the type.</p>
+<ul>
+<li>A Pyton object of type string has methods such as <code>capitalize()</code> and <code>replace()</code>.</li>
+<li>Python object for type float: <code>bit_length()</code>, <code>conjugate()</code></li>
+<li>Python object for type list: <code>index()</code>, <code>count()</code></li>
+</ul>
+<p>In Python, everything is an object, and each object has different methods associated with it. Depending on the type of object, the available methods are different. Objects of different types can have methods with the same name (e.g. the <code>index()</code> method is available for both strings and lists. When called on a string, you get the index of the letters of the string; when called on a list, you get the index for the elements in the list).</p>
+<p>Some methods can change the objects that they are called on. For example, passing the <code>append()</code> method on a list will add an additional element onto the list.</p>
+<div id="examples" class="section level4 tabset tabset-fade tabset-pills">
+<h4><span class="header-section-number">1.6.1.1</span> Examples</h4>
+<div id="string" class="section level5">
+<h5><span class="header-section-number">1.6.1.1.1</span> String</h5>
+<p>The <code>capitalize()</code> method, without any inputs will return a string where the first letter of the string is capitalized.</p>
+<p>You can use the <code>replace()</code> method to replace some parts of the string with other parts. This method call should include two inputs: in the output, the first argument is replaced with the content in the second argument (both should be in quotes).</p>
+</div>
+<div id="float" class="section level5">
+<h5><span class="header-section-number">1.6.1.1.2</span> Float</h5>
+</div>
+<div id="list" class="section level5">
+<h5><span class="header-section-number">1.6.1.1.3</span> List</h5>
+<p>Suppose you want to get the index for a list type object. To call the methods, you use the **dot-notation* – e.g. <code>list_name.index(&quot;variable&quot;)</code>. Python, in this case, should return the specified index for that variable.</p>
+<p>The <code>count()</code> method can be used to count the number of times a given element occurs in the list.</p>
+<p>Some other methods:</p>
+<ul>
+<li><code>remove()</code>, that removes the first element of a list that matches the input.</li>
+<li><code>reverse()</code>, that reverses the order of the elements in the list it is called on.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
